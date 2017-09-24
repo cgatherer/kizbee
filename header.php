@@ -25,8 +25,8 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<!-- Styles -->
-  	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
-  	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+  	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+  	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.css">
   	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/font-awesome.min.css">
 
 	<!-- Scripts -->
