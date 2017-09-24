@@ -419,21 +419,6 @@ table {
   flex-basis: 11.20563%;
   max-width: 11.20563%; }
 
-_:-ms-fullscreen, :root .fab .masterfab {
-  padding: 13px 0px 0 0;
-  margin-left: 11px; }
-  @media screen and (min-width: 768px) {
-    _:-ms-fullscreen, :root .fab .masterfab {
-      padding: 25px 0px 0 0;
-      margin-left: 20px;
-      font-size: 3rem; } }
-
-.fab .masterfab:not(*:root) {
-  padding: 13px 0px 0 0; }
-  @media screen and (min-width: 768px) {
-    .fab .masterfab:not(*:root) {
-      padding: 25px 0px 0 0; } }
-
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
@@ -626,6 +611,10 @@ input {
   font-family: 'FontAwesome', arial, sans-serif; }
 
 /* Default Style */
+.ab-item {
+  top: -30px;
+  position: relative; }
+
 hr {
   border: 0;
   border-bottom: 1px solid #ddd;
