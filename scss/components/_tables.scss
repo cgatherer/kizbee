@@ -1,0 +1,195 @@
+//**
+// Tables
+//**
+.table-wrap {
+    font-family: "Century Gothic", Helvetica, Arial;
+    background-color: $white;
+    padding: 15px 0 0 0;
+    overflow: hidden;
+
+    @include clearfix;
+    @include responsive($big-break) {
+        overflow-y: hidden;
+        // padding-right: 15px;
+    }
+    @include responsive($small-break) {
+        overflow-y: hidden;
+        padding-right: 15px;
+    }
+    @include responsive($tiny-break) {
+        overflow-y: hidden;
+        // padding-right: 15px;
+    }
+}
+
+.card-table-wrap {
+    @include clearfix;
+    font-family: "Century Gothic", Helvetica, Arial;
+    background-color: $white;
+    margin: 0 0 0 0;
+    overflow-x: scroll;
+    &:last-of-type {
+        // margin-bottom: $margin / 2;
+    }
+    @include responsive($big-break) {
+        overflow-y: hidden;
+        padding-right: 15px;
+    }
+    @include responsive($small-break) {
+        overflow-y: hidden;
+        padding-right: 15px;
+    }
+    @include responsive($tiny-break) {
+        overflow-y: hidden;
+        padding-right: 15px;
+    }
+}
+
+.table-nav {
+    padding: 10px;
+    a {
+        color: $light-black;
+        &:hover {
+            color: $hibbert-cyan;
+        }
+    }
+    i {
+        font-size: 1.3em;
+        padding-left: 15px;
+    }
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-family: "Century Gothic", Helvetica, Arial;
+    margin: 0;
+    width: 100%;
+    counter-reset: rowNumber;
+    overflow: hidden;
+    @include responsive($small-break) {
+        padding-right: 15px;
+    }
+    @include responsive($tiny-break) {
+        padding-right: 15px;
+    }
+    th,
+    td {
+        padding: 10px;
+        text-align: left;
+        color: $light-black;
+        font-size: .9em;
+        min-width: 70px;
+    }
+    th {
+        border-bottom: 1px solid $silver;
+        color: $light-black;
+        padding: 15px 0 15px 10px;
+        background-color: $white;
+    }
+    td {
+        -ms-word-break: break-all;
+        word-break: break-all;
+        // Non standard for webkit
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+        // min-width: 100px;
+    }
+    tr {
+        a {
+            color: $light-black;
+        }
+        &:not(:first-child) {
+            counter-increment: rowNumber;
+        }
+        &:nth-child(even) {
+            background: #eee;
+        }
+        &:nth-child(odd) {
+            background: #FFF;
+            // border-bottom: 1px solid #EEEEEE;
+        }
+    }
+}
+
+table.clickable tr {
+    cursor: pointer;
+    cursor: hand;
+    @include transition;
+    &:hover {
+        &:nth-child(even) {
+            background: $hibbert-light-cyan;
+        }
+        &:nth-child(odd) {
+            background: $hibbert-light-cyan;
+        }
+    }
+}
+
+tr.row-red {
+    border-left: 5px solid $red;
+}
+
+tr.row-yellow {
+    border-left: 5px solid $orange;
+    background: ($orange, 60%)!important;
+    opacity: 40%;
+}
+
+tr.row-white {
+    border-left: 5px solid $grey;
+}
+
+tr.row-green {
+    border-left: 5px solid $green;
+}
+
+// Date Calendar ******************************
+// ********************************************
+
+#ui-datepicker-div {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+    border: solid 1px $grey;
+
+    .ui-datepicker-header {
+        border-radius: 10px 10px 0 0;
+        padding: 5px 10px;
+        background: $hibbert-light-blue;
+    }
+
+    // table {
+    //     width: 100%;
+    //     min-width: 100px !important;
+    //     max-width: 320px !important;
+    // }
+
+    // .ui-datepicker-calendar {
+    //     width: 100%;
+    //     max-width: 320px;
+    //     border: solid 1px $grey;
+
+    //     table {
+    //         min-width: 100px !important;
+    //         max-width: 320px !important;
+    //     }
+    // }
+
+    .ui-datepicker-prev {
+        float: left;
+        color: $white;
+    }
+
+    .ui-datepicker-next {
+        float: right;
+        color: $white;
+    }
+
+    .ui-datepicker-title {
+        text-align: center;
+    }
+}

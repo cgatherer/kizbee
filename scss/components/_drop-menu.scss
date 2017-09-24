@@ -1,0 +1,148 @@
+.dropbtn {
+    color: white;
+    padding: 20px 16px 16px 16px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    height: 57px;
+}
+
+.short-drop {
+    max-height: 300px;
+}
+
+.dropbtn2 {
+    color: white;
+    padding: 20px 16px 16px 16px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    height: 57px;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    padding: 0px 0px;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    list-style: none;
+    // :hover {
+    //     background-color: $light-grey;
+    // }
+}
+
+.dropdown2 {
+    padding: 0px 0px;
+    position: absolute;
+    right: 115px;
+    top: 0;
+    list-style: none;
+    i:hover {
+        background-color: $light-grey;
+    }
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $white;
+    min-width: 380px;
+    box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    color: $black;
+    right: 0px;
+    top: 57px;
+    z-index: 100;
+    overflow-y: scroll;
+    max-height: 100%;
+    bottom: auto;
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: $white;
+    min-width: 220px;
+    box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    color: $black;
+    right: 63px;
+    top: 57px;
+    z-index: 100;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: $black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content2 a {
+    color: $black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: $light-grey;
+}
+
+.dropdown-content2 a:hover {
+    background-color: $light-grey;
+}
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+.show {
+    display: block;
+}
+
+.cart-container {
+    height: 200px;
+    background: $black;
+    color: $white;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+}
+
+.cart-menu {
+    display: table;
+    width: 100%;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.close-menu {
+    display: table-cell;
+    text-align: right;
+    width: 50px;
+    float: right;
+    top: -20px;
+    position: relative;
+}
+
+.thumb {
+    vertical-align: middle;
+    margin-right: 5px;
+    display: table-cell;
+    margin: 0;
+    width: 60px;
+}

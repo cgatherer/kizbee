@@ -1,0 +1,25 @@
+.grid {
+    @include clearfix;
+    .item {
+        float: left;
+        @include imagegrid(5, $margin); //the first integer is the # of columns
+        @include responsive($xbig-break) {
+            @include imagegrid(4, $margin);
+        }
+        @include responsive($big-break) {
+            @include imagegrid(3, $margin);
+        }
+        @include responsive($small-break) {
+            @include imagegrid(2, $margin);
+        }
+        @include responsive($tiny-break) {
+            @include imagegrid(1, $margin);
+            margin: 2.1722% 0;
+        }
+    }
+    img {
+        display: block;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+}

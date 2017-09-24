@@ -1,0 +1,253 @@
+.picker {
+    font-size: 1em;
+    text-align: left;
+    line-height: 1.2;
+    color: $light-black;
+    position: relative;
+    z-index: 1000;
+}
+
+.picker__input.picker__input--active {
+    border-color: #0089ec
+}
+
+.picker__holder {
+    width: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+// Reset
+.picker {
+    width: 100%;
+}
+
+.picker__holder {
+    position: absolute;
+    background: $white;
+    border: 1px solid #aaa;
+    border-top: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: 225px;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
+    max-height: 0;
+    -ms-filter: "alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    opacity: 0;
+    -webkit-transform: translateY(-1em) perspective(600px) rotateX(10deg);
+    -moz-transform: translateY(-1em) perspective(600px) rotateX(10deg);
+    transform: translateY(-1em) perspective(600px) rotateX(10deg);
+    -webkit-transition: all .15s ease-out, max-height 0 .15s;
+    -moz-transition: all .15s ease-out, max-height 0 .15s;
+    transition: all .15s ease-out, max-height 0 .15s;
+}
+
+.picker--opened .picker__holder {
+    max-height: 25em;
+    -ms-filter: "alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+    -webkit-transform: translateY(0) perspective(600px) rotateX(0);
+    -moz-transform: translateY(0) perspective(600px) rotateX(0);
+    transform: translateY(0) perspective(600px) rotateX(0);
+    -webkit-transition: all .15s ease-out, max-height 0;
+    -moz-transition: all .15s ease-out, max-height 0;
+    transition: all .15s ease-out, max-height 0;
+    -webkit-box-shadow: 0 6px 18px 1px rgba(0, 0, 0, .12);
+    -moz-box-shadow: 0 6px 18px 1px rgba(0, 0, 0, .12);
+    box-shadow: 0 6px 18px 1px rgba(0, 0, 0, .12);
+}
+
+.picker__list {
+    list-style: none;
+    padding: 0 0 .8em;
+    margin: 0;
+
+    li {
+        color: white;
+        &:nth-child(-n+34) {
+            background: $navy;
+            &:hover {
+                background-color: $hibbert-light-blue;
+            }
+        }
+    }
+
+    small {
+        color: white;
+        float:right;
+    }
+    // li {
+    //     color: white;
+    //     &:nth-child(-n+16) {
+    //         background: $navy;
+    //         &:hover {
+    //             background-color: lighten(navy, 50%);
+    //         }
+    //     }
+    //     &:nth-child(n+17):nth-child(-n+24) {
+    //         background: $blue;
+    //         &:hover {
+    //             background-color: lighten(darkblue, 60%);
+    //         }
+    //     }
+    //     &:nth-child(n+25):nth-child(-n+42) {
+    //         background: $aqua;
+    //         &:hover {
+    //             background-color: darken(lightblue, 10%);
+    //         }
+    //     }
+    //     &:nth-child(n+43):nth-child(-n+59) {
+    //         background: $yellow;
+    //         &:hover {
+    //             background-color: $orange;
+    //         }
+    //     }
+    //     &:nth-child(n+60):nth-child(-n+70) {
+    //         background: $orange;
+    //         &:hover {
+    //             background-color: $red;
+    //         }
+    //     }
+    //     &:nth-child(n+71):nth-child(-n+80) {
+    //         background: $red;
+    //         &:hover {
+    //             background-color: $maroon;
+    //         }
+    //     }
+    //     &:nth-child(n+81):nth-child(-n+90) {
+    //         background: $maroon;
+    //         &:hover {
+    //             background-color: $navy;
+    //         }
+    //     }
+    //     &:nth-child(n+90):nth-child(-n+96) {
+    //         background: $navy;
+    //         &:hover {
+    //             background-color: lighten(navy, 50%);
+    //         }
+    //     }
+    //     &:nth-child(49) {
+    //         background: yellow!important;
+    //         color: orange;
+    //         border-top: 3px dotted $yellow;
+    //         border-bottom: 3px dotted $yellow;
+    //         &:hover {
+    //             background-color: darken(yellow, 50%);
+    //             color: $red;
+    //         }
+    //     }
+    //     &:nth-child(50) {
+    //         border-top: none;
+    //     }
+    // }
+}
+
+.picker__list-item {
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    margin-bottom: -1px;
+    position: relative;
+    background: #fff;
+    padding: .75em 1.25em;
+    &:hover {
+        cursor: pointer;
+        color: #000;
+        // background: #b1dcfb;
+        // border-color: #0089ec;
+        z-index: 10;
+    }
+    @media (min-height:40.125em) {
+        .picker__list-item {
+            padding: .5em 1em;
+        }
+    }
+}
+
+.picker__list-item--selected,
+.picker__list-item--selected:hover {
+    border-color: #0089ec;
+    z-index: 10;
+}
+
+.picker__list-item--highlighted {
+    background: #b1dcfb;
+}
+
+.picker__list-item--highlighted:hover,
+.picker--focused .picker__list-item--highlighted {
+    background: #0089ec;
+    color: #fff;
+}
+
+.picker__list-item--disabled,
+.picker__list-item--disabled:hover {
+    background: whitesmoke;
+    border-color: whitesmoke;
+    color: #ddd;
+    cursor: default;
+    border-color: #777;
+    z-index: auto;
+}
+
+.picker--time .picker__button--clear {
+    display: block;
+    width: 80%;
+    margin: 1em auto 0;
+    padding: 1em 1.25em;
+    background: 0;
+    border: 0;
+    font-weight: 500;
+    font-size: .67em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.picker--time .picker__button--clear:hover,
+.picker--time .picker__button--clear:focus {
+    cursor: pointer;
+    color: #000;
+    background: #b1dcfb;
+    background: #e20;
+    border-color: #e20;
+    cursor: pointer;
+    color: #fff;
+    outline: 0;
+}
+
+.picker--time .picker__button--clear:before {
+    top: -.25em;
+    color: #666;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+.picker--time .picker__button--clear:hover:before,
+.picker--time .picker__button--clear:focus:before {
+    color: #fff;
+}
+
+.picker--time {
+    min-width: 256px;
+}
+
+.picker--time .picker__holder {
+    background: #f2f2f2;
+}
+
+@media (min-height:33.875em) {
+    .picker--time .picker__holder {
+        font-size: .875em;
+    }
+}
+
+.picker--time .picker__box {
+    padding: 0;
+}

@@ -1,0 +1,299 @@
+/* ==========================================
+    @Mixins 
+=========================================== */
+
+@mixin clear-center($axis: "both") {
+    position: relative;
+    @if $axis=="y" {
+        top: 0%;
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+    @if $axis=="x" {
+        left: 0%;
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%); 
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+    @if $axis=="both" {
+        top: 0%;
+        left: 0%;
+        -webkit-transform: translate(0%, 0%);
+        -moz-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        -o-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+}
+
+@mixin center($axis: "both") {
+    position: absolute;
+    @if $axis=="y" {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    @if $axis=="x" {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    @if $axis=="both" {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+@mixin center-menu($xy:xy) {
+    @if $xy == xy {
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        right: auto;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    
+    @else if $xy == x {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+    
+    @else if $xy == y {
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+    }
+}
+
+.center {
+    @include center;
+    width: 100%;
+    max-width: $max-width;
+}
+
+@media screen and (max-height: $sixplus) {
+    .clear-center {
+        @include clear-center;
+        margin-bottom: $margin * 2!important;
+    }
+}
+
+@mixin clearfix {
+    zoom: 1;
+    &:before,
+    &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.clearfix,
+.header,
+.center,
+.container,
+.group,
+.grid {
+    @include clearfix;
+}
+
+// Responsive mixins
+@mixin responsive($res) {
+    @media screen and (max-width: $max-width) {
+        @content;
+    }
+}
+
+@mixin mobilefirst($res) {
+    @media screen and (min-width: $small-break) { 
+        @content;
+    }
+}
+
+@mixin ipadfirst($res) {
+    @media screen and (max-width: $big-break) { 
+        @content;
+    }
+}
+
+@mixin ipadfirst($res) {
+    @media screen and (max-width: $big-break) { 
+        @content;
+    }
+}
+
+// Responsive Break points
+@mixin atTiny {
+    @media screen and (min-width: $tiny-break) {
+        @content;
+    }
+}
+
+@mixin atSixplus {
+    @media screen and (min-width: $sixplus) {
+        @content;
+    }
+}
+
+@mixin atSmall {
+    @media screen and (min-width: $small-break) {
+        @content;
+    }
+}
+
+@mixin atMedium {
+    @media screen and (min-width: $big-break) {
+        @content;
+    }
+}
+
+@mixin atLarge {
+    @media screen and (min-width: $xbig-break) {
+        @content;
+    }
+}
+
+@mixin atXlarge {
+    @media screen and (min-width: $max-width) {
+        @content;
+    }
+}
+
+@mixin truncate {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin shadow {
+    box-shadow: $silver 1px 1px 3px;
+}
+
+@mixin box-shadow {
+    box-shadow: $base-box-shadow;
+}
+
+@mixin border-radius {
+    border-radius: $br;
+}
+
+@mixin transition {
+    transition: $base-transition;
+}
+
+@mixin transition-in-out {
+    transition: $easeInOut-transition;
+}
+
+@mixin text-shadow {
+    text-shadow: 2px 2px 20px #000;
+}
+
+// Material design Shadow 
+@mixin shadow($level: 1) {
+    @if $level==1 {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+    @else if $level==2 {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+    @else if $level==3 {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+    @else if $level==4 {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+    @else if $level==5 {
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    }
+}
+
+@mixin box-shadow {
+    box-shadow: $black 2px 2px 3px;
+}
+
+// lets mack some classes to quickly apply to block elements
+.shadow-1 {
+    display: block;
+    @include shadow(1);
+}
+
+.shadow-2 {
+    display: block;
+    @include shadow(2);
+}
+
+.shadow-3 {
+    display: block;
+    @include shadow(3);
+}
+
+.shadow-4 {
+    display: block;
+    @include shadow(4);
+}
+
+.shadow-5 {
+    display: block;
+    @include shadow(5);
+}
+
+.shadow-hover {
+    display: block;
+    transition: all 250ms;
+    @include shadow;
+    // @include transition(all 250ms);
+    &:hover {
+        @include shadow(2);
+        cursor: pointer;
+    }
+}
+
+// Image Grid
+@mixin imagegrid($qty, $margin) {
+    width: ((100% - (($qty - 1) * $margin))/$qty);
+    &:nth-child(n) {
+        margin-right: $margin;
+        margin-bottom: $margin;
+    }
+    &:nth-child(#{$qty}n) {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+}
+
+// Table row count
+@mixin row-count {
+    td:first-child::before {
+        content: counter(rowNumber, decimal);
+        min-width: 1em;
+        margin-right: 0.5em;
+        font-weight: bold;
+    }
+}
+
+.row-count {
+    @include row-count;
+}

@@ -1,0 +1,422 @@
+//**
+// Form Elements
+//**
+label {
+    // margin-bottom: 5px;
+    display: block;
+}
+
+input[type=text],
+input[type=email],
+input[type=phone],
+input[type=password],
+input[type=number],
+input[type=search],
+textarea,
+select {
+    @include border-radius;
+    border: 1px solid $silver;
+    line-height: 1.2em!important;
+    outline: none;
+    padding: 5px 10px;
+    width: 100%;
+    background-color: $white;
+    height: 45px;
+    overflow: hidden;
+    // font-size: 1.2em;
+    @include responsive($small-break) {
+        // height: 2.5em;
+    }
+    &:focus {
+        border-color: $primary-color;
+    }
+    &.full-width {
+        width: 100%;
+    }
+}
+
+.master-number {
+
+    &_extra {
+        margin-top: 15px;
+        @include border-radius;
+        border: 1px solid $silver;
+        line-height: 1.2em!important;
+        outline: none;
+        padding: 5px 10px;
+        width: 100%;
+        background-color: $white;
+        height: 45px;
+        overflow: hidden;
+        // font-size: 1.2em;
+        @include responsive($small-break) {
+            height: 2.5em;
+        }
+        &:focus {
+            border-color: $primary-color;
+        }
+        &.full-width {
+            width: 100%;
+        }
+    }
+
+    &_extra:after {
+        content: 'X';
+    }
+
+    &_add {
+        cursor:pointer;
+    }
+
+    &_remove {
+        cursor:pointer;
+    }
+
+    &_close {
+        float: right;
+        position: relative;
+        right: -20px;
+        top: -40px;
+        cursor: pointer;
+    }
+
+    &_color {
+        background-color: $primary-color !important;
+    }
+}
+
+select {
+    padding: 2px 7px;
+}
+
+option {
+    width: 100%;
+}
+
+textarea {
+    min-height: $line-height*2.3!important;
+    resize: none;
+}
+
+form {
+    p {
+        padding: 0;
+        margin: 0;
+    }
+    // Wrap each form input/element in a field div
+    .field {
+        margin-bottom: $padding/2;
+        min-height: 55px !important;
+    }
+    // Notes go under the input fields
+    .hint {
+        color: $subtle-color;
+        margin-top: 5px;
+    }
+    // Required label
+    .is-required {
+        font-style: italic;
+    }
+    // Required Red Asterisk "*"
+    .required {
+        &:after {
+            content: " *";
+            color: $red;
+        }
+    }
+    // Validation, add error class to the item div
+    .has-error {
+        // Validation reason
+        .error-description {
+            color: #ccc;
+            margin-top: 5px;
+        }
+        input[type=text],
+        input[type=email],
+        input[type=phone],
+        input[type=password],
+        input[type=number],
+        input[type=search],
+        textarea {
+            border-color: $danger-color;
+        }
+    }
+    .checkbox,
+    .radio {
+        input[type=radio],
+        input[type=checkbox],
+        label {
+            display: inline-block;
+            font-weight: 400;
+        }
+    }
+}
+
+.field {
+    margin-bottom: 15px;
+    label {
+        color: $light-black;
+        float: left;
+        width: 100%;
+        text-align: left!important;
+        font-weight: bold;
+        margin-bottom: 3px;
+    }
+}
+
+.text {
+    margin: 15px 0;
+    -ms-word-break: break-all;
+    word-break: hyphens;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+.month {
+    width: 33% !important;
+    margin-right: 2% !important;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left !important;
+}
+
+.day {
+    width: 33% !important;
+    margin-right: 2% !important;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left !important;
+}
+
+.year {
+    width: 30% !important;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left !important;
+}
+
+.check-with-label:checked + .label-for-check {
+    font-weight: 500;
+}
+
+// Dropdown Multi Select 
+.dropdown dd,
+.dropdown dt {
+    margin: 0px;
+    padding: 0px;
+}
+
+.dropdown ul {
+    margin: -1px 0 0 0;
+}
+
+.dropdown dd {
+    position: relative;
+}
+
+.dropdown a,
+.dropdown a:visited {
+    color: $white;
+    text-decoration: none;
+    outline: none;
+    font-size: 12px;
+}
+
+.dropdown dt a {
+    background-color: $white;
+    display: block;
+    height: 32px;
+    overflow: hidden;
+    border: 1px solid #CCCCCC;
+    width: 100%;
+    float: left;
+    margin: 0 0 15px 0;
+    @include border-radius;
+}
+
+.dropdown dt a span,
+.mutliSelect span {
+    cursor: pointer;
+    display: inline-block;
+    color: #333;
+    font-size: 1.3em;
+    padding: 7px;
+}
+
+.dropdown dd ul {
+    position: absolute;
+    top: 43px;
+    left: 0px;
+    margin: 0;
+    background-color: $white;
+    list-style: none;
+    display: none;
+    border: 1px solid #CCCCCC;
+    border-top: none;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 0px 10px 10px 10px;
+    z-index: 1;
+    @include responsive($small-break) {
+        top: 45px;
+        margin: 0;
+    }
+}
+
+.dropdown span.value {
+    display: none;
+}
+
+.dropdown dd ul li a {
+    padding: 10px 0;
+    display: block;
+}
+
+.dropdown dd ul li a:hover {
+    background-color: $white;
+    padding: 0;
+}
+
+.mutliSelect {
+    li {
+        margin: 15px 0 0;
+        color: $light-black;
+        font-weight: 400;
+    }
+    input[type=checkbox] {
+        margin-right: 10px;
+    }
+}
+
+.dropdown.mutliSelect span {
+    padding: 0;
+}
+
+@include responsive($small-break) {
+    #timeFrameUnit {
+        margin: 20px 0;
+    }
+}
+
+// INDEX SEARCH BOX  **************************************************************************
+.site-search {
+    // setting up defaults
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    select,
+    textarea,
+    .field {
+        font-family: "fontawesome";
+        display: block;
+        height: 31px;
+        line-height: 1em;
+        padding: 0 12px;
+        margin-bottom: 14px;
+        font-size: 1em;
+        color: $blue;
+        vertical-align: middle;
+        box-shadow: none;
+        border: 0;
+        border-radius: 0px;
+        width: 100%;
+        font-family: $header-font-stack;
+        background-color: $white;
+        border-bottom: 3px solid #90adc7;
+        @include transition-in-out;
+        &:focus,
+        &:active {
+            background-color: #e1e8ec;
+            border-bottom: 3px solid $blue;
+            outline: none;
+            font-weight: 100;
+        }
+        &.error,
+        &.is-invalid {
+            color: $danger-color;
+            border-color: $danger-color;
+            background-color: $white;
+            background-position: 99% center;
+            background-repeat: no-repeat;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDREQkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDREQ0YwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3ODRGRkE2RjA0QTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERBRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+U8iT5wAAAedJREFUeNqk1U9I02Ecx/HtV3aIFAc1hcRDUoGXRAq0oNLA2CrsEFmHbikZu0iQYIFGYAiegkCpLipBxPpDEBMUzB0EhSG2LhG7hMR2GviPgUTvB57Bw8P3+U23B16HPX8+e/b8nt93wezZSMCnhXETF3AcB5BDCnH8Dq98ExcGHcFn8Ah3cdDni+fxnPDv9oAnTB7CKu6VCFXtChZy56LxUjt+jfuB8toSOth9wd7xWAWhqrUjYR/FRTwWJm+iIPT/w7bQf5ljiZnBg45dtKFX6H+LU8gIY8OEV6vgTkStwXWE8BPTGDHGPqNPz2mCfSOOYkA99TvCt1bhGPL68zMcwmncMuape10jrI+q4BbHi/FLn31S9z2x5tRhTc+1W506ipM+T3oRD4X+8+qtc4SqFvL0z/Fr14S+Szjis8bz9Lvvaq8cwS/wwGfdlqfPSWqTiFlX77o13u9Ym1PBs8JAytpRoy44X9Ft9E/gvbA+rYKn8NcaaMVc8UHgBw4b9/iqUQZ6hOAJFbyDcUflmsEX4a6+wTtHGfhAIUqa1U29Zc2BytouThD8x6xuN5CtMPi2CrXLZkZf/HyZoRFCP7n+QVR4PV7uI/AjGghN7OU/r1ilnqILtfpNC+o6vIFljBKYlhb/F2AAgaBsWR5wRiIAAAAASUVORK5CYII=);
+            outline-color: $danger-color;
+        } // end invalid input
+        // success notification
+        &.success,
+        &.is-valid {
+            color: $success-color;
+            border-color: $success-color;
+            background-color: $white;
+            background-position: 99% center;
+            background-repeat: no-repeat;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDRERkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDRFMEYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY0MzQ0NERERjA0QjExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERFRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+7olkTQAAAfhJREFUeNqklU9oE0EUhzdroWjw0tBeWlDxkEaIp55TsCU9VKIgCrHBelA8CQ1Kr1WPbZrQ3gqtQqvGqxpQc2jBk6BIIaAGD4qNCKURpDSKiPi98gLDsJt//uBjsztvfnk7895sIPAw6/joGMThFJyAXn2+A+9gA57/TaY/eU0OeBgfhGm4DiGnsb7DAszxBz/NAdcKjMJLuNWCqagHbsscN5+L+hmH4QkMOe1L5jzFfNA2PgT34ajTuY7AGuZB0/hmh5m+gS0r8xv1zRvg+gGCHZiOwnF4DP3iB3sQkYxPd2C6CWfhB9Xwlus5+K1j4jXuaq3a+gM1H9OPcAa+7q9lPidZJqHbiIm7Wg22rsEI7FrPSzAMX/T+ADyAKSsu7Fr1KplehLvwCs5DvfBf65p+MypqRbO1FXK9utH4/QKuaqYTsG3E3INJv00Q46px3+XxanJ/Ute2/vqP4FKDza2KcdljIKdnhS0xXYULTaqmLMZFn8FFSFtvt6x70ExFCS5oUXspq2ssa7oEl1swFa+CGFdgtkHgPDyDKy02zyxNU6lXRUZb1EuHYayNNs+Yh5B0WQo+/8fpJnNTZFuzz2OpjoQ2QruSOQlMy35fEGmEGMxY9e1brxobw7TkWA1h6xfckUPb+JhGoE/Hpfvew7qUld/H9J8AAwDpw3WYrxcZ3QAAAABJRU5ErkJggg==);
+            outline-color: $success-color;
+        } // end valid input
+        // a disabled input
+        &[disabled],
+        &.is-disabled {
+            cursor: not-allowed;
+            border-color: $subtle-color;
+            opacity: 0.6;
+            &:focus,
+            &:active {
+                background-color: $info-color;
+            } // end disabled focus
+        } // end disabled input
+    } // end input defaults
+    button {
+        margin-top: -53px;
+        color: $primary-color;
+        margin-right: 5px;
+    }
+} //end site-search
+.sm-field {
+    height: 30px !important;
+    width: 60px !important;
+}
+
+.readonly {
+    border: none !important;
+
+    &_noedit {
+      border: none !important;  
+    }
+
+    &_addr {
+       border: none !important; 
+    }
+}
+
+.has-error {
+    border-color: $red !important;
+}
+
+//     ::-webkit-input-placeholder {
+//     /* Chrome/Opera/Safari */
+//     color: $black;
+// }
+// ::-moz-placeholder {
+//     /* Firefox 19+ */
+//     color: $black;
+// }
+// :-ms-input-placeholder {
+//     /* IE 10+ */
+//     color: $black;
+// }
+// :-moz-placeholder {
+//     /* Firefox 18- */
+//     color: $black;
+// }

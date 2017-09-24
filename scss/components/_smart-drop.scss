@@ -1,0 +1,53 @@
+.flexselect_dropdown {
+    display: none;
+    position: fixed;
+    z-index: 1500;
+    margin: 0;
+    padding: 0;
+    border: 1px solid WindowFrame;
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: $white;
+    text-align: left;
+    width: 100%;
+}
+
+.flexselect_dropdown ul {
+    width: 100%;
+    list-style-position: outside;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.flexselect_dropdown li {
+    margin: 0px;
+    padding: 2px 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font: Menu;
+    overflow: hidden;
+}
+
+.flexselect_dropdown li.disabled {
+    cursor: not-allowed;
+    color: GrayText;
+}
+
+.flexselect_selected {
+    background-color: Highlight;
+    color: HighlightText;
+}
+
+.place {
+    position: absolute;
+    right: 30px;
+    margin-top: 12px;
+    pointer-events: none;
+    display: none;
+    @include responsive($small-break) {
+        margin-top: 7px;
+    }
+}

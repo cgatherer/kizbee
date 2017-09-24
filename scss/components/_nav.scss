@@ -1,0 +1,697 @@
+.schema-menu-icon,
+.account-menu-icon {
+    padding: 15px 4px 18px 35px !important;
+    height: 60px!important;
+}
+
+.account-menu,
+.db-schema {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    text-align: left;
+    float: right;
+    z-index: 1;
+    cursor: pointer;
+    ul {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    ul li {
+        display: inline-block;
+        width: 100%;
+        margin-right: 0;
+        position: relative;
+        padding: 15px 20px 15px 5px;
+        cursor: pointer;
+        min-height: 50px-!important;
+        @include transition;
+        @include responsive($tiny-break) {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    ul li:hover {
+        background: $medium-grey;
+        color: $black;
+    }
+    ul li ul {
+        padding: 0;
+        position: absolute;
+        top: 60px;
+        left: -170px;
+        width: 230px;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2;
+    }
+    ul li ul li {
+        background: $white;
+        display: block;
+        color: $black;
+        padding: 17px 20px 15px 15px;
+    }
+    ul li ul li:hover {
+        background: $hibbert-cyan;
+        color: $white;
+    }
+    ul li:hover ul {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+    a {
+        color: $black;
+        text-decoration: none;
+    }
+    i {
+        margin: 8px 18px 0 -12px;
+    }
+    i:hover {
+        color: $white;
+    }
+}
+
+.db-schema {
+    ul li ul {
+        padding: 0;
+        position: absolute;
+        top: 60px;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+//  Hibbert Applications Portal MINI Navigation
+.applications-menu-icon {
+    padding: 18px 21px !important;
+    height: 60px;
+}
+
+.applications-menu {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    text-align: right;
+    float: right;
+    color: $white;
+    @include responsive($small-break) {
+        height: 60px;
+        position: initial;
+    }
+    ul {
+        text-align: left;
+        display: inline-block;
+        margin: 0 5px;
+        padding: 0 5px 0 0;
+        list-style: none;
+    }
+    ul li {
+        display: inline-block;
+        margin-right: -5px;
+        position: relative;
+        width: 60px;
+        cursor: pointer;
+        padding: 10px;
+        @include transition;
+        @include responsive($small-break) {
+            position: initial;
+        }
+    }
+    ul li:hover {
+        background: $medium-grey;
+        color: $white;
+    }
+    ul li i:hover {
+        background: $medium-grey;
+        color: $white;
+    }
+    ul li ul {
+        padding: 0;
+        position: absolute;
+        top: 60px;
+        left: -345px;
+        background: $white;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2;
+        @include transition;
+        @include responsive($small-break) {
+            width: 100%;
+            float: none;
+            left: 0;
+            margin: 0;
+        }
+    }
+    ul li ul li {
+        background: $white;
+        display: block;
+        color: $black;
+        width: 400px;
+        position: initial;
+        @include responsive($small-break) {
+            width: 100%;
+            float: none;
+            margin: 0;
+        }
+    }
+    ul li ul li:hover {
+        background: $hibbert-cyan;
+    }
+    ul li:hover ul {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+    i {
+        text-align: center;
+    }
+}
+
+// Blue Applicitation nav
+nav {
+    background: $hibbert-blue;
+    width: 100%;
+    min-width: 260px;
+    z-index: 1;
+    @include responsive($small-break) {
+        padding: 0 0 0 7px;
+        height: 45px;
+    }
+    ul {
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+    }
+    ul li {
+        display: inline-block;
+        margin-right: 0;
+        position: relative;
+        cursor: pointer;
+        height: 50px;
+        width: 50px;
+        @include transition;
+        &:hover {
+            background: $hibbert-cyan;
+        }
+        @include responsive($small-break) {
+            width: 40px;
+            height: 45px;
+        }
+        @include responsive($tiny-break) {
+            width: 40px;
+            height: 45px;
+        }
+    }
+    @include responsive($small-break) {
+        float: left;
+    }
+    a {
+        color: $white;
+        text-decoration: none;
+        display: block;
+        height: 50px;
+        width: 50px;
+        @include responsive($small-break) {
+            width: 40px;
+        }
+        &:active {
+            outline: none;
+        }
+        &:focus {
+            -moz-outline-style: none;
+        }
+    }
+    i {
+        padding: 18px 15px;
+        i:hover {
+            color: $white;
+        }
+        @include responsive($small-break) {
+            padding: 16px 15px;
+            margin-left: -3px;
+        }
+    }
+}
+
+// White tertiarry nav
+nav.sub-nav {
+    margin-top: 48px;
+    background: $hibbert-cyan;
+    width: 100%;
+    min-width: 320px;
+    position: absolute;
+    ul {
+        padding: 0;
+        position: relative;
+        list-style-type: none;
+    }
+    ul li {
+        @include transition;
+        display: inline-block;
+        margin-right: 0;
+        -moz-margin: -9px 0pt 10px;
+        position: relative;
+        &:hover {
+            background: $hibbert-blue;
+        }
+    }
+    a {
+        @include transition;
+        display: block;
+        height: 45px;
+        &:active {
+            outline: none;
+        }
+        &:focus {
+            -moz-outline-style: none;
+        }
+    }
+    i {
+        @include responsive($small-break) {
+            margin: 16px 0 5px 12px;
+            padding: 0;
+        }
+        @include responsive($tiny-break) {
+            margin: 16px 0 5px 12px;
+            padding: 0;
+        }
+    }
+}
+
+// Push menu 
+
+#cms-logo {
+    display: block;
+    float: left;
+    margin: 13px 0 0 0px;
+    width: 100%;
+    max-width: 265px;
+
+    img {
+        max-height: 42px;
+        margin: 10px 20px 0;
+    }
+
+    @include atMedium {
+        margin: 7px 0 0 30px;
+        max-width: 500px;
+    }
+}
+
+#cms-top-nav {
+    position: absolute;
+    top: 0;
+    right: 120px;
+    height: 100%;
+    display: none;
+
+    li {
+        display: inline-block;
+        margin-right: 1em;
+    }
+
+    a {
+        display: inline-block;
+        padding: .5em;
+        font-size: .5rem;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        &.current {
+            background-color: $white;
+        }
+
+        .no-touch &:hover {
+            color: rgba(#FFF, .7);
+        }
+    }
+
+    .okta {
+        width: 50px;
+        padding: 0;
+
+        img {
+            height: 33px;
+            margin: 0 10px;
+        }
+    }
+
+    @include atMedium {
+        display: block;
+    }
+}
+
+#cms-menu-trigger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 110px;
+    height: 65px;
+    // background-color: $hibbert-light-blue;
+
+    .cms-menu-text {
+        height: 100%;
+        text-transform: uppercase;
+        color: $navy;
+        font-weight: 600;
+        display: none;
+    }
+
+    .cms-menu-icon {
+        /* this span is the central line in the menu menu */
+        display: inline-block;
+        position: absolute;
+        right: 1rem;
+        top: 31px;
+        width: 30px;
+        height: 3px;
+        background-color: $hibbert-light-blue;
+        
+        /* these are the upper and lower lines in the menu menu */
+        &::before, &:after {
+            content: '';
+            width: 100%;
+            height: 100%; 
+            position: absolute;
+            background-color: inherit;
+            left: 0px;
+        }
+        
+        &::before {
+            bottom: 5px;
+        }
+
+        &::after {
+            top: 5px;
+        }
+    }
+
+    &.is-clicked {
+        .cms-menu-icon {
+            background-color: rgba(#FFF, 0);
+
+            &::before, &::after {
+                background-color: $aqua;
+            }
+
+            &::before {
+                bottom: 0;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                top: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    @include atMedium {
+        width: 110px;
+        height: 65px;
+        display: block;
+        padding-left: 1.25em;
+
+        .cms-menu-text {
+            display: inline-block;
+            line-height: $header-M;
+        }
+
+        .cms-menu-icon {
+            left: auto;
+            right: 3rem;
+            transform: translateX(0);
+        }
+    }
+}
+
+#cms-lateral-nav {
+    position: fixed;
+    height: 100%;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+
+    /* the secondary navigation is covered by the main element */
+    z-index: $secondary-nav; 
+    width: 260px;
+    background-color: $white;
+    overflow-y: auto;
+
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: -webkit-transform .4s 0s, visibility 0s .2s;
+    -moz-transition: -moz-transform .4s 0s, visibility 0s .2s;
+    transition: transform .4s 0s, visibility 0s .2s;
+
+    /* Box Shadow */
+    -webkit-box-shadow: 0 0 25px 1px rgba(0,0,0,.5);
+    box-shadow: 0 0 25px 1px rgba(0,0,0,.5);
+
+    /* this creates the subtle slide in animation of the navigation */
+    transform: translateX(80px);
+
+    .cms-navigation {
+        margin: 10px 0 16px;
+
+        li {
+            width: 100%;
+            height: 65px;
+            padding: 10px 0 0 0;
+            font-size: 1rem;
+            border-bottom: solid 1px $grey;
+            transition: all .4s ease, visibility 0s 0s;
+
+            a {
+                color: $grey;
+                border-bottom: solid 5px $white;
+                text-align: center;
+                width: 100%;
+                transition: all .4s ease, visibility 0s 0s;
+
+                &:hover {
+                    color: $hibbert-light-blue;
+                    border-left: solid 5px $hibbert-light-blue;
+                }
+            }
+
+            &:hover {
+                background-color: $white;
+            }
+        }
+    }
+
+    .sub-menu {
+        padding: 0 10px 20px 15px;
+        display: none;
+    }
+
+    a {
+        display: block;
+        line-height: 2em;
+        // padding: 0 16px 0 32px;
+        color: $navy;
+
+        &.current {
+            background-color: lighten($grey, 10%);
+            color: #FFF;
+        }
+
+        .no-touch &:hover {
+            color: #FFF;
+        }
+    } 
+
+    @include atMedium {
+        .cms-navigation {
+            margin: 20px 0;
+            padding: 0 15px;
+
+            li {
+                width: 100%;
+                height: 75px;
+                padding: 20px 0 30px 0;
+                font-size: 1.5rem;
+                border-bottom: solid 1px $grey;
+                transition: all .4s ease, visibility 0s 0s;
+
+                a {
+                    color: $grey;
+                    border-bottom: solid 5px $white;
+                    text-align: center;
+                    width: 100%;
+                    transition: all .4s ease, visibility 0s 0s;
+
+                    &:hover {
+                        color: $hibbert-light-blue;
+                        border-left: solid 5px $hibbert-light-blue;
+                    }
+                }
+
+                &:hover {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+
+    &.lateral-menu-is-open {
+        transform: translateX(0);
+        visibility: visible;
+        -webkit-transition: -webkit-transform .4s 0s, visibility 0s 0s;
+        -moz-transition: -moz-transform .4s 0s, visibility 0s 0s;
+        transition: transform .4s 0s, visibility 0s 0s;
+
+        /* smooth the scrolling on touch devices - webkit browsers */
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.okta-mobile {
+    display: block;
+     img {
+        width: 100%;
+        max-width: 45px;
+     }
+
+    @include atMedium {
+        display: none;
+    }
+}
+
+
+/* style menu items which have a submenu  */
+#cms-lateral-nav .item-has-children > a {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    /* this is the right arrow to show that the item has a submenu  */
+    &::after {
+        content: '';
+        display: block;
+        height: 11px;
+        width: 8px;
+        position: absolute;
+        @include center-menu(y);
+        right: 1em;
+        background: url('../img/cms-arrow.svg') no-repeat center center;
+        background-size: 8px 11px;
+        transition-property: transform;
+        transition-duration: .2s;
+    }
+
+    &.submenu-open::after {
+        transform: translateY(-50%) rotate(90deg);
+
+    }
+}
+
+/* Floating action button SCSS */
+
+.fab {
+    background: $hibbert-light-blue;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: #FFF;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 2rem;
+    font-size: 2rem;
+    display: inline-block;
+    cursor: default;
+
+    @include atMedium {
+        width: 64px;
+        height: 64px;
+        bottom: 48px;
+        right: 48px;
+        font-size: 3rem;
+    }
+
+    .masterfab{
+        position: absolute;
+        padding: 12px 0px 0 0;
+        margin-left: -9px;
+        font-size: 2rem;
+
+        @include atMedium {
+            padding: 22px 0px 0 0;
+            margin-left: -13px;
+            font-size: 3rem;
+        }
+    }
+
+    span {
+        vertical-align: middle;
+    }
+  &.child {
+    background: $hibbert-blue;
+    right: 9.66666667px;
+    width: 42.66666667px;
+    height: 42.66666667px;
+    display: none;
+    opacity: 0;
+    font-size: 2em;
+
+    @include atMedium {
+        right: 58.66666667px;
+        width: 42.66666667px;
+        height: 42.66666667px;
+    }
+
+    i {
+        padding: 14px 0px 0 0;
+        font-size: 1rem;
+        color:$white;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    p {
+        position: absolute;
+        right: 60px;
+        top: 3px;
+        text-align: center;
+        color: $white;
+        font-weight: 300;
+        font-size: .85rem;
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 10px;
+        padding: 10px;
+        width: 165px;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ECECEC;
+  opacity: 0.9;
+  display: none;
+}

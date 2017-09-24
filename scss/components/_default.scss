@@ -1,0 +1,166 @@
+/* Default Style */
+hr {
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    margin: 2.1277%;
+    width: 100%;
+}
+
+.page-details {
+    color: $navy;
+
+    h2{
+        margin: 75px 0 25px;
+        // text-shadow: 1px 1px 1px #000000;
+    }
+}
+
+.button-size {
+    max-width: 100%;
+    padding: 9px 0 !important;
+    display: inline-block;
+
+    @include atMedium {
+        max-width: 150px;
+        padding: 9px 0 !important;
+    }
+}
+
+#upload{
+    display:none
+}
+
+/* New User Panel */
+
+.panel-wrapper {
+    position: fixed;
+    left: 0;
+    // bottom: -185px;
+    bottom: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 200;
+}
+
+.panel-content {
+    overflow: scroll;
+    background-color: $white;
+    padding: 20px;
+    width: 100%;
+    // height: 110vh;
+    height: 100%;
+    border-top: solid 10px $hibbert-light-blue;
+
+    // @include atMedium {
+    //     height: 80vh;
+    //     border-top: solid 15px $hibbert-light-blue;
+    // }
+
+    &_close-panel {
+        font-size: 2.6rem !important;
+        color: $hibbert-light-blue;
+        padding: 0;
+        float: right;
+        margin: 0;
+        border-radius: 30px;
+        height: 33px;
+        cursor: pointer;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.25);
+
+        @include atMedium {
+            font-size: 4rem !important;
+            padding: 11px 0 0 0;
+            float: right;
+            margin: 0;
+            height: 54px;
+        }
+    }
+
+    &__upload {
+        display: none;
+
+        @include atMedium {
+            width: 50%;
+            border: dashed 3px #aaa;
+            margin: 20px auto 0;
+            text-align: center;
+            padding: 25px;
+            border-radius: $big-br;
+            float: left;
+            display: block;
+
+            i {
+                font-size: 5rem;
+                color: $grey;
+            }
+
+            a {
+                color: $hibbert-light-blue !important;
+            }
+        }
+    }
+}
+
+.address-block_title {
+    margin-bottom: 0;
+    padding: 10px 0;
+
+    @include atMedium {
+        margin-bottom: 15px;
+        padding: 0;
+    } 
+}
+
+.address-block{
+    background-color: $light-grey;
+    padding:15px;
+    margin: 15px 0;
+
+    @include atMedium {
+        margin: 0;
+    }
+
+    &_add, &_remove {
+        color: $hibbert-light-blue !important;
+        float:left;
+        margin: 0 20px 0 0;
+    }
+
+    &_save a {
+        color: $white !important;
+        margin-left: 0;
+
+        @include atMedium {
+            margin-left: 15px;
+        }
+    }
+}
+
+.expand-all, .collapse-all, .advanced_toggle {
+    cursor: pointer;
+}
+
+.ui-menu {
+    max-width: 1100px;
+    border:solid 1px #ddd;
+}
+
+.ui-menu .ui-menu-item {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+}
+
+.ui-menu-item-wrapper {
+    padding:5px 10px;
+
+    &:hover {
+        color:white !important;
+        background: $hibbert-light-blue !important;
+    }
+}
+
+

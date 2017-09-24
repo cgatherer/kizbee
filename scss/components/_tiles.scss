@@ -1,0 +1,208 @@
+.tiles {
+    display: block;
+    width: 100%;
+    @include clearfix;
+    // @include responsive($big-break) {
+    //     margin: 125px 0px 0px 0px !important;
+    //     padding: 15px 0 0px 15px !important;
+    // }
+    // @include responsive($small-break) {
+    //     margin: 50px auto 0 !important;
+    //     padding: 0 !important;
+    // }
+    // @include responsive($tiny-break) {
+    //     margin: 125px auto 0 !important;
+    //     padding: 0 !important;
+    // }
+}
+
+.home-container {}
+
+.tile-container {
+    margin: 0 auto 0;
+    padding: 50px 0 0 0;
+    min-width: 320px;
+    @include responsive($big-break) {
+        height: 100% !important;
+        display: block;
+        padding: 25px 15px 0px 0px;
+    }
+    @include responsive($small-break) {
+        height: 100% !important;
+        display: block;
+        padding: 15px 0px 0px 0px;
+    }
+    @include responsive($tiny-break) {
+        height: 100% !important;
+        display: block;
+        padding: 15px 0px 0px 0px;
+        margin: -105px 0 0 0;
+    }
+    h2 {
+        color: $hibbert-blue;
+        padding-left: 15px;
+    }
+}
+
+.home-tiles {
+    width: 100%;
+    margin: 0 auto 20px;
+    max-width: 1200px;
+
+    @include mobilefirst($big-break) {
+        margin: 100px auto;
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+        display: block!important;
+        height: 100%!important;
+        width: 100%!important;
+    }
+
+    p {
+        color: $white;
+        font-size: 1.25rem;
+        margin: 15px 0 0 0;
+        line-height: 1.1em
+    }
+
+    h1 {
+        color: $white;
+        font-weight: bold;
+        margin: 0vw;
+        line-height: .9em;
+    }
+
+    h2 {
+        color: $white;
+        font-weight: bold;
+        margin: 0vw;
+        line-height: .9em;
+        text-align: left;
+        text-transform: uppercase;
+
+        @include responsive($tiny-break) {
+            font-size: 1.4rem;
+        }
+    }
+
+    h3 {
+        color: $white;
+        font-weight: bold;
+        margin: 0vw;
+        line-height: .9em;
+    }
+
+    ul {
+        padding: 0;
+        @include responsive($big-break) {
+            position: relative;
+            margin: 0 auto 20px;
+            padding: 0!important;
+            min-width: 250px;
+        }
+        @include responsive($small-break) {
+            position: relative;
+            margin: 12px auto 20px;
+            min-width: 250px;
+        }
+        @include responsive($tiny-break) {
+            position: relative;
+            margin: 12px auto 20px;
+            padding: 0px 0px !important;
+            min-width: 250px;
+        }
+    }
+
+    li {
+        padding: 1em;
+        background-color: $hibbert-blue;
+        height: 0;
+        padding-bottom: 27%;
+        position: relative;
+        min-height: 200px;
+        max-height: 200px;
+        list-style: none;
+        cursor: pointer;
+        margin-bottom: 15px;
+        border-radius: $big-br;
+
+        @include atMedium {
+            min-height: 250px;
+            max-height: 250px;
+        }
+
+        @include atLarge {
+            min-height: 320px;
+            max-height: 320px;
+        }
+        
+        @include box-shadow;
+        &:hover {
+            background-color: $hibbert-cyan;
+            transition: background .15s ease;
+            @include box-shadow;
+        }
+        h3 {
+            font-size: 18px;
+            line-height: normal;
+            margin-bottom: 5px;
+        }
+        i {
+            position: absolute;
+            bottom: 15px;
+            margin: 0 0 -35px 0;
+            line-height: 3em;
+            color: $white;
+            font-size: 1.75rem;
+        }
+        @include responsive($big-break) {
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    img {
+        text-align: center;
+    }
+}
+
+.span6.home-tile {
+    min-height: 274px;
+    @include responsive($small-break) {
+        min-height: 175px;
+    }
+    p {
+        margin: 15px 0;
+        line-height: 1.25em;
+    }
+}
+
+.inactive-tile {
+    background-color: $grey!important;
+    @include box-shadow;
+    &:hover {
+        cursor: no-drop;
+    }
+    p, h3, i {
+        &:hover {
+            cursor: no-drop;
+        }
+    }
+}
+
+#transition-hover-content {
+    opacity: 0;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    transition: .5s;
+}
+
+#transition-hover:hover #transition-hover-content {
+    opacity: 1;
+}
