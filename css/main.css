@@ -611,9 +611,9 @@ input {
   font-family: 'FontAwesome', arial, sans-serif; }
 
 /* Default Style */
-.ab-item {
-  top: -30px;
-  position: relative; }
+#wpadminbar .ab-top-secondary {
+  float: right;
+  top: -35px !important; }
 
 hr {
   border: 0;
