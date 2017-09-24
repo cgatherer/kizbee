@@ -58,7 +58,7 @@
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 	  <?php
 			endif; ?>
-			
+
       <!-- <a id="cms-logo" href="landing-page.html"><img src="<?php echo get_template_directory_uri(); ?>/img/Hibbert_CMS_logo.svg" alt="Homepage"></a> -->
       
       <!-- Okta -->
@@ -76,6 +76,12 @@
 
     <!-- Push Nav -->
     <nav id="cms-lateral-nav">
+		<?php
+			wp_nav_menu( array(
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu', 
+			));
+		?>
       <ul class="cms-navigation">
         <li><a href="#">Account Settings</a></li>
         <li><a href="#">Administration</a></li>
