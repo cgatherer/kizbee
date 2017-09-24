@@ -24,13 +24,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
+	<!-- Styles -->
+  	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+  	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+  	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/font-awesome.min.css">
+
 	<!-- Scripts -->
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.js"></script>
   	<script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
 
 
-	<?php wp_head(); ?>
+	<?php //wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
