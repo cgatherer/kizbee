@@ -125,7 +125,7 @@ function kizbees_kitchen_scripts() {
 
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js' );
 
-	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.11.2.js', array(), '1112', true );
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.11.2.js' );
 
 	// wp_enqueue_script( 'kizbees_kitchen-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
