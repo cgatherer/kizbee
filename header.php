@@ -79,10 +79,11 @@
 		<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu', 
+				'menu_class'        => 'cms-navigation',
+                'items_wrap'      => '<li>%3$s</li>'
 			));
 		?>
-      <ul class="cms-navigation">
+      <!-- <ul class="cms-navigation">
         <li><a href="#">Account Settings</a></li>
         <li><a href="#">Administration</a></li>
         <li><a href="#">Notification</a></li>
@@ -90,7 +91,7 @@
         <li><a href="#">Privacy</a></li>
         <li><a href="#">Help</a></li>
         <li><a href="#">Logout</a></li>
-      </ul> 
+      </ul>  -->
     </nav>
 
 	<!-- <header id="masthead" class="site-header">
