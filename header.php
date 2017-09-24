@@ -70,7 +70,7 @@
       
       <!-- Menu -->
       <div class="dropdown">
-        <a id="cms-menu-trigger" href="#"><p>Menu</p> <span class="cms-menu-icon"></span></a>
+        <a id="cms-menu-trigger" href="#"><span class="cms-menu-text">Menu</span><span class="cms-menu-icon"></span></a>
       </div>
     </header>
 
@@ -79,8 +79,8 @@
 		<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
-				'menu_class'        => 'cms-navigation',
-                'items_wrap'      => '<li>%3$s</li>'
+				'menu_class'     => 'cms-navigation',
+                'items_wrap'     => '<li>%3$s</li>'
 			));
 		?>
     </nav>
