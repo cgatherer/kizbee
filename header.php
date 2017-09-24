@@ -33,12 +33,12 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'kizbees_kitchen' ); ?></a>
 
 	<header role="banner" class="suite-header-bar clearfixshadow-1">
-      <a id="cms-logo" href="landing-page.html"><img src="img/Hibbert_CMS_logo.svg" alt="Homepage"></a>
+      <a id="cms-logo" href="landing-page.html"><img src="<?php echo get_template_directory_uri(); ?>/img/Hibbert_CMS_logo.svg" alt="Homepage"></a>
       
       <!-- Okta -->
       <div id="cms-top-nav"> 
         <ul>
-          <li><a class="okta" href="https://hibbert.okta.com/" target="_blank"><img src="img/Hibbert_okta.svg" alt="Homepage"></a></li>
+          <li><a class="okta" href="https://hibbert.okta.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/Hibbert_okta.svg" alt="Homepage"></a></li>
         </ul>
       </div>
       
@@ -58,7 +58,7 @@
         <li><a href="#">Privacy</a></li>
         <li><a href="#">Help</a></li>
         <li><a href="#">Logout</a></li>
-        <li class="okta-mobile"><a class="okta" href="https://hibbert.okta.com/"><img src="img/Hibbert_okta.svg" alt="Homepage"></a></li>
+        <li class="okta-mobile"><a class="okta" href="https://hibbert.okta.com/"><img src="<?php echo get_template_directory_uri(); ?>/img/Hibbert_okta.svg" alt="Homepage"></a></li>
       </ul> <!-- cms-navigation -->
     </nav>
 
