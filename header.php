@@ -28,10 +28,41 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<!-- <div id="page" class="site"> -->
+<main role="main" class="main">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'kizbees_kitchen' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header role="banner" class="suite-header-bar clearfixshadow-1">
+      <a id="cms-logo" href="landing-page.html"><img src="img/Hibbert_CMS_logo.svg" alt="Homepage"></a>
+      
+      <!-- Okta -->
+      <div id="cms-top-nav"> 
+        <ul>
+          <li><a class="okta" href="https://hibbert.okta.com/" target="_blank"><img src="img/Hibbert_okta.svg" alt="Homepage"></a></li>
+        </ul>
+      </div>
+      
+      <!-- Menu -->
+      <div class="dropdown">
+        <a id="cms-menu-trigger" href="#"><span class="cms-menu-icon"></span></a>
+      </div>
+    </header>
+
+    <!-- Push Nav -->
+    <nav id="cms-lateral-nav">
+      <ul class="cms-navigation">
+        <li><a href="#">Account Settings</a></li>
+        <li><a href="#">Administration</a></li>
+        <li><a href="#">Notification</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Logout</a></li>
+        <li class="okta-mobile"><a class="okta" href="https://hibbert.okta.com/"><img src="img/Hibbert_okta.svg" alt="Homepage"></a></li>
+      </ul> <!-- cms-navigation -->
+    </nav>
+
+	<!-- <header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -47,7 +78,7 @@
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php
 			endif; ?>
-		</div><!-- .site-branding -->
+		</div>
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'kizbees_kitchen' ); ?></button>
@@ -57,7 +88,7 @@
 					'menu_id'        => 'primary-menu',
 				) );
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		</nav>
+	</header> -->
 
 	<div id="content" class="site-content">
