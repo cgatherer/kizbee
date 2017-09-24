@@ -123,6 +123,8 @@ function kizbees_kitchen_scripts() {
 
 	wp_enqueue_style( 'woocommerce', get_stylesheet_directory_uri() . '/css/woocommerce.css' );
 
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js' );
+
 	// wp_enqueue_script( 'kizbees_kitchen-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	// wp_enqueue_script( 'kizbees_kitchen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
