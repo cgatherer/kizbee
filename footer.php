@@ -28,6 +28,10 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.nice-select.min.js"></script> 
+<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.11.2.js"></script> 
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 <?php wp_footer(); ?>
 
 </body>
