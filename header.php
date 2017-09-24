@@ -70,7 +70,7 @@
       
       <!-- Menu -->
       <div class="dropdown">
-        <a id="cms-menu-trigger" href="#">Menu <span class="cms-menu-icon"></span></a>
+        <a id="cms-menu-trigger" href="#"><p>Menu</p> <span class="cms-menu-icon"></span></a>
       </div>
     </header>
 
@@ -83,15 +83,6 @@
                 'items_wrap'      => '<li>%3$s</li>'
 			));
 		?>
-      <!-- <ul class="cms-navigation">
-        <li><a href="#">Account Settings</a></li>
-        <li><a href="#">Administration</a></li>
-        <li><a href="#">Notification</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="#">Logout</a></li>
-      </ul>  -->
     </nav>
 
 	<!-- <header id="masthead" class="site-header">
