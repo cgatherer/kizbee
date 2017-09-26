@@ -1351,7 +1351,7 @@ nav.sub-nav {
   max-width: 265px; }
   #cms-logo img {
     max-height: 85px;
-    margin: 10px 20px 0; }
+    margin: 0 20px 0; }
   @media screen and (min-width: 768px) {
     #cms-logo {
       margin: 7px 0 0 30px;
