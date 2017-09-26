@@ -3387,9 +3387,6 @@ header {
     transform: translateX(-260px); }
   header.is-fixed {
     position: fixed; }
-  @media screen and (min-width: 768px) {
-    header {
-      height: 100px; } }
 
 .footer-landing {
   width: 100vw;

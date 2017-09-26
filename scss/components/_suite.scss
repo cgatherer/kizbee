@@ -41,9 +41,9 @@ header {
         position: fixed;
     }
 
-    @include atMedium {
-        height: $header-L;
-    }
+    // @include atMedium {
+    //     height: $header-L;
+    // }
 }
 
 .footer-landing {
