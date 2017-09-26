@@ -3373,8 +3373,7 @@ header {
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   transition-property: transform;
-  transition-duration: .4s;
-  border-bottom: solid 15px #46acdc; }
+  transition-duration: .4s; }
   header:before, header:after {
     content: "\0020";
     display: block;
