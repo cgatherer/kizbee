@@ -18,7 +18,7 @@
  */
 function kizbees_kitchen_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'kizbees_kitchen_custom_header_args', array(
-		'default-image'          => '',
+		'default-image'          => '/wp-content/uploads/2017/01/LOGO-Transparent-e1485136889476.gif',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
