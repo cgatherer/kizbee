@@ -42,13 +42,11 @@
 
 <main role="main" class="main">
 	<header role="banner" class="suite-header-bar clearfixshadow-1">
-			<div class="site-branding">
-				<a id="cms-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/LOGO-Transparent-e1485136889476.gif" alt="home">
-				</a>
-			</div>
-
-      <!-- <a id="cms-logo" href="landing-page.html"><img src="<?php echo get_template_directory_uri(); ?>/img/Hibbert_CMS_logo.svg" alt="Homepage"></a> -->
+		<div class="site-branding">
+			<a id="cms-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/LOGO-Transparent-e1485136889476.gif" alt="home">
+			</a>
+		</div>
       
       <!-- Okta -->
       <div id="cms-top-nav"> 
@@ -59,7 +57,10 @@
       
       <!-- Menu -->
       <div class="dropdown">
-        <a id="cms-menu-trigger" href="#"><span class="cms-menu-text">Menu</span><span class="cms-menu-icon"></span></a>
+        <a id="cms-menu-trigger" href="#">
+        	<span class="cms-menu-text">Menu</span>
+        	<span class="cms-menu-icon"></span>
+        </a>
       </div>
     </header>
 
@@ -73,34 +74,5 @@
 			));
 		?>
     </nav>
-
-	<!-- <header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div>
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'kizbees_kitchen' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav>
-	</header> -->
-
-	<div id="content" class="site-content">
+    
+	<div id="content" class="container">
