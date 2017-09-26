@@ -1431,7 +1431,7 @@ nav.sub-nav {
       transform: rotate(-45deg); }
   @media screen and (min-width: 768px) {
     #cms-menu-trigger {
-      width: 110px;
+      width: 150px;
       height: 65px;
       display: block;
       padding-left: 1.25em; }
