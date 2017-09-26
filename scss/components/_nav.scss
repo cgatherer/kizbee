@@ -372,7 +372,7 @@ nav.sub-nav {
         display: inline-block;
         position: absolute;
         right: 1rem;
-        top: 31px;
+        top: 46px;
         width: 30px;
         height: 3px;
         background-color: $hibbert-light-blue;
@@ -418,7 +418,7 @@ nav.sub-nav {
 
     @include atMedium {
         width: 150px;
-        height: 65px;
+        height: 100px;
         display: block;
         padding-left: 1.25em;
 

@@ -1403,7 +1403,7 @@ nav.sub-nav {
     display: inline-block;
     position: absolute;
     right: 1rem;
-    top: 31px;
+    top: 46px;
     width: 30px;
     height: 3px;
     background-color: #46acdc;
@@ -1432,7 +1432,7 @@ nav.sub-nav {
   @media screen and (min-width: 768px) {
     #cms-menu-trigger {
       width: 150px;
-      height: 65px;
+      height: 100px;
       display: block;
       padding-left: 1.25em; }
       #cms-menu-trigger .cms-menu-text {
