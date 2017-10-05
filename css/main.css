@@ -1119,6 +1119,7 @@ hr {
     padding: 15px 20px 15px 5px;
     cursor: pointer;
     min-height: 50px- !important;
+    list-style: none;
     transition: all 0.2s 0 ease; }
     @media screen and (max-width: 1200px) {
       .account-menu ul li,
@@ -1135,13 +1136,15 @@ hr {
     display: none;
     opacity: 0;
     visibility: hidden;
-    z-index: 2; }
+    z-index: 2;
+    list-style: none; }
   .account-menu ul li ul li,
   .db-schema ul li ul li {
     background: #fff;
     display: block;
     color: #111;
-    padding: 17px 20px 15px 15px; }
+    padding: 17px 20px 15px 15px;
+    list-style: none; }
   .account-menu ul li:hover ul,
   .db-schema ul li:hover ul {
     display: block;

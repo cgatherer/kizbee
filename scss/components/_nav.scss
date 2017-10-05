@@ -27,6 +27,7 @@
         padding: 15px 20px 15px 5px;
         cursor: pointer;
         min-height: 50px-!important;
+        list-style: none;
         @include transition;
         @include responsive($tiny-break) {
             margin: 0;
@@ -47,12 +48,14 @@
         opacity: 0;
         visibility: hidden;
         z-index: 2;
+        list-style: none;
     }
     ul li ul li {
         background: $white;
         display: block;
         color: $black;
         padding: 17px 20px 15px 15px;
+        list-style: none;
     }
     ul li ul li:hover {
         // background: $hibbert-cyan;
