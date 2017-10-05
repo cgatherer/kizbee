@@ -1511,7 +1511,9 @@ nav.sub-nav {
           transition: all .4s ease, visibility 0s 0s; }
           #cms-lateral-nav .cms-navigation li a:hover {
             color: #b10dc9;
-            border-left: solid 5px #b10dc9; } }
+            border-left: solid 5px #b10dc9; }
+        #cms-lateral-nav .cms-navigation li:hover {
+          background-color: none; } }
   #cms-lateral-nav.lateral-menu-is-open {
     transform: translateX(0);
     visibility: visible;
