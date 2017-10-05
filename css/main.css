@@ -1395,7 +1395,7 @@ nav.sub-nav {
   #cms-menu-trigger .cms-menu-text {
     height: 100%;
     text-transform: uppercase;
-    color: #3c71d1;
+    color: #fff;
     font-weight: 600;
     display: none; }
   #cms-menu-trigger .cms-menu-icon {
@@ -1406,7 +1406,7 @@ nav.sub-nav {
     top: 46px;
     width: 30px;
     height: 3px;
-    background-color: #46acdc;
+    background-color: #fff;
     /* these are the upper and lower lines in the menu menu */ }
     #cms-menu-trigger .cms-menu-icon::before, #cms-menu-trigger .cms-menu-icon:after {
       content: '';

@@ -362,7 +362,7 @@ nav.sub-nav {
     .cms-menu-text {
         height: 100%;
         text-transform: uppercase;
-        color: $navy;
+        color: $white;
         font-weight: 600;
         display: none;
     }
@@ -375,7 +375,7 @@ nav.sub-nav {
         top: 46px;
         width: 30px;
         height: 3px;
-        background-color: $hibbert-light-blue;
+        background-color: $white;
         
         /* these are the upper and lower lines in the menu menu */
         &::before, &:after {
