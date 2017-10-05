@@ -1350,7 +1350,7 @@ nav.sub-nav {
   width: 100%;
   max-width: 265px; }
   #cms-logo img {
-    max-height: 85px;
+    max-height: 100px;
     margin: 0 20px 0; }
   @media screen and (min-width: 768px) {
     #cms-logo {
@@ -1403,7 +1403,7 @@ nav.sub-nav {
     display: inline-block;
     position: absolute;
     right: 1rem;
-    top: 46px;
+    top: 65px;
     width: 30px;
     height: 3px;
     background-color: #fff;
@@ -1437,7 +1437,7 @@ nav.sub-nav {
       padding-left: 1.25em; }
       #cms-menu-trigger .cms-menu-text {
         display: inline-block;
-        line-height: 100px; }
+        line-height: 135px; }
       #cms-menu-trigger .cms-menu-icon {
         left: auto;
         right: 3rem;
@@ -1503,7 +1503,6 @@ nav.sub-nav {
         height: 75px;
         padding: 20px 0 30px 0;
         font-size: 1.5rem;
-        border-bottom: solid 1px #aaa;
         transition: all .4s ease, visibility 0s 0s; }
         #cms-lateral-nav .cms-navigation li a {
           color: #fff;
@@ -1511,10 +1510,8 @@ nav.sub-nav {
           width: 100%;
           transition: all .4s ease, visibility 0s 0s; }
           #cms-lateral-nav .cms-navigation li a:hover {
-            color: #46acdc;
-            border-left: solid 5px #46acdc; }
-        #cms-lateral-nav .cms-navigation li:hover {
-          background-color: #fff; } }
+            color: #b10dc9;
+            border-left: solid 5px #b10dc9; } }
   #cms-lateral-nav.lateral-menu-is-open {
     transform: translateX(0);
     visibility: visible;

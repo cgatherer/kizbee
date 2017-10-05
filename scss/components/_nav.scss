@@ -298,7 +298,7 @@ nav.sub-nav {
     max-width: 265px;
 
     img {
-        max-height: $header-M;
+        max-height: $header-L;
         margin: 0 20px 0;
     }
 
@@ -372,7 +372,7 @@ nav.sub-nav {
         display: inline-block;
         position: absolute;
         right: 1rem;
-        top: 46px;
+        top: 65px;
         width: 30px;
         height: 3px;
         background-color: $white;
@@ -424,7 +424,7 @@ nav.sub-nav {
 
         .cms-menu-text {
             display: inline-block;
-            line-height: $header-L;
+            line-height: 135px;
         }
 
         .cms-menu-icon {
@@ -523,7 +523,7 @@ nav.sub-nav {
                 height: 75px;
                 padding: 20px 0 30px 0;
                 font-size: 1.5rem;
-                border-bottom: solid 1px $grey;
+                // border-bottom: solid 1px $grey;
                 transition: all .4s ease, visibility 0s 0s;
 
                 a {
@@ -533,13 +533,13 @@ nav.sub-nav {
                     transition: all .4s ease, visibility 0s 0s;
 
                     &:hover {
-                        color: $hibbert-light-blue;
-                        border-left: solid 5px $hibbert-light-blue;
+                        color: $purple;
+                        border-left: solid 5px $purple;
                     }
                 }
 
                 &:hover {
-                    background-color: $white;
+                    // background-color: $white;
                 }
             }
         }
