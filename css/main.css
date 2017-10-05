@@ -1298,6 +1298,7 @@ hr {
       height: 65px;
       padding: 10px 0 0 0;
       font-size: 1rem;
+      list-style: none;
       border-bottom: solid 1px #aaa;
       transition: all .4s ease, visibility 0s 0s; }
       #cms-lateral-nav .cms-navigation li a {
