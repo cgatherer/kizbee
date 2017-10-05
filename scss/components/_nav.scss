@@ -460,7 +460,7 @@ nav.sub-nav {
     box-shadow: 0 0 25px 1px rgba(0,0,0,.5);
 
     /* this creates the subtle slide in animation of the navigation */
-    transform: translateX(80px);
+    transform: translateX(160px);
 
     .cms-navigation {
         margin: 10px 0 16px;
@@ -527,8 +527,7 @@ nav.sub-nav {
                 transition: all .4s ease, visibility 0s 0s;
 
                 a {
-                    color: $grey;
-                    border-bottom: solid 5px $white;
+                    color: $white;
                     text-align: center;
                     width: 100%;
                     transition: all .4s ease, visibility 0s 0s;
