@@ -475,19 +475,19 @@ nav.sub-nav {
 
             a {
                 color: $grey;
-                border-bottom: solid 5px $white;
+                // border-bottom: solid 5px $white;
                 text-align: center;
                 width: 100%;
                 transition: all .4s ease, visibility 0s 0s;
 
                 &:hover {
-                    color: $hibbert-light-blue;
-                    border-left: solid 5px $hibbert-light-blue;
+                    color: $purple;
+                    border-left: solid 5px $purple;
                 }
             }
 
             &:hover {
-                background-color: $white;
+                // background-color: $white;
             }
         }
     }

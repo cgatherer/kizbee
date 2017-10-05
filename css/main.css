@@ -1476,15 +1476,12 @@ nav.sub-nav {
       transition: all .4s ease, visibility 0s 0s; }
       #cms-lateral-nav .cms-navigation li a {
         color: #aaa;
-        border-bottom: solid 5px #fff;
         text-align: center;
         width: 100%;
         transition: all .4s ease, visibility 0s 0s; }
         #cms-lateral-nav .cms-navigation li a:hover {
-          color: #46acdc;
-          border-left: solid 5px #46acdc; }
-      #cms-lateral-nav .cms-navigation li:hover {
-        background-color: #fff; }
+          color: #b10dc9;
+          border-left: solid 5px #b10dc9; }
   #cms-lateral-nav .sub-menu {
     padding: 0 10px 20px 15px;
     display: none; }
