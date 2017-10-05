@@ -1293,6 +1293,9 @@ hr {
   transform: translateX(160px); }
   #cms-lateral-nav .cms-navigation {
     margin: 10px 0 16px; }
+    #cms-lateral-nav .cms-navigation ul {
+      list-style: none;
+      padding: 0; }
     #cms-lateral-nav .cms-navigation li {
       width: 100%;
       height: 65px;
