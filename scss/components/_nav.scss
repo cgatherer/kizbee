@@ -445,7 +445,7 @@ nav.sub-nav {
     /* the secondary navigation is covered by the main element */
     z-index: $secondary-nav; 
     width: 260px;
-    background-color: $white;
+    background-color: $light-black;
     overflow-y: auto;
 
     /* Force Hardware Acceleration in WebKit */
