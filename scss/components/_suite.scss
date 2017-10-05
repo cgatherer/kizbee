@@ -29,7 +29,6 @@ header {
     -webkit-backface-visibility: hidden;
     transition-property: transform;
     transition-duration: .4s;
-    border-bottom: solid 5px $hibbert-light-blue;
 
     &.lateral-menu-is-open {
         /* translate to show the lateral menu */
