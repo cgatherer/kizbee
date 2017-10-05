@@ -4,25 +4,12 @@ html {
     -webkit-overflow-scrolling: touch !important;
 }
 
-.home-bg {
-    background-color: #000000 !important;
-    background: url("../img/home-bg.jpg");
-    background-repeat: no-repeat;
-    display: cover;
-    background-size: 100% auto;
-    background-position: center bottom;
-    overflow-x: hidden;
-    @include responsive($small-break) {
-        overflow-x: hidden;
-    }
-}
-
 header {
     @include clearfix;
     background: rgba(0, 0, 0, 1);
     width: 100%;
     display: block;
-    height: $header-L;
+    height: $header-XL;
     
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
