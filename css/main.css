@@ -1422,7 +1422,7 @@ nav.sub-nav {
   #cms-menu-trigger.is-clicked .cms-menu-icon {
     background-color: rgba(255, 255, 255, 0); }
     #cms-menu-trigger.is-clicked .cms-menu-icon::before, #cms-menu-trigger.is-clicked .cms-menu-icon::after {
-      background-color: #46acdc; }
+      background-color: #fff; }
     #cms-menu-trigger.is-clicked .cms-menu-icon::before {
       bottom: 0;
       transform: rotate(45deg); }
