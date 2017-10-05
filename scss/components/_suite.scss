@@ -19,7 +19,7 @@ html {
 
 header {
     @include clearfix;
-    background: $white;
+    background: rgba(0, 0, 0, 1);
     width: 100%;
     display: block;
     height: $header-L;
