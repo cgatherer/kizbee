@@ -187,6 +187,11 @@
     text-overflow: ellipsis;
 }
 
+@mixin font-smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 @mixin shadow {
     box-shadow: $silver 1px 1px 3px;
 }
