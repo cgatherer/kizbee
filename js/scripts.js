@@ -59,69 +59,24 @@ function loadGravatars() {
     });    
  */
 
-    // slide toggle SECTIONS
-
-    jQuery(document).ready(function($) {
-        function slide() {
-            $(".table-collapse").slideToggle("1500");
-            return false;
-        }
-        $(".table-toggle").click(slide, slide);
-    });
-
-
-    jQuery(document).ready(function($) {
-        function slide() {
-            $(this).siblings(".section-content-wrapper").slideToggle("1500");
-            return false;
-        }
-        $(".section-header").click(slide, slide);
-    });
-
-    jQuery(document).ready(function($) {
-        function slide() {
-            $(this).siblings(".data-set").slideToggle("1500");
-            return false;
-        }
-        $(".data-header").click(slide, slide);
-    });
-
-    jQuery(document).ready(function($) {
-        function slide() {
-            $(this).siblings(".trends").slideToggle("1500");
-            return false;
-        }
-        $(".trending-header").click(slide, slide);
-    });
-
-
-    jQuery(document).ready(function($) {
-        function slide() {
-            $(this).siblings(".trending-content-wrapper").slideToggle("1500");
-            return false;
-        }
-        $(".trending-header").click(slide, slide);
-    });
-
-
 
     jQuery(document).ready(function($) {
         $(document).ready(function() {
             $('select:not(.ignore)').niceSelect();      
     });   
 
-    // Start Ease scroll to text anchors****************************************
-    // *************************************************************************
-    jQuery(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 750);
-                    return false;
+// Start Ease scroll to text anchors****************************************
+// *************************************************************************
+jQuery(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 750);
+                return false;
                 }
             }
         });
@@ -214,168 +169,155 @@ jQuery(document).ready(function($){
     });
 });
 
-// Slide Panel **************************************
-// **************************************************
-jQuery(document).ready(function($){
-
-    $(".show-panel").click(function(){
-        $(".panel-wrapper").slideToggle("slow");
-    });
-});
-
-// Append Address ***********************************
-// **************************************************
-
-jQuery(document).ready(function($){
-    var $mainAddress = $(
-        '<div class="span6 address-block_main_append">' +
-        '<div class="field">' +
-        '<label for="#">Billing / Shipping:</label>' +
-        '<select name="application">' +
-        '<option value="--">--</option>' +
-        '<option value="option1">Billing</option>' +
-        '<option value="option2">Shipping</option>' +
-        '</select>' +
-        '</div>' +
-        '<div class="field">' +
-        '<label for="#">Address:</label>' +
-        '<input name="address1" tabindex="4" type="text" value=""><br>' +
-        '<input name="address2" tabindex="4" type="text" value="">' +
-        '</div>' +
-
-        '<div class="group">' +
-        '<div class="span4">' +
-        '<div class="field">' +
-        '<label for="#">city:</label>' +
-        '<input name="city" tabindex="3" type="text" value="">' +
-        '</div>' +
-        '</div>' +
-        '<div class="span4">' +
-        '<div class="field">' +
-        '<label for="#">State:</label>' +
-        '<input name="state" tabindex="3" type="text" value="">' +
-        '</div>' +
-        '</div>' +
-
-        '<div class="span4">' +
-        '<div class="field">' +
-        '<label for="#">Zip:</label>' +
-        '<input name="zip" tabindex="3" type="text" value="">' +
-        '</div>' +
-        '</div>' +
-        '</div>' +
-
-        '<div class="field">' +
-        '<label for="#">Country:</label>' +
-        '<input name="country" tabindex="4" type="text" value="" autocomplete="on">' +
-        '</div>' +
-
-        '<div class="field">' +
-        '<label for="#">Email:</label>' +
-        '<input name="billingEmail" tabindex="4" type="text" value="">' +
-        '</div>' +
-        '</div>');
-
-    // ADD ADDRESS.
-    $(".address-block_add").click(function(){
-        $( ".address-block_main" ).after( $mainAddress );
-    });
-
-    // REMOVE ONE ELEMENT PER CLICK.
-    $(".address-block_remove").click(function() {
-        $( $mainAddress ).remove();
-    });
-});
-
-// Search Panel *************************************
-// **************************************************
-
-jQuery(document).ready(function($){
-
-    var $searchPanel = $(
-        '<div class="card" style="overflow: scroll;">' + '<section class="card-header ">' + '<span class="card-color-label label-blue clear">' + '<i class="fa fa-send"></i>' + '<h4 class="text-shadow card-header-label">Search Details</h4>' + '</span>' + '</section>' +
-        '<table width="100%" border="0" data-role="table" data-mode="columntoggle" class="campaign-search-table clickable" id="campaignList">' + '<tbody><tr>' + '<th scope="col">' + '<a href="javascript:sortResults("Company Name")">Company Name</a>' + '</th>' + '<th scope="col">' + '<a href="javascript:sortResults("Status")">Status</a>' + '</th>' + '<th scope="col">' + '<a href="javascript:sortResults("Company Number")">Company Number</a>' + '</th>' + '<th scope="col">' + '<a href="javascript:sortResults("Division Name")">Division Name</a>' + '</th>' + '<th scope="col">' + '<a href="javascript:sortResults("Division Number")">Division Number</a>' + '</th>' + '<th scope="col">' + '<a href="javascript:sortResults("Active Item Count")">Active Item Count</a>' + '</th>' + '<th scope="col">' + '<a href="javascript:sortResults("Client UID")">Client UID</a>' + '</th>' +
-        '<tr class="row-red" id="0">' + '<td>Company Name<input type="hidden" id="0_hibId" value="14844"><input type="hidden" id="0_fulfId" value="329"></td>' + '<td>EXPIRED<input type="hidden" id="0_status" value="EXPIRED"></td>' + '<td>1070</td>' + '<td>Clinical Trials</td>' + '<td>1000</td>' + '<td>237</td>' + '<td>0123456789</td>' + '</tr>' +
-        '<tr class="row-red" id="1">' + '<td>Company Name<input type="hidden" id="1_hibId" value="14706"><input type="hidden" id="1_fulfId" value="324"></td>' + '<td>EXPIRED<input type="hidden" id="1_status" value="EXPIRED"></td>' + '<td>1071</td>' + '<td>Clinical Trials</td>' + '<td>1001</td>' + '<td>237</td>' + '<td>0123456789</td>' + '</tr>' +
-        '<tr class="row-green" id="2">' + '<td>Company Name<input type="hidden" id="2_hibId" value="14887"><input type="hidden" id="2_fulfId" value="323"></td>' + '<td>ACTIVE<input type="hidden" id="2_status" value="ACTIVE"></td>' + '<td>1072</td>' + '<td>Clinical Trials</td>' + '<td>1002</td>' + '<td>237</td>' + '<td>0123456789</td>' + '</tr>' +
-        '<tr class="row-green" id="3">'+ '<td>Company Name<input type="hidden" id="3_hibId" value="14883"><input type="hidden" id="3_fulfId" value="326"></td>'+ '<td>ACTIVE<input type="hidden" id="3_status" value="ACTIVE"></td>'+ '<td>1073</td>'+ '<td>Clinical Trials</td>'+ '<td>1004</td>'+ '<td>237</td>'+ '<td>0123456789</td>' + '</tr>'+
-        '<tr class="row-green" id="4">'+ '<td>Company Name<input type="hidden" id="4_hibId" value="14765"><input type="hidden" id="4_fulfId" value="327"></td>'+ '<td>ACTIVE<input type="hidden" id="4_status" value="ACTIVE"></td>'+ '<td>1074</td>'+ '<td>Clinical Trials</td>'+ '<td>1005</td>'+ '<td>237</td>'+ '<td>0123456789</td>' + '</tr>'+
-        '<tr class="row-red" id="5">' + '<td>Company Name<input type="hidden" id="5_hibId" value="15468"><input type="hidden" id="5_fulfId" value="442"></td>' + '<td>EXPIRED<input type="hidden" id="5_status" value="EXPIRED"></td>' + '<td>1075</td>' + '<td>Clinical Trials</td>' + '<td>1006</td>' + '<td>237</td>' + '<td>0123456789</td>' + '</tr>' +
-        '<tr class="row-white" id="6">' + '<td>Company Name<input type="hidden" id="6_hibId" value="14896"><input type="hidden" id="6_fulfId" value="331"></td>' + '<td>DENIED<input type="hidden" id="6_status" value="DENIED"></td>' + '<td>1076</td>' + '<td>Clinical Trials</td>' + '<td>1007</td>' + '<td>237</td>' + '<td>0123456789</td>' + '</tr>' +
-        '<tr class="row-green" id="7">' + '<td>Company Name<input type="hidden" id="7_hibId" value="14888"><input type="hidden" id="7_fulfId" value="330"></td>' + '<td>ACTIVE<input type="hidden" id="7_status" value="ACTIVE"></td>' + '<td>1077</td>' + '<td>Clinical Trials</td>' + '<td>1008</td>' + '<td>237</td>' + '<td>0123456789</td>' + '</tr>' +
-        '<tr class="row-white" id="8">' + '<td>Company Name<input type="hidden" id="8_hibId" value="15078"><input type="hidden" id="8_fulfId" value="382"></td>' + '<td>LOCKED<input type="hidden" id="8_status" value="LOCKED"></td>' + '<td>1078</td>' + '<td>Clinical Trials</td>' + '<td>1009</td>' + '<td>237</td>' + '<td>0123456789</td>' + '</tr>' +
-        '<tr class="row-white" id="9">' + '<td>Company Name<input type="hidden" id="9_hibId" value="15121"><input type="hidden" id="9_fulfId" value="388"></td>' + '<td>CREATED<input type="hidden" id="9_status" value="CREATED"></td>' + '<td>1079</td>' + '<td>Clinical Trials</td>' + '<td>1010</td>' + '<td>237</td>' + '<td>0123456789</td>' + '</tr>' +
-        '<tr class="row-white" id="10">' + '<td>Company Name<input type="hidden" id="10_hibId" value="15275"><input type="hidden" id="10_fulfId" value="423"></td>' + '<td>CREATED<input type="hidden" id="10_status" value="CREATED"></td>' + '<td>1080</td>' + '<td>Clinical Trials</td>' + '<td>1011</td>' + '<td>237</td>' + '<td>0123456789</td>' + '</tr>' +
-        '<tr class="row-green" id="11">' + '<td>Company Name<input type="hidden" id="11_hibId" value="14762"><input type="hidden" id="11_fulfId" value="325"></td>' + '<td>ACTIVE<input type="hidden" id="11_status" value="ACTIVE"></td>' + '<td>1081</td>' + '<td>Clinical Trials</td>' + '<td>1012</td>' + '<td>237</td>' + '<td>0123456789</td>' + '</tr>' +
-        '<tr class="row-white" id="12">' + '<td>Company Name<input type="hidden" id="12_hibId" value="15502"><input type="hidden" id="12_fulfId" value="482"></td>' + '<td>LOCKED<input type="hidden" id="12_status" value="LOCKED"></td>' + '<td>1082</td>' + '<td>Clinical Trials</td>' + '<td>1013</td>' + '<td>237</td>' + '<td>0123456789</td>' + '</tr>' +
-        '<tr class="row-white" id="13">' + '<td>Company Name<input type="hidden" id="13_hibId" value="15273"><input type="hidden" id="13_fulfId" value="422"></td>' + '<td>CREATED<input type="hidden" id="13_status" value="CREATED"></td>' + '<td>1083</td>' + '<td>Clinical Trials</td>' + '<td>1014</td>' + '<td>237</td>' + '<td>0123456789</td>' + '</tr>' +
-        '<tr class="row-red" id="14">' + '<td>Company Name<input type="hidden" id="14_hibId" value="15014"><input type="hidden" id="14_fulfId" value="363"></td>' + '<td>EXPIRED<input type="hidden" id="14_status" value="EXPIRED"></td>' + '<td>1084</td>' + '<td>Clinical Trials</td>' + '<td>1015</td>' + '<td>237</td>' + '<td>0123456789</td>' + '</tr>' +
-        '</tbody></table>' + '<div class="right">' + '<div class="left" style="padding: 10px;">Viewing 1 of 2</div>' + '<div id="numbers" class="pagination light-theme simple-pagination"><ul><li class="disabled"><span class="current prev">Prev</span></li><li class="active"><span class="current">1</span></li><li><a href="#page-2" class="page-link">2</a></li><li><a href="#page-2" class="page-link next">Next</a></li></ul></div>' + '</div>' + '</section>' +
-        '</div>');
-    
-    var $searchPanel2 = $(
-        '<div class="card" style="overflow: scroll;">' + '<section class="card-header ">' + '<span class="card-color-label label-blue clear">' + '<i class="fa fa-send"></i>' + '<h4 class="text-shadow card-header-label">Search Details</h4>' + '</span>' + '</section>' +
-        '<table width="100%" border="0" data-role="table" data-mode="columntoggle" class="campaign-search-table clickable" id="campaignList">' + '<tbody><tr>' + '<th scope="col">' + '<a href="javascript:sortResults("Company Number")">Company Number</a>' + '</th>' + '<th scope="col">' + '<a href="javascript:sortResults("Status")">Status</a>' + '</th>' + '<th scope="col">' + '<a href="javascript:sortResults("Customer Number")">Customer Number</a>' + '</th>' + '<th scope="col">' + '<a href="javascript:sortResults("Customer First name")">Customer First name</a>' + '</th>' + '<th scope="col">' + '<a href="javascript:sortResults("Customer LName")">Customer Last Name</a>' + '</th>' + '<th scope="col">' + '<a href="javascript:sortResults("Customer UID")">Customer UID</a>' + '</th>' + '<th scope="col">' + '<a href="javascript:sortResults("Division Name")">Division Name</a>' + '</th>' + '<th scope="col">' + '<a href="javascript:sortResults("Division Name")">Division Number</a>' + '</th>' + 
-        '<tr class="row-red" id="0">' + '<td>1001<input type="hidden" id="0_hibId" value="14844"><input type="hidden" id="0_fulfId" value="329"></td>' + '<td>INACTIVE<input type="hidden" id="0_status" value="INACTIVE"></td>' + '<td>0001070</td>' + '<td>Jack</td>' + '<td>Sparrow</td>' + '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>' +
-        '<tr class="row-red" id="0">' + '<td>1001<input type="hidden" id="0_hibId" value="14844"><input type="hidden" id="0_fulfId" value="329"></td>' + '<td>INACTIVE<input type="hidden" id="0_status" value="INACTIVE"></td>' + '<td>0001070</td>' + '<td>Jack</td>' + '<td>Sparrow</td>' + '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>' +
-        '<tr class="row-red" id="1">' + '<td>1002<input type="hidden" id="1_hibId" value="14706"><input type="hidden" id="1_fulfId" value="324"></td>' + '<td>INACTIVE<input type="hidden" id="1_status" value="INACTIVE"></td>' + '<td>0001071</td>' + '<td>Jack</td>' + '<td>Sparrow</td>' + '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>' +
-        '<tr class="row-green" id="2">' + '<td>1003<input type="hidden" id="2_hibId" value="14887"><input type="hidden" id="2_fulfId" value="323"></td>' + '<td>ACTIVE<input type="hidden" id="2_status" value="ACTIVE"></td>' + '<td>0001072</td>' + '<td>Jack</td>' + '<td>Sparrow</td>' + '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>' +
-        '<tr class="row-green" id="3">'+ '<td>1004<input type="hidden" id="3_hibId" value="14883"><input type="hidden" id="3_fulfId" value="326"></td>'+ '<td>ACTIVE<input type="hidden" id="3_status" value="ACTIVE"></td>'+ '<td>0001073</td>'+ '<td>Jack</td>'+ '<td>Sparrow</td>'+ '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>'+
-        '<tr class="row-green" id="4">'+ '<td>1005<input type="hidden" id="4_hibId" value="14765"><input type="hidden" id="4_fulfId" value="327"></td>'+ '<td>ACTIVE<input type="hidden" id="4_status" value="ACTIVE"></td>'+ '<td>0001074</td>'+ '<td>Jack</td>'+ '<td>Sparrow</td>'+ '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>'+
-        '<tr class="row-red" id="5">' + '<td>1006<input type="hidden" id="5_hibId" value="15468"><input type="hidden" id="5_fulfId" value="442"></td>' + '<td>INACTIVE<input type="hidden" id="5_status" value="INACTIVE"></td>' + '<td>0001075</td>' + '<td>Jack</td>' + '<td>Sparrow</td>' + '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>' +
-        '<tr class="row-red" id="6">' + '<td>1007<input type="hidden" id="6_hibId" value="14896"><input type="hidden" id="6_fulfId" value="331"></td>' + '<td>INACTIVE<input type="hidden" id="6_status" value="INACTIVE"></td>' + '<td>0001076</td>' + '<td>Jack</td>' + '<td>Sparrow</td>' + '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>' +
-        '<tr class="row-green" id="7">' + '<td>1008<input type="hidden" id="7_hibId" value="14888"><input type="hidden" id="7_fulfId" value="330"></td>' + '<td>ACTIVE<input type="hidden" id="7_status" value="ACTIVE"></td>' + '<td>0001077</td>' + '<td>Jack</td>' + '<td>Sparrow</td>' + '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>' +
-        '<tr class="row-red" id="8">' + '<td>1009<input type="hidden" id="8_hibId" value="15078"><input type="hidden" id="8_fulfId" value="382"></td>' + '<td>INACTIVE<input type="hidden" id="8_status" value="INACTIVE"></td>' + '<td>0001078</td>' + '<td>Jack</td>' + '<td>Sparrow</td>' + '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>' +
-        '<tr class="row-red" id="9">' + '<td>1010<input type="hidden" id="9_hibId" value="15121"><input type="hidden" id="9_fulfId" value="388"></td>' + '<td>ACTIVE<input type="hidden" id="9_status" value="ACTIVE"></td>' + '<td>0001079</td>' + '<td>Jack</td>' + '<td>Sparrow</td>' + '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>' +
-        '<tr class="row-red" id="10">' + '<td>1011<input type="hidden" id="10_hibId" value="15275"><input type="hidden" id="10_fulfId" value="423"></td>' + '<td>ACTIVE<input type="hidden" id="10_status" value="ACTIVE"></td>' + '<td>0001080</td>' + '<td>Jack</td>' + '<td>Sparrow</td>' + '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>' +
-        '<tr class="row-green" id="11">' + '<td>1012<input type="hidden" id="11_hibId" value="14762"><input type="hidden" id="11_fulfId" value="325"></td>' + '<td>ACTIVE<input type="hidden" id="11_status" value="ACTIVE"></td>' + '<td>0001081</td>' + '<td>Jack</td>' + '<td>Sparrow</td>' + '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>' +
-        '<tr class="row-red" id="12">' + '<td>1013<input type="hidden" id="12_hibId" value="15502"><input type="hidden" id="12_fulfId" value="482"></td>' + '<td>INACTIVE<input type="hidden" id="12_status" value="INACTIVE"></td>' + '<td>0001082</td>' + '<td>Jack</td>' + '<td>Sparrow</td>' + '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>' +
-        '<tr class="row-red" id="13">' + '<td>1014<input type="hidden" id="13_hibId" value="15273"><input type="hidden" id="13_fulfId" value="422"></td>' + '<td>ACTIVE<input type="hidden" id="13_status" value="ACTIVE"></td>' + '<td>0001083</td>' + '<td>Jack</td>' + '<td>Sparrow</td>' + '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>' +
-        '<tr class="row-red" id="14">' + '<td>1015<input type="hidden" id="14_hibId" value="15014"><input type="hidden" id="14_fulfId" value="363"></td>' + '<td>INACTIVE<input type="hidden" id="14_status" value="INACTIVE"></td>' + '<td>0001084</td>' + '<td>Jack</td>' + '<td>Sparrow</td>' + '<td>0123456789</td>' + '<td>Lilly</td>' + '<td>01234</td>' + '</tr>' +
-        '</tbody></table>' + '<div class="right">' + '<div class="left" style="padding: 10px;">Viewing 1 of 2</div>' + '<div id="numbers" class="pagination light-theme simple-pagination"><ul><li class="disabled"><span class="current prev">Prev</span></li><li class="active"><span class="current">1</span></li><li><a href="#page-2" class="page-link">2</a></li><li><a href="#page-2" class="page-link next">Next</a></li></ul></div>' + '</div>' + '</section>' +
-        '</div>');
-
-    $(".show-search").click(function(){
-        $(".search-panel").append($searchPanel); 
-    });
-
-    $(".show-search2").click(function(){
-        $(".search-panel2").append($searchPanel2); 
-    });
-});
-
-
-//ERRORS
-
-jQuery(document).ready(function($){
-    $("input").each(function () {
-        $(this).keyup(function () {
-            var errors = 0;
-            if($.trim($('.readonly').val()) == errors){
-                $("input[type=text]:focus").addClass("has-error");
-                // $(".error-description").show(100);
-            }
-            if($.trim($('input[type=text]:focus').val()) > errors){
-                $("input[type=text]:focus").removeClass("has-error");
-                // $(".error-description").hide(100);
-            }  
-        });
-    });
-});
-
-function CheckInputs() {
-    var valid = false;
-    $(".readonly").each(function () {
-        if (valid) { return valid; }
-        var input = $.trim($(this).val());
-        valid = !input;
-    });
-    return valid;
-}
-
 // Toggle Popup *************************************
 // **************************************************
  
 function toggleDiv(popup) {
     $("#" + popup).fadeToggle(['fast']);
 }
+
+// Home Slider **************************************
+// **************************************************
+
+jQuery(document).ready(function(){
+    /*
+        convert a cubic bezier value to a custom mina easing
+        http://stackoverflow.com/questions/25265197/how-to-convert-a-cubic-bezier-value-to-a-custom-mina-easing-snap-svg
+    */
+    var duration = 300,
+        delay = 300,
+        epsilon = (1000 / 60 / duration) / 4,
+        firstCustomMinaAnimation = bezier(.42,.03,.77,.63, epsilon),
+        secondCustomMinaAnimation = bezier(.27,.5,.6,.99, epsilon);
+
+    //initialize the slider
+    $('.cd-slider-wrapper').each(function(){
+        initSlider($(this));
+    });
+
+    function initSlider(sliderWrapper) {
+        //cache jQuery objects
+        var slider = sliderWrapper.find('.cd-slider'),
+            sliderNavigation = sliderWrapper.find('.cd-slider-navigation').find('li'),
+            svgCoverLayer = sliderWrapper.find('div.cd-svg-cover'),
+            pathId = svgCoverLayer.find('path').attr('id'),
+            svgPath = Snap('#'+pathId);
+        
+        //store path 'd' attribute values   
+        var pathArray = [];
+        pathArray[0] = svgCoverLayer.data('step1');
+        pathArray[1] = svgCoverLayer.data('step6');
+        pathArray[2] = svgCoverLayer.data('step2');
+        pathArray[3] = svgCoverLayer.data('step7');
+        pathArray[4] = svgCoverLayer.data('step3');
+        pathArray[5] = svgCoverLayer.data('step8');
+        pathArray[6] = svgCoverLayer.data('step4');
+        pathArray[7] = svgCoverLayer.data('step9');
+        pathArray[8] = svgCoverLayer.data('step5');
+        pathArray[9] = svgCoverLayer.data('step10');    
+
+        //update visible slide when user clicks .cd-slider-navigation buttons
+        sliderNavigation.on('click', function(event){
+            event.preventDefault();
+            var selectedItem = $(this);
+            if(!selectedItem.hasClass('selected')) {
+                // if it's not already selected
+                var selectedSlidePosition = selectedItem.index(),
+                    selectedSlide = slider.children('li').eq(selectedSlidePosition),
+                    visibleSlide = slider.find('.visible'),
+                    visibleSlidePosition = visibleSlide.index(),
+                    direction = '';
+                direction = ( visibleSlidePosition < selectedSlidePosition) ? 'next': 'prev';
+                updateSlide(visibleSlide, selectedSlide, direction, svgCoverLayer, sliderNavigation, pathArray, svgPath);
+            }
+        });
+    }
+
+    function updateSlide(oldSlide, newSlide, direction, svgCoverLayer, sliderNavigation, paths, svgPath) {
+        if( direction == 'next' ) {
+            var path1 = paths[0],
+                path2 = paths[2],
+                path3 = paths[4];
+                path4 = paths[6];
+                path5 = paths[8];
+        } else {
+            var path1 = paths[1],
+                path2 = paths[3],
+                path3 = paths[5];
+                path4 = paths[7];
+                path5 = paths[9];
+        }
+
+        svgCoverLayer.addClass('is-animating');
+        svgPath.attr('d', path1);
+        svgPath.animate({'d': path2}, duration, firstCustomMinaAnimation, function(){
+            svgPath.animate({'d': path3}, duration, secondCustomMinaAnimation, function(){
+                oldSlide.removeClass('visible');
+                newSlide.addClass('visible');
+                updateNavSlide(newSlide, sliderNavigation);
+                setTimeout(function(){
+                    svgPath.animate({'d': path4}, duration, firstCustomMinaAnimation, function(){
+                        svgPath.animate({'d': path5}, duration, secondCustomMinaAnimation, function(){
+                            svgCoverLayer.removeClass('is-animating');
+                        });
+                    });
+                }, delay);
+            });
+        });
+    }
+
+    function updateNavSlide(actualSlide, sliderNavigation) {
+        var position = actualSlide.index();
+        sliderNavigation.removeClass('selected').eq(position).addClass('selected');
+    }
+
+    function bezier(x1, y1, x2, y2, epsilon){
+        //https://github.com/arian/cubic-bezier
+        var curveX = function(t){
+            var v = 1 - t;
+            return 3 * v * v * t * x1 + 3 * v * t * t * x2 + t * t * t;
+        };
+
+        var curveY = function(t){
+            var v = 1 - t;
+            return 3 * v * v * t * y1 + 3 * v * t * t * y2 + t * t * t;
+        };
+
+        var derivativeCurveX = function(t){
+            var v = 1 - t;
+            return 3 * (2 * (t - 1) * t + v * v) * x1 + 3 * (- t * t * t + 2 * v * t) * x2;
+        };
+
+        return function(t){
+
+            var x = t, t0, t1, t2, x2, d2, i;
+
+            // First try a few iterations of Newton's method -- normally very fast.
+            for (t2 = x, i = 0; i < 8; i++){
+                x2 = curveX(t2) - x;
+                if (Math.abs(x2) < epsilon) return curveY(t2);
+                d2 = derivativeCurveX(t2);
+                if (Math.abs(d2) < 1e-6) break;
+                t2 = t2 - x2 / d2;
+            }
+
+            t0 = 0, t1 = 1, t2 = x;
+
+            if (t2 < t0) return curveY(t0);
+            if (t2 > t1) return curveY(t1);
+
+            // Fallback to the bisection method for reliability.
+            while (t0 < t1){
+                x2 = curveX(t2);
+                if (Math.abs(x2 - x) < epsilon) return curveY(t2);
+                if (x > x2) t0 = t2;
+                else t1 = t2;
+                t2 = (t1 - t0) * .5 + t0;
+            }
+
+            // Failure
+            return curveY(t2);
+
+        };
+    };
+});
