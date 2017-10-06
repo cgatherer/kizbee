@@ -244,7 +244,7 @@
     visibility: hidden;
 
     /* the secondary navigation is covered by the main element */
-    z-index: $secondary-nav; 
+    z-index: 3; 
     width: 260px;
     background-color: $light-black;
     overflow-y: auto;
