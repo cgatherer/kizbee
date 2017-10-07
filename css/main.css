@@ -3191,12 +3191,6 @@ Slider
     width: 100%;
     padding: 0;
     margin: 0; }
-  .cd-slider-wrapper .cd-slider:before {
-    display: block;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background-image: url(../img/overlay.png); }
 
 .cd-slider > li {
   position: absolute;
@@ -3214,8 +3208,6 @@ Slider
     position: relative;
     z-index: 2;
     opacity: 1; }
-  .cd-slider > li:before {
-    opacity: 0.5; }
   .cd-slider > li:first-of-type {
     background-color: #4a3553; }
   .cd-slider > li:nth-of-type(2) {
