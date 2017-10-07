@@ -3286,7 +3286,8 @@ Slider navigation
   z-index: 3;
   zoom: 1;
   text-align: center;
-  width: 90%; }
+  width: 90%;
+  padding: 0; }
   .cd-slider-navigation:before, .cd-slider-navigation:after {
     content: "\0020";
     display: block;
