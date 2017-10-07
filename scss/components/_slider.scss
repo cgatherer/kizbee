@@ -44,14 +44,6 @@ Slider
         z-index: 2;
         opacity: 1;
     }
-    
-    &:after {
-        display: block;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-        background-image: url(../img/overlay.png);
-    }
 
     &:first-of-type {
         background-color: $color-1;
