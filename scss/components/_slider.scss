@@ -24,15 +24,15 @@ Slider
         margin: 0;
     }
 
-    .cd-slider {
-        &:before {
-            display: block;
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-            background-image: url(../img/overlay.jpg);
-        }
-    }
+    // .cd-slider {
+    //     &:before {
+    //         display: block;
+    //         height: 100%;
+    //         width: 100%;
+    //         overflow: hidden;
+    //         background-image: url(../img/overlay.jpg);
+    //     }
+    // }
 }
 
 .cd-slider > li {
