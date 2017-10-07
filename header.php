@@ -82,6 +82,8 @@
 
 		<section class="cd-slider-wrapper">
 			<ul class="cd-slider">
+				
+
 				<li class="visible">
 					<div>
 						<h2>Animated SVG Hero Slider</h2>
@@ -136,6 +138,11 @@
 	<?php } ?> 
     
 	<div id="content">
+
+	<?php 
+		$repeater = get_field('hero_slider');
+		echo var_dump($repeater);
+	?>
 
 
 
