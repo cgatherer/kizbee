@@ -83,14 +83,26 @@
 		<section class="cd-slider-wrapper">
 			<ul class="cd-slider">
 				
+				<?php if( have_rows('hero_slider') ): ?>
+					<?php while( have_rows('hero_slider') ): the_row(); 
 
-				<li class="visible">
-					<div>
-						<h2>Animated SVG Hero Slider</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p>
-						<a href="http://codyhouse.co/?p=854" class="cd-btn">Article &amp; Download</a>
-					</div>
-				</li>
+						// vars
+						$headline = get_sub_field('hero_headline');
+						$message  = get_sub_field('hero_messaging');
+						$button   = get_sub_field('hero_button_link');
+						$text     = get_sub_field('hero_button_link_text');
+						$image    = get_sub_field('hero_image'); ?>
+
+						<li class="visible">
+							<div>
+								<h2><?php echo $headline;?></h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p>
+								<a href="http://codyhouse.co/?p=854" class="cd-btn">Article &amp; Download</a>
+							</div>
+						</li>
+
+					<?php endwhile; ?>
+				<?php endif; ?>
 						
 				<!-- <li>
 					<div>
@@ -138,11 +150,4 @@
 	<?php } ?> 
     
 	<div id="content">
-
-	<?php 
-		$repeater = get_field('hero_slider');
-		echo var_dump($repeater);
-	?>
-
-
 
