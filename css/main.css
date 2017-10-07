@@ -3229,10 +3229,10 @@ Slider
     vertical-align: middle;
     text-align: center; }
   .cd-slider > li h2, .cd-slider > li p {
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
     line-height: 1.2;
     margin: 0 auto 14px;
-    color: #fff;
+    color: #111;
     width: 90%;
     max-width: 320px; }
   .cd-slider > li h2 {
