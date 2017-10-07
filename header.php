@@ -127,7 +127,7 @@
 						<a href="http://codyhouse.co/?p=854" class="cd-btn">Learn more</a>
 					</div>
 				</li> -->
-			</ul>
+			</ul>   
 			
 			<!-- <ol class="cd-slider-navigation">
 				<li class="selected"><a href="#0"><em>Item 1</em></a></li>
