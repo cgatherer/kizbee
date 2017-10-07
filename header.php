@@ -79,11 +79,11 @@
 
     <!-- Hero Iamges -->
 
-    <?php if(){ ?>
+    <!-- <?php if(){ ?>
 
     <?php } else { ?>
 
-    <?php } ?>
+    <?php } ?> -->
 
     <section class="cd-slider-wrapper">
 		<ul class="cd-slider">
