@@ -3196,7 +3196,7 @@ Slider
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background-image: url(../img/overlay.jpg); }
+    background-image: url(../img/overlay.png); }
 
 .cd-slider > li {
   position: absolute;
