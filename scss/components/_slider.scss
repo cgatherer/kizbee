@@ -7,10 +7,14 @@ Slider
 .cd-slider-wrapper {
     position: relative;
     width: 100%;
-    height: 195vh;
+    height: 85vh;
     
     /* hide horizontal scrollbar on IE11 */
     overflow: hidden;
+    
+    @include atSmall {
+       height: 195vh;
+    }
 
     .cd-slider , .cd-slider > li {
         height: 100%;
