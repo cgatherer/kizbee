@@ -3209,8 +3209,7 @@ Slider
     z-index: 2;
     opacity: 1; }
   .cd-slider > li:first-of-type {
-    background-color: #4a3553;
-    background-image: url(../img/img-1.jpg); }
+    background-color: #4a3553; }
   .cd-slider > li:nth-of-type(2) {
     background-color: #ffb251;
     background-image: url(../img/img-2.jpg); }

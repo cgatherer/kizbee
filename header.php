@@ -89,15 +89,15 @@
 						// vars
 						$headline = get_sub_field('hero_headline');
 						$message  = get_sub_field('hero_messaging');
-						$button   = get_sub_field('hero_button_link');
+						$link     = get_sub_field('hero_button_link');
 						$text     = get_sub_field('hero_button_link_text');
 						$image    = get_sub_field('hero_image'); ?>
 
-						<li class="visible">
+						<li class="visible" style="border-image: url('<?php echo $image['url']; ?>')">
 							<div>
-								<h2><?php echo $headline; ?></h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p>
-								<a href="http://codyhouse.co/?p=854" class="cd-btn">Article &amp; Download</a>
+								<h2><?php echo $headline;?></h2>
+								<p><?php echo $message;?></p>
+								<a href="<?php echo $link;?>" class="cd-btn"><?php echo $text;?></a>
 							</div>
 						</li>
 
