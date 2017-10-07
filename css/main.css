@@ -3182,7 +3182,7 @@ Slider
   height: 85vh;
   /* hide horizontal scrollbar on IE11 */
   overflow: hidden;
-  border-bottom: solid 20px #4a3553; }
+  border-bottom: solid 20px #46acdc; }
   @media screen and (min-width: 599px) {
     .cd-slider-wrapper {
       height: 195vh; } }
