@@ -85,7 +85,7 @@
 
     <?php //} ?>
 
-    <!-- <section class="cd-slider-wrapper">
+    <section class="cd-slider-wrapper">
 		<ul class="cd-slider">
 			<li class="visible">
 				<div>
@@ -134,7 +134,7 @@
 				<path id="cd-changing-path" d="M1402,800h-2V0.6c0-0.3,0-0.3,0-0.6h2v294V800z"/>
 			</svg>
 		</div>
-	</section> -->
+	</section>
     
 	<div id="content">
 
