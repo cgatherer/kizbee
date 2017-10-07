@@ -78,12 +78,6 @@
     </nav>
 
     <!-- Hero Iamges -->
-	<?php if ( is_single('464') ) { ?>
-	
-	<?php }  else { ?>
-	
-	<?php } ?>
-
     <section class="cd-slider-wrapper">
 		<ul class="cd-slider">
 			<li class="visible">
