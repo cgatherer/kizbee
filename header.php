@@ -128,7 +128,7 @@
 		</div> <!-- .cd-svg-cover -->
 	</section> <!-- .cd-slider-wrapper -->
     
-	<div id="content" class="container">
+	<div id="content">
 
 
 
