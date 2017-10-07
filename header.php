@@ -97,7 +97,7 @@
 							<div>
 								<h2><?php echo $headline;?></h2>
 								<p><?php echo $message;?></p>
-								<a href="<?php echo $link;?>" class="cd-btn"><?php echo $image['url']; ?></a>
+								<a href="<?php echo $link;?>" class="cd-btn"><?php echo $image; ?></a>
 							</div>
 						</li>
 
