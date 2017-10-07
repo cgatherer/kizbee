@@ -92,7 +92,8 @@
 						$link     = get_sub_field('hero_button_link');
 						$text     = get_sub_field('hero_button_link_text');
 						$image    = get_sub_field('hero_image'); ?>
-
+						
+						<div class="backdrop"></div>
 						<li class="visible" style="background-image: url('<?php echo $image; ?>');">
 							<div>
 								<h2><?php echo $headline;?></h2>
