@@ -11,6 +11,7 @@ Slider
     
     /* hide horizontal scrollbar on IE11 */
     overflow: hidden;
+    border-bottom: solid 20px $color-1;
     
     @include atSmall {
        height: 195vh;
