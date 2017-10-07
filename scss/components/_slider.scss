@@ -23,6 +23,17 @@ Slider
         padding: 0;
         margin: 0;
     }
+
+    .cd-slider {
+        &:before {
+            display: block;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: #000;
+            opacity: 0.5;
+        }
+    }
 }
 
 .cd-slider > li {
