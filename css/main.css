@@ -3208,6 +3208,8 @@ Slider
     position: relative;
     z-index: 2;
     opacity: 1; }
+  .cd-slider > li:before {
+    opacity: 0.5; }
   .cd-slider > li:first-of-type {
     background-color: #4a3553; }
   .cd-slider > li:nth-of-type(2) {
