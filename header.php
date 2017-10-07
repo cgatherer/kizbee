@@ -95,7 +95,7 @@
 
 						<li class="visible">
 							<div>
-								<h2><?php echo $headline;?></h2>
+								<h2>Animated SVG Hero Slider</h2>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p>
 								<a href="http://codyhouse.co/?p=854" class="cd-btn">Article &amp; Download</a>
 							</div>
