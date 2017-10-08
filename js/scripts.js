@@ -85,6 +85,7 @@ jQuery(function() {
 
 // Push Menu ****************************************
 // **************************************************
+
 jQuery(document).ready(function($){
     
     var $lateral_menu_trigger = $('#cms-menu-trigger'),
@@ -125,6 +126,18 @@ jQuery(document).ready(function($){
 
         }
     });
+});
+
+// Sticky Header ************************************
+// **************************************************
+
+jQuery(window).scroll(function($){
+    if ($(window).scrollTop() >= 100) {
+        $('.suite-header-bar').addClass('is-fixed');
+    }
+    else {
+        $('.suite-header-bar').removeClass('is-fixed');
+    }
 });
 
 // Floating Action Button JS ************************
