@@ -6,7 +6,7 @@ html {
 
 header {
     @include clearfix;
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, .85);
     width: 100%;
     display: block;
     height: $header-XL;
@@ -27,7 +27,6 @@ header {
     //assign this class to the header if you want a fixed navigation
     &.is-fixed {
         position: fixed;
-        z-index: 3;
     }
 
     // @include atMedium {
