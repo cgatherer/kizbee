@@ -133,6 +133,11 @@ jQuery(document).ready(function($){
 
 jQuery(document).ready(function($){
 
+    if ( $('body').scrollTop() >= 100){
+        $('.suite-header-bar').addClass('is-fixed');
+    } else {
+         $('.suite-header-bar').removeClass('is-fixed');
+    } 
 });
 
 // Floating Action Button JS ************************
