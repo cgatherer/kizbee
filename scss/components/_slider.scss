@@ -176,7 +176,7 @@ Slider navigation
         position: relative;
         height: 40px;
         width: 40px;
-        background: url(../img/cd-icon-navigation.svg) no-repeat -10px -10px;
+        background: url(../img/cupcake.svg) no-repeat -10px -10px;
         border-radius: 50%;
         background-color: $color-6;
 
@@ -196,29 +196,29 @@ Slider navigation
         background-position: -10px -70px;
     }
 
-    li:nth-of-type(2) a {
-        background-position: -70px -10px;
-    }
+    // li:nth-of-type(2) a {
+    //     background-position: -70px -10px;
+    // }
 
-    li.selected:nth-of-type(2) a {
-        background-position: -70px -70px;
-    }
+    // li.selected:nth-of-type(2) a {
+    //     background-position: -70px -70px;
+    // }
 
-    li:nth-of-type(3) a {
-        background-position: -130px -10px;
-    }
+    // li:nth-of-type(3) a {
+    //     background-position: -130px -10px;
+    // }
 
-    li.selected:nth-of-type(3) a {
-        background-position: -130px -70px;
-    }
+    // li.selected:nth-of-type(3) a {
+    //     background-position: -130px -70px;
+    // }
 
-    li:nth-of-type(4) a {
-        background-position: -190px -10px;
-    }
+    // li:nth-of-type(4) a {
+    //     background-position: -190px -10px;
+    // }
 
-    li.selected:nth-of-type(4) a {
-        background-position: -190px -70px;
-    }
+    // li.selected:nth-of-type(4) a {
+    //     background-position: -190px -70px;
+    // }
 
     em {
         /* tooltip visible on hover */
