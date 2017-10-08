@@ -70,7 +70,6 @@
 		<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
-				'container'      => 'ul',
 				'menu_class'     => 'cms-navigation',
                 'items_wrap'     => '<li>%3$s</li>'
 			));
