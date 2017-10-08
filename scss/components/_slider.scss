@@ -176,9 +176,11 @@ Slider navigation
         position: relative;
         height: 40px;
         width: 40px;
-        background: url(../img/cupcake.svg) no-repeat -10px -10px;
+        background: url(../img/cupcake.svg) no-repeat;
+        background-size: 75%;
+        background-position: 7px 6px !important;
         border-radius: 50%;
-        background-color: $color-6;
+        background-color: $white;
 
         .no-touch &:hover {
 
