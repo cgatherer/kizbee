@@ -92,7 +92,7 @@
 						$link     = get_sub_field('hero_button_link');
 						$text     = get_sub_field('hero_button_link_text');
 						$image    = get_sub_field('hero_image');
-						$class    = get_sub_field('hero_class'); ?>
+						//$class    = get_sub_field('hero_class'); ?>
 						
 						<li class="<?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>');">
 							<div>
