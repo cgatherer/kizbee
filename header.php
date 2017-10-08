@@ -100,7 +100,7 @@
 								<p><?php echo $message;?></p>
 								<a href="<?php echo $link;?>" class="cd-btn"><?php echo $text;?></a>
 							</div>
-							<!-- <div class="overlay"></div> -->
+							<div class="overlay"></div>
 						</li>
 
 					<?php endwhile; ?>
