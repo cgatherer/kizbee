@@ -71,7 +71,7 @@
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
 				'menu_class'     => 'cms-navigation',
-                'items_wrap'     => '<li>%3$s</li>'
+                'items_wrap'     => '<ul>%3$s</ul>'
 			));
 		?>
     </nav>
