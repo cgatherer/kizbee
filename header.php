@@ -98,7 +98,7 @@
 							<div>
 								<h2><?php echo $headline;?></h2>
 								<p><?php echo $message;?></p>
-								<a href="<?php echo $link;?>" class="cd-btn"><?php echo $text;?></a>
+								<a href="#" class="cd-btn"><?php echo $text;?></a>
 							</div>
 							<div class="overlay"></div>
 						</li>
