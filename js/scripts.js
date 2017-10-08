@@ -131,7 +131,7 @@ jQuery(document).ready(function($){
 // Sticky Header ************************************
 // **************************************************
 
-jQuery(document).ready(function($){
+$(window).scroll(function() {
 
     if ( $('body').scrollTop() >= 100){
         $('.suite-header-bar').addClass('is-fixed');
