@@ -31,7 +31,6 @@
   	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/font-awesome.min.css">
 
 	<!-- Scripts -->
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
   	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.js"></script>
   	<script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
@@ -77,10 +76,7 @@
 		?>
     </nav>
 
-	<!-- Hero Image -->
-	<?php if(is_page('Home')){ ?>
-
-		<section class="cd-slider-wrapper">
+    <section class="cd-slider-wrapper">
 			<ul class="cd-slider">
 				<li class="visible">
 					<div>
@@ -130,6 +126,9 @@
 				</svg>
 			</div> <!-- .cd-svg-cover -->
 		</section> <!-- .cd-slider-wrapper -->
+
+	<!-- Hero Image -->
+	<?php //if(is_page('Home')){ ?>
 
 		<!-- <section class="cd-slider-wrapper">
 			<ul class="cd-slider">
@@ -182,9 +181,9 @@
 			</div> 
 		</section> -->
 	
-	<?php } else { ?>
+	<?php //} else { ?>
 		<!-- Do Nothing -->
-	<?php } ?> 
+	<?php //} ?> 
     
 	<div id="content">
 
