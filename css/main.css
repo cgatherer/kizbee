@@ -3185,7 +3185,7 @@ Slider
   border-bottom: solid 20px #46acdc; }
   @media screen and (min-width: 599px) {
     .cd-slider-wrapper {
-      height: 150vh; } }
+      height: 100vh; } }
   .cd-slider-wrapper .cd-slider, .cd-slider-wrapper .cd-slider > li {
     height: 100%;
     width: 100%;

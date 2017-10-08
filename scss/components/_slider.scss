@@ -14,7 +14,7 @@ Slider
     border-bottom: solid 20px $aqua;
     
     @include atSmall {
-       height: 150vh;
+       height: 100vh;
     }
 
     .cd-slider , .cd-slider > li {
