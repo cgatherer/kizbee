@@ -3437,7 +3437,8 @@ header {
     /* translate to show the lateral menu */
     transform: translateX(-260px); }
   header.is-fixed {
-    position: fixed; }
+    position: fixed;
+    z-index: 3; }
 
 .footer-landing {
   width: 100vw;
