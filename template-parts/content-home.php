@@ -21,7 +21,11 @@
 
 	<div>
 		<?php
-			$params = array('posts_per_page' => 5);
+			$params = array(
+				'posts_per_page' => 5, 
+				'post_type' => 'product'
+			);
+			
 			$wc_query = new WP_Query($params); ?>
 
 			<?php 
@@ -40,5 +44,5 @@
 					</p>
 		<?php endif; ?>
 	</div>
-	
+
 </div>
