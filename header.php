@@ -92,13 +92,13 @@
 						$link     = get_sub_field('hero_button_link');
 						$text     = get_sub_field('hero_button_link_text');
 						$image    = get_sub_field('hero_image');
-						$class    = get_sub_field('li_class'); ?>
+						$class    = get_sub_field('hero_class'); ?>
 						
 						<li class="<?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>');">
 							<div>
 								<h2><?php echo $headline;?></h2>
 								<p><?php echo $message;?></p>
-								<a href="#" class="cd-btn"><?php echo $text;?></a>
+								<a href="<?php echo $link;?>" class="cd-btn"><?php echo $text;?></a>
 							</div>
 							<div class="overlay"></div>
 						</li>
@@ -129,7 +129,22 @@
 						<a href="http://codyhouse.co/?p=854" class="cd-btn">Learn more</a>
 					</div>
 				</li> -->
-			</ul>   
+			</ul> 
+
+			<ol class="cd-slider-navigation">
+
+				<?php if( have_rows('hero_slider') ): ?>
+					<?php while( have_rows('hero_slider') ): the_row(); 
+
+						// vars
+						$navClass = get_sub_field('navigation_class'); 
+						$navTitle = get_sub_field('navigation_title') ?> 
+
+						<li class="<?php echo $navClass;?>"><a href="#"><em><?php echo $navTitle;?></em></a></li>
+
+					<?php endwhile; ?>
+				<?php endif; ?>
+			</ol>
 			
 			<!-- <ol class="cd-slider-navigation">
 				<li class="selected"><a href="#0"><em>Item 1</em></a></li>
