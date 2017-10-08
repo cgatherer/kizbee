@@ -132,6 +132,21 @@ function kizbees_kitchen_scripts() {
 add_action( 'wp_enqueue_scripts', 'kizbees_kitchen_scripts' );
 
 /**
+ * load Custom Post Types file
+ */
+require get_template_directory() . '/inc/CPT.php';
+
+/**
+ * Create Custom Staff Member.
+ */
+require get_template_directory() . '/inc/post-types/register-staff.php';
+
+/**
+ * Create Custom Food Menus.
+ */
+require get_template_directory() . '/inc/post-types/register-menus.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
