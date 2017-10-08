@@ -294,8 +294,7 @@ table {
   min-height: 100%; }
   .main:after {
     content: "";
-    display: block;
-    height: 60px; }
+    display: block; }
 
 @media screen and (min-width: 599px) {
   .group,
@@ -3432,31 +3431,16 @@ header {
   header.is-fixed {
     position: fixed; }
 
-.footer-landing {
-  width: 100vw;
-  text-align: center;
-  color: #aaa;
-  padding: 50px 0 20px 0;
-  line-height: 1.25em;
-  font-size: .8em;
-  z-index: 2;
-  position: relative; }
-  .footer-landing a {
-    color: #aaa;
-    text-decoration: none; }
-    .footer-landing a:hover {
-      color: #0098DB; }
-
 footer {
   width: 100vw;
   text-align: center;
-  color: #aaa;
-  padding: 20px 0;
+  color: #fff;
+  padding: 40px 0;
   line-height: 1.25em;
   font-size: .8em;
   z-index: 2;
-  margin-top: 100px;
-  position: relative; }
+  position: relative;
+  background: #000; }
   footer a {
     color: #aaa;
     text-decoration: none; }

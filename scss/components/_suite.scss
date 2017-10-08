@@ -34,43 +34,16 @@ header {
     // }
 }
 
-.footer-landing {
-    width: 100vw;
-    text-align: center;
-    color: $grey;
-    // text-shadow: 1px 1px 1px #000000;
-    padding: 50px 0 20px 0;
-    line-height: 1.25em;
-    font-size: .8em;
-    z-index: 2;
-    position: relative;
-
-    // @include atMedium {
-    //     position: absolute;
-    //     bottom: 50px;
-    // }
-
-    a {
-        color: $grey;
-        // text-shadow: 1px 1px 1px #000000;
-        text-decoration: none;
-        
-        &:hover {
-            color: $hibbert-cyan;
-        }
-    }
-}
-
 footer {
     width: 100vw;
     text-align: center;
-    color: $grey;
-    padding: 20px 0;
+    color: #fff;
+    padding: 40px 0;
     line-height: 1.25em;
     font-size: .8em;
     z-index: 2;
-    margin-top: 100px;
     position: relative;
+    background: #000;
     
     a {
         color: $grey;
