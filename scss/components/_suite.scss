@@ -10,6 +10,8 @@ header {
     width: 100%;
     display: block;
     height: $header-XL;
+    position: fixed;
+    z-index: 3;
     
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);

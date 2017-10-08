@@ -131,14 +131,14 @@ jQuery(document).ready(function($){
 // Sticky Header ************************************
 // **************************************************
 
-$(window).scroll(function() {
+// $(window).scroll(function() {
 
-    if ( $('body').scrollTop() >= 100){
-        $('header').addClass('is-fixed');
-    } else {
-         $('header').removeClass('is-fixed');
-    } 
-});
+//     if ( $('body').scrollTop() >= 100){
+//         $('header').addClass('is-fixed');
+//     } else {
+//          $('header').removeClass('is-fixed');
+//     } 
+// });
 
 // Floating Action Button JS ************************
 // **************************************************
