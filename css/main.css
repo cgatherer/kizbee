@@ -3418,7 +3418,7 @@ html {
 
 header {
   zoom: 1;
-  background: black;
+  background: rgba(0, 0, 0, 0.7);
   width: 100%;
   display: block;
   height: 125px;

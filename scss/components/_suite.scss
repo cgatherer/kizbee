@@ -6,7 +6,7 @@ html {
 
 header {
     @include clearfix;
-    background: rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, .7);
     width: 100%;
     display: block;
     height: $header-XL;
