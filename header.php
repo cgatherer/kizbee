@@ -91,9 +91,10 @@
 						$message  = get_sub_field('hero_messaging');
 						$link     = get_sub_field('hero_button_link');
 						$text     = get_sub_field('hero_button_link_text');
-						$image    = get_sub_field('hero_image'); ?>
+						$image    = get_sub_field('hero_image');
+						$class    = get_sub_field('li_class'); ?>
 						
-						<li class="visible" style="background-image: url('<?php echo $image; ?>');">
+						<li class="<?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>');">
 							<div>
 								<h2><?php echo $headline;?></h2>
 								<p><?php echo $message;?></p>
