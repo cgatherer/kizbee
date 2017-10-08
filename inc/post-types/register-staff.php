@@ -7,7 +7,7 @@ $staff = new CPT(array(
     'slug' => 'staff-member'
 ),
 	array(
-    'supports' => array('title', 'editor', 'thumbnail', 'comments', 'excerpt'),
+    'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
     'menu_icon' => 'dashicons-admin-users'
 ));
 
