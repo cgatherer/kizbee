@@ -138,7 +138,7 @@
 
 						// vars
 						$navClass = get_sub_field('navigation_class'); 
-						$navTitle = get_sub_field('navigation_title') ?> 
+						$navTitle = get_sub_field('navigation_title'); ?> 
 
 						<li class="<?php echo $navClass;?>"><a href="#"><em><?php echo $navTitle;?></em></a></li>
 
