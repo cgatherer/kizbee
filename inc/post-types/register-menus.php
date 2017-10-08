@@ -12,8 +12,8 @@ $menus = new CPT(array(
 ));
 
 $menus->register_taxonomy(array(
-    'taxonomy_name' => 'staff_member_type',
-    'singular' => __('Staff Member Type'),
-    'plural' => __('Staff Member Types'),
-    'slug' => 'staff-member-type'
+    'taxonomy_name' => 'menu_type',
+    'singular' => __('Menu Type'),
+    'plural' => __('Menu Types'),
+    'slug' => 'menu-type'
 ));
