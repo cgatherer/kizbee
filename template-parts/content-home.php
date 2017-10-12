@@ -32,7 +32,7 @@
 
 			<?php $category = get_the_category();
 
-					print($category); ?>
+					var_dump($category); ?>
 
 			<?php 
 				if ($wc_query->have_posts()) :
