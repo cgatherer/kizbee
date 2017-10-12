@@ -30,6 +30,10 @@
 
 			$wc_query = new WP_Query($params); ?>
 
+			<?php $category = get_the_category();
+
+					print($category); ?>
+
 			<?php 
 				if ($wc_query->have_posts()) :
 					while ($wc_query->have_posts()) :
