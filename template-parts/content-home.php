@@ -61,16 +61,17 @@
 
 			$wc_query = new WP_Query($params); ?>
 
-			<?php $category = get_the_category();
-					$firstCategory = $category[0]->cat_name; echo $firstCategory;?>
-
 			<?php 
 				if ($wc_query->have_posts()) :
 					while ($wc_query->have_posts()) :
-                	$wc_query->the_post(); ?>
+                	$wc_query->the_post(); 
+
+                		$image = wp_get_attachment_url('large'); ?>
 						
-						<div class="span6 tile" style="">
+						<div class="span6 tiles" style="">
 							<?php the_title();?>
+
+							<?php $image;?>
 						</div>
 					
 					<?php endwhile;
