@@ -20,6 +20,13 @@
 	</div>
 
 	<div>
+		<div class="container">
+			<div class="span12 group">
+				<div class="span6"><p>test</p></div>
+				<div class="span6"><p>test</p></div>
+			</div>
+		</div>
+
 		<?php
 			$params = array(
 				'posts_per_page' => 5, 
