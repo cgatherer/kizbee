@@ -67,11 +67,11 @@
 					while ($wc_query->have_posts()) :
                 	$wc_query->the_post(); ?>
 
-                		<?php $featured_image = wp_get_attachment_image_src(post->ID, "large"); ?>
+                		<?php $featured_image = wp_get_attachment_url( get_post_thumbnail_id() ); ?>
 						
 						<div class="span6 tiles" style="">
 							<?php the_title();?>
-							<img src="<?php $featured_image[0]; ?>" data-id="<?php echo $wc_query->post->ID; ?>">
+							<img src="<?php $featured_image; ?>" data-id="<?php echo $wc_query->post->ID; ?>">
 						</div>
 					
 					<?php endwhile;
