@@ -71,7 +71,7 @@
 						
 						<div class="span6 tiles" style="">
 							<?php the_title();?>
-							<img src="<?php $featured_image; ?>" data-id="<?php echo $wc_query->post->ID; ?>">
+							<img src="<?php echo $featured_image; ?>" data-id="<?php echo $wc_query->post->ID; ?>">
 						</div>
 					
 					<?php endwhile;
