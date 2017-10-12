@@ -67,7 +67,7 @@
 					while ($wc_query->have_posts()) :
                 	$wc_query->the_post(); ?>
 
-                		<?php $featured_image = wp_get_attachment_link('medium'); ?>
+                		<?php $featured_image = wp_get_attachment_image('large'); ?>
 						
 						<div class="span6 tiles" style="">
 							<?php the_title();?>
