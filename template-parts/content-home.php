@@ -19,17 +19,12 @@
 		?>
 	</div>
 
-	<div>
-		<div class="container">
-			<div class="span12 group">
-				<div class="span6"><p>test</p></div>
-				<div class="span6"><p>test</p></div>
-			</div>
-		</div>
+	<div class="container">
+		<div class="span12 group">
 
 		<?php
 			$params = array(
-				'posts_per_page' => 5, 
+				'posts_per_page' => 6, 
 				'post_type' => 'product'
 			);
 
@@ -39,8 +34,10 @@
 				if ($wc_query->have_posts()) :
 					while ($wc_query->have_posts()) :
                 	$wc_query->the_post(); ?>
-					
-						<?php the_title();?>
+						
+						<div class="span6">
+							<?php the_title();?>
+						</div>
 					
 					<?php endwhile;
 					wp_reset_postdata();
@@ -50,6 +47,8 @@
 					     <?php _e( 'No Products' ); // (6) ?>
 					</p>
 		<?php endif; ?>
+
+		</div>
 	</div>
 
 </div>
