@@ -9,15 +9,15 @@
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-header">
+	<!-- <div class="entry-header">
 		<?php the_title( '<h1>', '</h1>' ); ?>
-	</div><!-- .entry-header -->
+	</div> -->
 
 	<div class="entry-content">
 		<?php
 			the_content();
 		?>
-	</div><!-- .entry-content -->
+	</div>
 
 	<div>
 		<?php
