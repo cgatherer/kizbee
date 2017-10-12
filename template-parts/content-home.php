@@ -31,8 +31,7 @@
 			$wc_query = new WP_Query($params); ?>
 
 			<?php $category = get_the_category();
-
-					var_dump($category); ?>
+					$firstCategory = $category[0]->cat_name; echo $firstCategory;?>
 
 			<?php 
 				if ($wc_query->have_posts()) :
