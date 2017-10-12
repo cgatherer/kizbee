@@ -62,7 +62,7 @@
 			$wc_query = new WP_Query($params); ?>
 
 			<?php 
-				$image = wp_get_attachment_url('large');
+				$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "large" );
 
 				if ($wc_query->have_posts()) :
 					while ($wc_query->have_posts()) :
@@ -71,7 +71,7 @@
 						<div class="span6 tiles" style="">
 							<?php the_title();?>
 
-							<?php echo $image;?>
+							<?php echo $thumbnail;?>
 						</div>
 					
 					<?php endwhile;
