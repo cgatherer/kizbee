@@ -24,19 +24,29 @@
 			<?php
 			  	$taxonomy     = 'product_cat';
 			  	$orderby      = 'name';  
+			  	$show_count   = 0;
+			  	$pad_counts   = 0;
+			  	$hierarchical = 1;
+			  	$title        = '';  
+			  	$empty        = 0;
 
 			  	$args = array(
 			         'taxonomy'     => $taxonomy,
-			         'orderby'      => $orderby
+			         'orderby'      => $orderby,
+			         'show_count'   => $show_count,
+			         'pad_counts'   => $pad_counts,
+			         'hierarchical' => $hierarchical,
+			         'title_li'     => $title,
+			         'hide_empty'   => $empty
 				);
 			 
 				$all_categories = get_categories($args);
 
 				foreach ($all_categories as $cat) {
-			    	// if($cat->category_parent == 0) {
+			    	if($cat->category_parent == 0) {
 			        	$category_id = $cat->term_id;       
 			        	echo '<a href="'. get_term_link($cat->slug, 'product_cat') .'">'. $cat->name .'</a>';
-			    	// }       
+			    	}       
 				}
 			?>
 		</div>
