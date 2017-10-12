@@ -71,7 +71,7 @@
 						<div class="span6 tiles" style="">
 							<?php the_title();?>
 
-							<?php echo $thumbnail;?>
+							<?php var_dump($thumbnail);?>
 						</div>
 					
 					<?php endwhile;
