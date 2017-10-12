@@ -62,16 +62,16 @@
 			$wc_query = new WP_Query($params); ?>
 
 			<?php 
-				$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "large" );
 
 				if ($wc_query->have_posts()) :
 					while ($wc_query->have_posts()) :
                 	$wc_query->the_post(); ?>
+
+                		<?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($wc_query->post->ID)); ?>
 						
 						<div class="span6 tiles" style="">
 							<?php the_title();?>
-
-							<?php var_dump($thumbnail);?>
+							<img src="<?php $featured_image[0]; ?>" data-id="<?php echo $wc_query->post->ID; ?>">
 						</div>
 					
 					<?php endwhile;
