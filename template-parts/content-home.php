@@ -61,13 +61,15 @@
 
 			$wc_query = new WP_Query($params); ?>
 
-			<?php 
+			<?php print_r($wc_query);?>
+
+			<!-- <?php 
 
 				if ($wc_query->have_posts()) :
 					while ($wc_query->have_posts()) :
                 	$wc_query->the_post(); ?>
 
-                		<?php $featured_image = get_the_post_thumbnail_url('large'); ?>
+                		<!-- <?php $featured_image = get_the_post_thumbnail_url('large'); ?> -->
 						
 						<div class="span6 tiles" style="">
 							<?php the_title();?>
@@ -81,7 +83,7 @@
 					<p>
 					     <?php _e( 'No Products' ); // (6) ?>
 					</p>
-		<?php endif; ?>
+		<?php endif; ?> -->
 
 		</div>
 	</div>
