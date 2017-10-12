@@ -2,21 +2,7 @@
     display: block;
     width: 100%;
     @include clearfix;
-    // @include responsive($big-break) {
-    //     margin: 125px 0px 0px 0px !important;
-    //     padding: 15px 0 0px 15px !important;
-    // }
-    // @include responsive($small-break) {
-    //     margin: 50px auto 0 !important;
-    //     padding: 0 !important;
-    // }
-    // @include responsive($tiny-break) {
-    //     margin: 125px auto 0 !important;
-    //     padding: 0 !important;
-    // }
 }
-
-.home-container {}
 
 .tile-container {
     margin: 0 auto 0;
