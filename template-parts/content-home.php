@@ -69,7 +69,7 @@
 					while ($wc_query->have_posts()) :
                 	$wc_query->the_post(); ?>
 						
-						<div class="span6">
+						<div class="span6 tile" style="">
 							<?php the_title();?>
 						</div>
 					
