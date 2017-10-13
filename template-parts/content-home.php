@@ -18,7 +18,7 @@ global $product;
 			<?php
 			  	$taxonomy     = 'product_cat';
 			  	$orderby      = 'name';  
-			  	$show_count   = 0ž
+			  	$show_count   = 0;
 			  	$pad_counts   = 0;
 			  	$hierarchical = 1;
 			  	$title        = '';  
