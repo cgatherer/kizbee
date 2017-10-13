@@ -72,7 +72,7 @@ global $product;
 					else:  ?>
 					
 					<p>
-					     <?php _e( 'No Products' ); // (6) ?>
+					    <?php _e( 'No Products' ); // (6) ?>
 					</p>
 		<?php endif; ?>
 
