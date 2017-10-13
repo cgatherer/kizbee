@@ -25,6 +25,8 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 
 	<div class="container">
 		<div class="span12 margin-top">
+
+			<?php echo $post_thumbnail_id;?>
 			<?php
 			  	$taxonomy     = 'product_cat';
 			  	$orderby      = 'name';  
