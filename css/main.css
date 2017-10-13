@@ -3763,6 +3763,7 @@ input:checked + .slider:before {
   display: block;
   width: 100%;
   height: auto;
+  margin: 0px;
   min-height: 400px;
   max-height: 600px;
   zoom: 1; }
