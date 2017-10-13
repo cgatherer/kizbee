@@ -6,6 +6,9 @@
  *
  * @package Kizbees_Kitchen
  */
+
+global $product;
+
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -64,10 +67,13 @@
 			<?php 
 				if ($wc_query->have_posts()) :
 					while ($wc_query->have_posts()) :
-                	$wc_query->the_post(); ?>
+                	$wc_query->the_post(); 
+
+                		?>
 						
 						<div class="span6 tiles" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 							<h2><?php the_title();?></h2>
+							<p class="price"><?php echo $product->get_price_html(); ?></p>
 						</div>
 					
 					<?php endwhile;
