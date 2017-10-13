@@ -39,7 +39,7 @@ global $product;
 				foreach ($all_categories as $cat) {
 			    	if($cat->category_parent == 0) {
 			        	$category_id = $cat->term_id;       
-			        	echo '<a href="'. get_term_link($cat->slug, 'product_cat') .'" class="btn btn-sm">'. $cat->name .'</a>';
+			        	echo '<a href="'. get_term_link($cat->slug, 'product_cat') .'" class="btn btn-sm button-size">'. $cat->name .'</a>';
 			    	}       
 				}
 			?>
