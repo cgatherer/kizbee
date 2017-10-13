@@ -62,12 +62,15 @@
 			$wc_query = new WP_Query($params); ?>
 
 			<?php 
+                $price = get_post_meta( get_the_ID(), '_regular_price', true);
+
 				if ($wc_query->have_posts()) :
 					while ($wc_query->have_posts()) :
                 	$wc_query->the_post(); ?>
 						
 						<div class="span6 tiles" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 							<?php the_title();?>
+							<?php echo $price;?>
 						</div>
 					
 					<?php endwhile;
