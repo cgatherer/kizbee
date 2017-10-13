@@ -46,21 +46,8 @@ global $product;
 		</div>
 
 		<div class="span12 group margin-bottom">
-			<?php
-				$args = array( 'post_type' => 'product', 'posts_per_page' => 80, 'product_cat' => 'profiler', 'orderby' => 'rand' );
 
-				$loop = new WP_Query( $args );
-				while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
-				    <div class="dvThumb col-xs-4 col-sm-3 col-md-3 profiler-select profiler<?php echo the_title(); ?>" data-profile="<?php echo $loop->post->ID; ?>">
-				        <?php if($featured_image) { ?>
-				        	<img src="<?php the_field( 'new_product_image' ); ?>" data-id="<?php echo $loop->post->ID; ?>">
-				        <?php } ?>
-				        	<p><?php the_title(); ?></p>
-				        	<span class="price"><?php echo $product->get_price_html(); ?></span>
-				    </div>
-				<?php endwhile; ?>	
-
-		<!-- <?php
+		<?php
 			$params = array(
 				'posts_per_page' => 6, 
 				'post_type' => 'product'
@@ -77,7 +64,6 @@ global $product;
 						
 						<div class="span6 tiles" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 							<h2><?php the_title();?></h2>
-
 						</div>
 					
 					<?php endwhile;
@@ -87,7 +73,7 @@ global $product;
 					<p>
 					    <?php _e( 'No Products' ); // (6) ?>
 					</p>
-		<?php endif; ?> -->
+		<?php endif; ?>
 
 		</div>
 	</div>
