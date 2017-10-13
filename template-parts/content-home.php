@@ -61,18 +61,16 @@
 
 			$wc_query = new WP_Query($params); ?>
 
-			<?php
-				$productImage = get_field('new_product_image'); 
-                $size = 'full'; 
-
+			<?php 
 				if ($wc_query->have_posts()) :
 					while ($wc_query->have_posts()) :
                 	$wc_query->the_post(); ?>
 						
 						<div class="span6 tiles" style="">
 							<?php the_title();?>
-							<!-- <img src="<?php echo $productImage; ?>" data-id="<?php echo $wc_query->post->ID; ?>"> -->
-							<?php print_r($productImage);?>
+							<?php if ( get_field( 'new_product_image') ) { ?>
+								<img src="<?php the_field( 'new_product_image' ); ?>" />
+							<?php } ?>
 						</div>
 					
 					<?php endwhile;
