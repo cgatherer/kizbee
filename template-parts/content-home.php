@@ -67,11 +67,14 @@
 					while ($wc_query->have_posts()) :
                 	$wc_query->the_post(); ?>
 
-                		<?php $productImage = get_sub_field('new_product_image'); ?>
+                		<?php 
+                			$productImage = get_field('new_product_image'); 
+                			$size = 'full';?>
 						
 						<div class="span6 tiles" style="">
 							<?php the_title();?>
-							<img src="<?php echo $productImage; ?>" data-id="<?php echo $wc_query->post->ID; ?>">
+							<!-- <img src="<?php echo $productImage; ?>" data-id="<?php echo $wc_query->post->ID; ?>"> -->
+							<?php echo wp_get_attachment_image( $productImage, $size );?>
 						</div>
 					
 					<?php endwhile;
