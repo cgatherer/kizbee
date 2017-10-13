@@ -53,7 +53,7 @@
 
 		<div class="span12 group">
 
-		<?php
+		<!-- <?php
 			$params = array(
 				'posts_per_page' => 6, 
 				'post_type' => 'product'
@@ -61,7 +61,26 @@
 
 			$wc_query = new WP_Query($params); ?>
 
-			<?php print_r($wc_query);?>
+			<?php print_r($wc_query);?> -->
+
+			<?php
+				$args = array( 
+					'post_type' => 'product', 
+					'posts_per_page' => 8, 
+					'orderby' => 'rand' 
+				);
+
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+				    <div class="dvThumb col-xs-4 col-sm-3 col-md-3 profiler-select profiler<?php echo the_title(); ?>" data-profile="<?php echo $loop->post->ID; ?>">
+				        <?php $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id($loop->post->ID)); ?>
+				        <?php if($featured_image) { ?>
+				        <img src="<?php $featured_image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
+				        <?php } ?>
+				        <p><?php the_title(); ?></p>
+				        <span class="price"><?php echo $product->get_price_html(); ?></span>
+				    </div>
+				<?php endwhile; ?>
 
 			<!-- <?php 
 
@@ -71,19 +90,19 @@
 
                 		<!-- <?php $featured_image = get_the_post_thumbnail_url('large'); ?> -->
 						
-						<div class="span6 tiles" style="">
+						<!-- <div class="span6 tiles" style="">
 							<?php the_title();?>
 							<img src="<?php echo $featured_image; ?>" data-id="<?php echo $wc_query->post->ID; ?>">
-						</div>
+						</div> -->
 					
-					<?php endwhile;
+					<!-- <?php endwhile;
 					wp_reset_postdata();
 					else:  ?>
 					
 					<p>
-					     <?php _e( 'No Products' ); // (6) ?>
-					</p>
-		<?php endif; ?> -->
+					     <?php _e( 'No Products' ); ?>
+					</p> -->
+		<!-- <?php endif; ?> --> 
 
 		</div>
 	</div>
