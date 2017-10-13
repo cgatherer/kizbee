@@ -51,7 +51,7 @@
 			?>
 		</div>
 
-		<div class="span12 group">
+		<div class="span12 group margin-bottom">
 
 		<?php
 			$params = array(
