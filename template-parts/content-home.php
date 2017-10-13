@@ -67,11 +67,11 @@
 					while ($wc_query->have_posts()) :
                 	$wc_query->the_post(); ?>
 
-                		<!-- <?php $featured_image = get_the_post_thumbnail_url('large'); ?> -->
+                		<?php $productImage = get_sub_field('new_product_image'); ?>
 						
 						<div class="span6 tiles" style="">
 							<?php the_title();?>
-							<img src="<?php echo $featured_image; ?>" data-id="<?php echo $wc_query->post->ID; ?>">
+							<img src="<?php echo $productImage; ?>" data-id="<?php echo $wc_query->post->ID; ?>">
 						</div>
 					
 					<?php endwhile;
