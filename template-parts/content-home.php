@@ -68,9 +68,7 @@
 						
 						<div class="span6 tiles" style="">
 							<?php the_title();?>
-							<?php if ( get_field( 'new_product_image') ) { ?>
-								<img src="<?php the_field( 'new_product_image' ); ?>" />
-							<?php } ?>
+							<img src="<?php the_field( 'new_product_image' ); ?>" />
 						</div>
 					
 					<?php endwhile;
