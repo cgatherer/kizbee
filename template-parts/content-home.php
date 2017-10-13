@@ -14,7 +14,23 @@ global $product;
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="container">
-		<div class="span12 margin-top">
+		
+		<?php
+			$args = array( 'post_type' => 'product', 'posts_per_page' => 80, 'product_cat' => 'profiler', 'orderby' => 'rand' );
+
+			$loop = new WP_Query( $args );
+			while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+			    <div class="dvThumb col-xs-4 col-sm-3 col-md-3 profiler-select profiler<?php echo the_title(); ?>" data-profile="<?php echo $loop->post->ID; ?>">
+			        <?php $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id($loop->post->ID)); ?>
+			        <?php if($featured_image) { ?>
+			        <img src="<?php $featured_image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
+			        <?php } ?>
+			        <p><?php the_title(); ?></p>
+			        <span class="price"><?php echo $product->get_price_html(); ?></span>
+			    </div>
+			<?php endwhile; ?>
+
+		<!-- <div class="span12 margin-top">
 			<?php
 			  	$taxonomy     = 'product_cat';
 			  	$orderby      = 'name';  
@@ -43,9 +59,9 @@ global $product;
 			    	}       
 				}
 			?>
-		</div>
+		</div> -->
 
-		<div class="span12 group margin-bottom">
+		<!-- <div class="span12 group margin-bottom">
 
 		<?php
 			$params = array(
@@ -75,7 +91,8 @@ global $product;
 					</p>
 		<?php endif; ?>
 
-		</div>
+		</div> -->
+
 	</div>
 
 </div>
