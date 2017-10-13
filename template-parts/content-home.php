@@ -64,7 +64,7 @@ global $product;
 						
 						<div class="span6 tiles" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 							<h2><?php the_title();?></h2>
-
+							<p><?php echo $product->get_price_html(); ?></p>
 						</div>
 					
 					<?php endwhile;
@@ -76,7 +76,7 @@ global $product;
 					</p>
 		<?php endif; ?>
 
-		<?php
+		<!-- <?php
 			$args = array( 'post_type' => 'product', 'posts_per_page' => 80, 'product_cat' => 'profiler', 'orderby' => 'rand' );
 
 			$loop = new WP_Query( $args );
@@ -89,7 +89,7 @@ global $product;
 			        <p><?php the_title(); ?></p>
 			        <span class="price"><?php echo $product->get_price_html(); ?></span>
 			    </div>
-			<?php endwhile; ?>
+			<?php endwhile; ?> -->
 
 		</div>
 	</div>
