@@ -68,7 +68,6 @@
 						
 						<div class="span6 tiles" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 							<?php the_title();?>
-							<?php get_price()?>
 						</div>
 					
 					<?php endwhile;
