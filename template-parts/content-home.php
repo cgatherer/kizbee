@@ -14,7 +14,7 @@ global $product;
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="container">
-		<div class="span12 margin-top">
+		<div class="span4 margin-top margin-bottom">
 			<select class="ignore">
 				<?php
 				  	$taxonomy     = 'product_cat';
