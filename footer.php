@@ -28,6 +28,7 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<script src="<?php echo get_template_directory_uri(); ?>/js/chosen.jquery.min.js"></script> 
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.nice-select.min.js"></script> 
 <script src="<?php echo get_template_directory_uri(); ?>/js/snap.svg-min.js"></script> 
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
