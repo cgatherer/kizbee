@@ -13,9 +13,9 @@ global $product;
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div id="home-product" class="container">
-			<select class="tile-filters ignore">
-				<option data-filter="*">Show All</option>
+	<div id="home-product" class="container pack-grid">
+		<div class="span4 margin-top margin-bottom tile-filters">
+			
 				<?php
 				  	$taxonomy     = 'product_cat';
 				  	$orderby      = 'name';  
@@ -41,14 +41,14 @@ global $product;
 				    	if($cat->category_parent == 0) {
 				        	$category_id = $cat->term_id;       
 				        	// echo '<a href="'. get_term_link($cat->slug, 'product_cat') .'" class="btn btn-sm button-size">'. $cat->name .'</a>';
-				        	echo '<option data-filter="'. $cat->name .'">'. $cat->name .'</option>';
+				        	echo '<button data-filter="'. $cat->name .'">'. $cat->name .'</button>';
 				    	}       
 					}
 				?>
-			</select>
+
 		</div>
 
-		<div class="span12 group pack-grid margin-bottom">
+		<div class="span12 group margin-bottom">
 			<?php
 				$params = array(
 					'posts_per_page' => 6, 
@@ -94,7 +94,7 @@ global $product;
         itemSelector: '.pack-item'
       });
 
-      $('.tile-filters').on( 'click', 'option', function() {
+      $('.tile-filters').on( 'click', 'button', function() {
         var filterValue = $(this).attr('data-filter');
         $grid.isotope({ filter: filterValue });
       });
