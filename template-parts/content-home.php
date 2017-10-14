@@ -67,7 +67,7 @@ global $product;
 							
 							<div class="span6 tiles pack-item" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 								<h2><?php the_title();?></h2>
-								<p><?php print_r($categories); ?></p>
+								<p><?php echo $categories; ?></p>
 							</div>
 						
 						<?php endwhile;
