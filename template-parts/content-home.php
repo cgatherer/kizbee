@@ -50,37 +50,39 @@ global $product;
 		</div>
 
 		<div class="span12 group margin-bottom">
+			<?php
+				$params = array(
+					'posts_per_page' => 6, 
+					'post_type' => 'product'
+				);
 
-		<?php
-			$params = array(
-				'posts_per_page' => 6, 
-				'post_type' => 'product'
-			);
+				$wc_query = new WP_Query($params); ?>
 
-			$wc_query = new WP_Query($params); ?>
+				<?php 
+					if ($wc_query->have_posts()) :
+						while ($wc_query->have_posts()) :
+	                	$wc_query->the_post(); 
 
-			<?php 
-				if ($wc_query->have_posts()) :
-					while ($wc_query->have_posts()) :
-                	$wc_query->the_post(); 
-
-                		?>
+	                		?>
+							
+							<div class="span6 tiles" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
+								<h2><?php the_title();?></h2>
+								
+							</div>
 						
-						<div class="span6 tiles" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
-							<h2><?php the_title();?></h2>
-
-						</div>
-					
-					<?php endwhile;
-					wp_reset_postdata();
-					else:  ?>
-					
-					<p>
-					    <?php _e( 'No Products' ); // (6) ?>
-					</p>
-		<?php endif; ?>
-
+						<?php endwhile;
+						wp_reset_postdata();
+						else:  ?>
+						
+						<p>
+						    <?php _e( 'No Products' ); // (6) ?>
+						</p>
+			<?php endif; ?>
 		</div>
+	</div>
+
+	<div>
+		<?php the_content();?>
 	</div>
 
 </div>
