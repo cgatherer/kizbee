@@ -13,7 +13,7 @@ global $product;
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="container">
+	<div id="home-product" class="container">
 		<div class="span4 margin-top margin-bottom">
 			<select class="ignore">
 				<option data-value="*">Show All</option>
