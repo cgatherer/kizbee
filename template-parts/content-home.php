@@ -15,7 +15,7 @@ global $product;
 
 	<div class="container">
 		<div class="span12 margin-top">
-			<select class="chosen-select">
+			<select class="ignore">
 				<?php
 				  	$taxonomy     = 'product_cat';
 				  	$orderby      = 'name';  
