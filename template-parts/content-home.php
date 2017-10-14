@@ -43,7 +43,7 @@ global $product;
 				        	$category_id = $cat->term_id;       
 				        	// echo '<a href="'. get_term_link($cat->slug, 'product_cat') .'" class="btn btn-sm button-size">'. $cat->name .'</a>';
 				        	//echo '<a href="javascript:void(0);" data-filter="'. $cat->name .'">'. $cat->name .'</a>';
-				        	echo '<input type="button" data-filter="'. $cat->name .'" class="btn btn-blue button-size" value="'. $cat->name .'">'
+				        	echo '<input type="button" data-filter="'. $cat->name .'" class="btn btn-blue button-size" value="'. $cat->name .'">';
 				    	}       
 					}
 				?>
