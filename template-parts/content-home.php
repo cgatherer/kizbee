@@ -14,8 +14,9 @@ global $product;
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div id="home-product" class="container pack-grid">
-		<div class="span4 margin-top margin-bottom tile-filters">
-			
+		<div class="span12 margin-top margin-bottom">
+				
+				<input type="button" data-filter="*" class="btn btn-blue button-size" value="Show All">
 				<?php
 				  	$taxonomy     = 'product_cat';
 				  	$orderby      = 'name';  
@@ -41,11 +42,11 @@ global $product;
 				    	if($cat->category_parent == 0) {
 				        	$category_id = $cat->term_id;       
 				        	// echo '<a href="'. get_term_link($cat->slug, 'product_cat') .'" class="btn btn-sm button-size">'. $cat->name .'</a>';
-				        	echo '<button data-filter="'. $cat->name .'">'. $cat->name .'</button>';
+				        	//echo '<a href="javascript:void(0);" data-filter="'. $cat->name .'">'. $cat->name .'</a>';
+				        	echo '<input type="button" data-filter="'. $cat->name .'" class="btn btn-blue button-size" value="'. $cat->name .'">'
 				    	}       
 					}
 				?>
-
 		</div>
 
 		<div class="span12 group margin-bottom">
@@ -94,7 +95,7 @@ global $product;
         itemSelector: '.pack-item'
       });
 
-      $('.tile-filters').on( 'click', 'button', function() {
+      $('.tile-filters').on( 'click', 'input', function() {
         var filterValue = $(this).attr('data-filter');
         $grid.isotope({ filter: filterValue });
       });
