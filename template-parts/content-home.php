@@ -11,6 +11,13 @@ global $product;
 
 ?>
 
+<style type="text/css">
+	.pack-grid {
+		position: relative;
+    	min-height: 400px;
+	}
+</style>
+
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div id="home-product" class="container pack-grid">
