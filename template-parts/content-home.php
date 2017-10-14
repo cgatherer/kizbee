@@ -13,8 +13,7 @@ global $product;
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div id="home-product" class="container pack-grid">
-		<div class="span4 margin-top margin-bottom">
+	<div id="home-product" class="container">
 			<select class="ignore">
 				<option data-filter="*">Show All</option>
 				<?php
@@ -49,7 +48,7 @@ global $product;
 			</select>
 		</div>
 
-		<div class="span12 group margin-bottom">
+		<div class="span12 group pack-grid margin-bottom">
 			<?php
 				$params = array(
 					'posts_per_page' => 6, 
