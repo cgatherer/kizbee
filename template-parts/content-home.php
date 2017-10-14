@@ -14,7 +14,7 @@ global $product;
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div id="home-product" class="container">
-			<select class="ignore">
+			<select class="tile-filters ignore">
 				<option data-filter="*">Show All</option>
 				<?php
 				  	$taxonomy     = 'product_cat';
