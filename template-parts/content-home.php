@@ -13,10 +13,10 @@ global $product;
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div id="home-product" class="container">
+	<div id="home-product" class="container pack-grid">
 		<div class="span4 margin-top margin-bottom">
 			<select class="ignore">
-				<option data-value="*">Show All</option>
+				<option data-filter="*">Show All</option>
 				<?php
 				  	$taxonomy     = 'product_cat';
 				  	$orderby      = 'name';  
@@ -42,7 +42,7 @@ global $product;
 				    	if($cat->category_parent == 0) {
 				        	$category_id = $cat->term_id;       
 				        	// echo '<a href="'. get_term_link($cat->slug, 'product_cat') .'" class="btn btn-sm button-size">'. $cat->name .'</a>';
-				        	echo '<option data-value="'. $cat->name .'">'. $cat->name .'</option>';
+				        	echo '<option data-filter="'. $cat->name .'">'. $cat->name .'</option>';
 				    	}       
 					}
 				?>
@@ -65,7 +65,7 @@ global $product;
 
 	                		?>
 							
-							<div class="span6 tiles" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
+							<div class="span6 tiles pack-item" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 								<h2><?php the_title();?></h2>
 								
 							</div>
@@ -86,3 +86,18 @@ global $product;
 	</div>
 
 </div>
+
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+
+      var $grid = $('.pack-grid').isotope({
+        // options
+        itemSelector: '.pack-item'
+      });
+
+      $('.tile-filters').on( 'click', 'option', function() {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({ filter: filterValue });
+      });
+  });
+</script>
