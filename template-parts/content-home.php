@@ -43,7 +43,7 @@ global $product;
 				        	$category_id = $cat->term_id;       
 				        	// echo '<a href="'. get_term_link($cat->slug, 'product_cat') .'" class="btn btn-sm button-size">'. $cat->name .'</a>';
 				        	//echo '<a href="javascript:void(0);" data-filter="'. $cat->name .'">'. $cat->name .'</a>';
-				        	echo '<input type="button" data-filter="'. $cat->name .'" class="btn btn-blue button-size" value="'. $cat->name .'">';
+				        	echo '<input type="button" data-filter=".'. $cat->name .'" class="btn btn-blue button-size" value="'. $cat->name .'">';
 				    	}       
 					}
 				?>
@@ -63,11 +63,11 @@ global $product;
 						while ($wc_query->have_posts()) :
 	                	$wc_query->the_post(); 
 
-	                		?>
+	                	$taxonomy = 'product_cat';	?>
 							
 							<div class="span6 tiles pack-item" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 								<h2><?php the_title();?></h2>
-								
+								<p><?php echo $taxonomy; ?></p>
 							</div>
 						
 						<?php endwhile;
