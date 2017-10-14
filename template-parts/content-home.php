@@ -16,6 +16,7 @@ global $product;
 	<div class="container">
 		<div class="span4 margin-top margin-bottom">
 			<select class="ignore">
+				<option data-value="*">Show All</option>
 				<?php
 				  	$taxonomy     = 'product_cat';
 				  	$orderby      = 'name';  
@@ -41,7 +42,7 @@ global $product;
 				    	if($cat->category_parent == 0) {
 				        	$category_id = $cat->term_id;       
 				        	// echo '<a href="'. get_term_link($cat->slug, 'product_cat') .'" class="btn btn-sm button-size">'. $cat->name .'</a>';
-				        	echo '<option class="'. $cat->name .'">'. $cat->name .'</option>';
+				        	echo '<option data-value="'. $cat->name .'">'. $cat->name .'</option>';
 				    	}       
 					}
 				?>
