@@ -59,15 +59,15 @@ global $product;
 				$wc_query = new WP_Query($params); ?>
 
 				<?php 
+					$categories = wp_get_post_terms(get_the_ID(), 'product_cat', array("fields" => "names"));
+
 					if ($wc_query->have_posts()) :
 						while ($wc_query->have_posts()) :
-	                	$wc_query->the_post(); 
-
-	                	$taxonomy = 'product_cat';	?>
+	                	$wc_query->the_post(); ?>
 							
 							<div class="span6 tiles pack-item" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 								<h2><?php the_title();?></h2>
-								<p><?php echo $taxonomy; ?></p>
+								<p><?php print_r($categories); ?></p>
 							</div>
 						
 						<?php endwhile;
