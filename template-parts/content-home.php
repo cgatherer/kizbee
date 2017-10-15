@@ -95,9 +95,9 @@ global $product;
         itemSelector: '.pack-item'
       });
 
-      $('.tile-filters').on( 'click', 'input', function() {
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
-      });
+      // $('.tile-filters').on( 'click', 'input', function() {
+      //   var filterValue = $(this).attr('data-filter');
+      //   $grid.isotope({ filter: filterValue });
+      // });
   });
 </script>
