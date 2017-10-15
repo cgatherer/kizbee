@@ -62,7 +62,7 @@
 						<h2><?php the_title();?></h2>
 						<div class="price"><?php echo $product->get_price_html(); ?></div>
 						<!-- <p><?php echo print_r($term); ?></p> -->
-						<?php ?>
+						<?php echo $term->cat_name;?>
 					</div>
 			<?php endwhile; ?>
 		</div>
