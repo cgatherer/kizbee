@@ -56,7 +56,7 @@
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 					<?php 
-						$term = $product->get_term_by('name'); ?>
+						$term = $product->get_categories(); ?>
 
 				    <div class="span6 tiles pack-item" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 						<h2><?php the_title();?></h2>
