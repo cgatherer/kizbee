@@ -56,12 +56,13 @@
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 					<?php 
-						$terms = get_the_terms( $product->get_id(), 'product_cat' ); ?>
+						$cat_count = sizeof( get_the_terms( $post->ID, 'product_cat' ) ); ?>
 
 				    <div class="span6 tiles pack-item" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 						<h2><?php the_title();?></h2>
 						<div class="price"><?php echo $product->get_price_html(); ?></div>
-						<p><?php single_term_title(); ?></p>
+						<?php echo $product->get_categories( ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', $cat_count, 'woocommerce' ) . ' ', '</span>' ); ?>
+
 					</div>
 			<?php endwhile; ?>
 		</div>
