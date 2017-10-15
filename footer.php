@@ -24,8 +24,8 @@
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'kizbees_kitchen' ), 'kizbees_kitchen', '<a href="http://seasideconnections.com">christopher gatherer</a>' );
 			?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+		</div>
+	</footer>
 </div><!-- #page -->
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/chosen.jquery.min.js"></script> 

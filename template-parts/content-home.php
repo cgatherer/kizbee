@@ -13,8 +13,9 @@
 	<div id="home-product" class="container pack-grid">
 		<div class="span12 margin-top margin-bottom">
 				
-				<input type="button" data-filter="*" class="btn btn-blue button-size" value="Show All">
-				<!-- <?php
+				<!-- <input type="button" data-filter="*" class="btn btn-blue button-size" value="Show All"> -->
+				<select class="ignore tile-filters">
+				<?php
 				  	$taxonomy     = 'product_cat';
 				  	$orderby      = 'name';  
 				  	$show_count   = 0;
@@ -40,10 +41,12 @@
 				        	$category_id = $cat->term_id;       
 				        	// echo '<a href="'. get_term_link($cat->slug, 'product_cat') .'" class="btn btn-sm button-size">'. $cat->name .'</a>';
 				        	//echo '<a href="javascript:void(0);" data-filter="'. $cat->name .'">'. $cat->name .'</a>';
-				        	echo '<input type="button" data-filter=".'. $cat->name .'" class="btn btn-blue button-size" value="'. $cat->name .'">';
+				        	// echo '<input type="button" data-filter=".'. $cat->name .'" class="btn btn-blue button-size" value="'. $cat->name .'">';
+				        	echo '<option data-filter=".'. $cat->name .'" value="'. $cat->name .'">'. $cat->name .'</option>';
 				    	}       
 					}
-				?> -->
+				?>
+				</select>
 		</div>
 
 		<div class="span12 group margin-bottom">
@@ -69,14 +72,14 @@
 <script type="text/javascript">
   jQuery(document).ready(function($) {
 
-      // var $grid = $('.pack-grid').isotope({
-      //   // options
-      //   itemSelector: '.pack-item'
-      // });
+      var $grid = $('.pack-grid').isotope({
+        // options
+        itemSelector: '.pack-item'
+      });
 
-      // $('.tile-filters').on( 'click', 'input', function() {
-      //   var filterValue = $(this).attr('data-filter');
-      //   $grid.isotope({ filter: filterValue });
-      // });
+      $('.tile-filters').on( 'change', 'input', function() {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({ filter: filterValue });
+      });
   });
 </script>
