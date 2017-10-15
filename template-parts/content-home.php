@@ -60,9 +60,19 @@ global $product;
 
 				foreach($posts as $post) {
 				    //var_dump($post);
-				    echo $product->get_price_html();
+				    //echo $product->get_price_html();
 				}
 			?>
+
+			<?php
+				$args = array( 'post_type' => 'product', 'posts_per_page' => 8, 'orderby' => 'rand' );
+
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+				        <p><?php the_title(); ?></p>
+				        <span class="price"><?php echo $product->get_price_html(); ?></span>
+				    </div>
+				<?php endwhile; ?>
 			<!-- <?php
 				$params = array(
 					'posts_per_page' => 6, 
