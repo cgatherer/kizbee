@@ -74,7 +74,8 @@
 
       var $grid = $('.pack-grid').isotope({
         // options
-        itemSelector: '.pack-item'
+        itemSelector: '.pack-item',
+        layoutMode: 'fitRows'
       });
 
       $('.tile-filters').on( 'change', 'input', function() {
