@@ -90,10 +90,10 @@ global $product;
 <script type="text/javascript">
   jQuery(document).ready(function($) {
 
-      var $grid = $('.pack-grid').isotope({
-        // options
-        itemSelector: '.pack-item'
-      });
+      // var $grid = $('.pack-grid').isotope({
+      //   // options
+      //   itemSelector: '.pack-item'
+      // });
 
       // $('.tile-filters').on( 'click', 'input', function() {
       //   var filterValue = $(this).attr('data-filter');
