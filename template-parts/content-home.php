@@ -17,7 +17,7 @@ global $product;
 		<div class="span12 margin-top margin-bottom">
 				
 				<input type="button" data-filter="*" class="btn btn-blue button-size" value="Show All">
-				<?php
+				<!-- <?php
 				  	$taxonomy     = 'product_cat';
 				  	$orderby      = 'name';  
 				  	$show_count   = 0;
@@ -46,11 +46,23 @@ global $product;
 				        	echo '<input type="button" data-filter=".'. $cat->name .'" class="btn btn-blue button-size" value="'. $cat->name .'">';
 				    	}       
 					}
-				?>
+				?> -->
 		</div>
 
 		<div class="span12 group margin-bottom">
 			<?php
+				$query = new WP_Query(array( 
+					'post_type' => 'product',
+					'posts_per_page' => 6 
+				));
+
+				$posts = $query->posts;
+
+				foreach($posts as $post) {
+				    var_dump($post);
+				}
+			?>
+			<!-- <?php
 				$params = array(
 					'posts_per_page' => 6, 
 					'post_type' => 'product'
@@ -67,7 +79,6 @@ global $product;
 							
 							<div class="span6 tiles pack-item" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 								<h2><?php the_title();?></h2>
-								<p><?php echo $categories; ?></p>
 							</div>
 						
 						<?php endwhile;
@@ -77,7 +88,7 @@ global $product;
 						<p>
 						    <?php _e( 'No Products' ); // (6) ?>
 						</p>
-			<?php endif; ?>
+			<?php endif; ?> -->
 		</div>
 	</div>
 
