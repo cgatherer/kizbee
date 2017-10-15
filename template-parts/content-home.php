@@ -59,7 +59,8 @@ global $product;
 				$posts = $query->posts;
 
 				foreach($posts as $post) {
-				    var_dump($post);
+				    //var_dump($post);
+				    echo get_price_html();
 				}
 			?>
 			<!-- <?php
