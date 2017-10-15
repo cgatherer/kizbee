@@ -72,13 +72,7 @@
 	</div>
 
 	<div>
-		<?php //the_content();?>
-		<?php 
-			while ( have_posts() ){
-				the_post();							// Post Loop
-				mfn_builder_print( get_the_ID() );	// Content Builder & WordPress Editor Content
-			}
-		?>
+		<?php the_content();?>
 	</div>
 
 </div>
