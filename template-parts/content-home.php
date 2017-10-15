@@ -57,7 +57,7 @@
 				while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 					<?php 
 						$termCat = $product->get_categories(); 
-						$term   .= $termCat->name .', ';?>
+						$term   .= $termCat->name; ?>
 
 				    <div class="span6 tiles pack-item" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 						<h2><?php the_title();?></h2>
