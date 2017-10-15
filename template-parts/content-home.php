@@ -58,11 +58,9 @@
 					<?php 
 						$cat_count = sizeof( get_the_terms( $post->ID, 'product_cat' ) ); ?>
 
-				    <div class="span6 tiles pack-item" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
+				    <div class="span6 tiles pack-item <?php echo $product->get_categories(); ?>" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 						<h2><?php the_title();?></h2>
 						<div class="price"><?php echo $product->get_price_html(); ?></div>
-						<p><?php echo $product->get_categories(); ?></p>
-
 					</div>
 			<?php endwhile; ?>
 		</div>
