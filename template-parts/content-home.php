@@ -56,15 +56,14 @@
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 					<?php 
-						$taxonomy     = 'product_cat'; ?>
+						$term = $product->get_categories(); ?>
 
-					    <div class="span6 tiles pack-item" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
-							<h2><?php the_title();?></h2>
-							<div class="price"><?php echo $product->get_price_html(); ?></div>
-							<!-- <p><?php echo print_r($term); ?></p> -->
-							<?php echo $taxonomy; ?>
-						</div>
-	
+				    <div class="span6 tiles pack-item" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
+						<h2><?php the_title();?></h2>
+						<div class="price"><?php echo $product->get_price_html(); ?></div>
+						<!-- <p><?php echo print_r($term); ?></p> -->
+						<?php ?>
+					</div>
 			<?php endwhile; ?>
 		</div>
 	</div>
