@@ -51,16 +51,12 @@
 
 		<div class="span12 group margin-bottom">
 			<?php
-				$args = array('post_type' => 'product', 'posts_per_page' => 8);
+				$taxonomy = 'product_cat';
+
+				$args = array('post_type' => 'product', 'posts_per_page' => 8, 'taxonomy' => $taxonomy);
 
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
-					<?php 
-						$taxonomy = 'product_cat';
-					  	$args = array('taxonomy' => $taxonomy);
-
-						$all_categories = get_categories($args);
-					?>
 
 					<!-- <?php foreach ($all_categories as $cat) { ?> -->
 
@@ -68,7 +64,7 @@
 							<h2><?php the_title();?></h2>
 							<div class="price"><?php echo $product->get_price_html(); ?></div>
 							<!-- <p><?php echo print_r($term); ?></p> -->
-							<?php echo $all_categories->name; ?>
+							<?php echo $taxonomy->name; ?>
 						</div>
 
 					<!-- <?php } ?>	 -->
