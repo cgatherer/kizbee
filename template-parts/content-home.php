@@ -60,7 +60,7 @@ global $product;
 
 				foreach($posts as $post) {
 				    //var_dump($post);
-				    echo get_price_html();
+				    echo $product->get_price_html();
 				}
 			?>
 			<!-- <?php
