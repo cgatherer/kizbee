@@ -65,6 +65,10 @@
 					</div>
 			<?php endwhile; ?>
 		</div>
+
+		<div class="span12 margin-bottom">
+			<h2>Details About Shipping &amp; Availability</h2>
+		</div>
 	</div>
 
 	<div>
