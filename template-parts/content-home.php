@@ -48,56 +48,15 @@
 
 		<div class="span12 group margin-bottom">
 			<?php
-				$query = new WP_Query(array( 
-					'post_type' => 'product',
-					'posts_per_page' => 6 
-				));
-
-				$posts = $query->posts;
-
-				foreach($posts as $post) {
-				    //var_dump($post);
-				    //echo $product->get_price_html();
-				}
-			?>
-
-			<?php
 				$args = array('post_type' => 'product', 'posts_per_page' => 8);
 
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 				    <div class="span6 tiles pack-item" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 						<h2><?php the_title();?></h2>
-						<span class="price"><?php echo $product->get_price_html(); ?></span>
+						<h4 class="price"><?php echo $product->get_price_html(); ?></h4>
 					</div>
-				<?php endwhile; ?>
-			<!-- <?php
-				$params = array(
-					'posts_per_page' => 6, 
-					'post_type' => 'product'
-				);
-
-				$wc_query = new WP_Query($params); ?>
-
-				<?php 
-					$categories = wp_get_post_terms(get_the_ID(), 'product_cat', array("fields" => "names"));
-
-					if ($wc_query->have_posts()) :
-						while ($wc_query->have_posts()) :
-	                	$wc_query->the_post(); ?>
-							
-							<div class="span6 tiles pack-item" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
-								<h2><?php the_title();?></h2>
-							</div>
-						
-						<?php endwhile;
-						wp_reset_postdata();
-						else:  ?>
-						
-						<p>
-						    <?php _e( 'No Products' ); // (6) ?>
-						</p>
-			<?php endif; ?> -->
+			<?php endwhile; ?>
 		</div>
 	</div>
 
