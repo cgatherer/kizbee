@@ -10,8 +10,8 @@
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div id="home-product" class="container pack-grid">
-		<div class="span12 margin-top margin-bottom">
+	<!-- <div id="home-product" class="container pack-grid">
+		<div class="span12 margin-top margin-bottom"> -->
 				
 				<!-- <input type="button" data-filter="*" class="btn btn-blue button-size" value="Show All"> -->
 				<!-- <select class="ignore tile-filters"> -->
@@ -47,9 +47,9 @@
 					}
 				?> -->
 				<!-- </select> -->
-		</div>
+		<!-- </div> -->
 
-		<div class="span12 group margin-bottom">
+		<!-- <div class="span12 group margin-bottom">
 			<?php
 				$args = array('post_type' => 'product', 'posts_per_page' => 8);
 
@@ -64,12 +64,12 @@
 						<p><?php echo $term; ?></p>
 					</div>
 			<?php endwhile; ?>
-		</div>
+		</div> -->
 
-		<div class="span12 margin-bottom" style="text-align: center;">
+		<!-- <div class="span12 margin-bottom" style="text-align: center;">
 			<h2>Details About Shipping &amp; Availability</h2>
 		</div>
-	</div>
+	</div> -->
 
 	<div>
 		<?php the_content();?>
