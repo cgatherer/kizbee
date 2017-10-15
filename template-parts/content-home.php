@@ -66,7 +66,7 @@
 			<?php endwhile; ?>
 		</div>
 
-		<div class="span12 margin-bottom">
+		<div class="span12 margin-bottom text-center">
 			<h2>Details About Shipping &amp; Availability</h2>
 		</div>
 	</div>
