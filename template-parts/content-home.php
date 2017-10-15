@@ -14,7 +14,7 @@
 		<div class="span12 margin-top margin-bottom">
 				
 				<!-- <input type="button" data-filter="*" class="btn btn-blue button-size" value="Show All"> -->
-				<select class="ignore tile-filters">
+				<!-- <select class="ignore tile-filters"> -->
 				<!-- <?php
 				  	$taxonomy     = 'product_cat';
 				  	$orderby      = 'name';  
@@ -46,7 +46,7 @@
 				    	}       
 					}
 				?> -->
-				</select>
+				<!-- </select> -->
 		</div>
 
 		<div class="span12 group margin-bottom">
