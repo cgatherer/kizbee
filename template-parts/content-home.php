@@ -15,7 +15,7 @@
 				
 				<!-- <input type="button" data-filter="*" class="btn btn-blue button-size" value="Show All"> -->
 				<select class="ignore tile-filters">
-				<?php
+				<!-- <?php
 				  	$taxonomy     = 'product_cat';
 				  	$orderby      = 'name';  
 				  	$show_count   = 0;
@@ -45,7 +45,7 @@
 				        	echo '<option data-filter=".'. $cat->name .'" value="'. $cat->name .'">'. $cat->name .'</option>';
 				    	}       
 					}
-				?>
+				?> -->
 				</select>
 		</div>
 
@@ -76,15 +76,15 @@
 <script type="text/javascript">
   jQuery(document).ready(function($) {
 
-      var $grid = $('.pack-grid').isotope({
-        // options
-        itemSelector: '.pack-item',
-        layoutMode: 'fitRows'
-      });
+      // var $grid = $('.pack-grid').isotope({
+      //   // options
+      //   itemSelector: '.pack-item',
+      //   layoutMode: 'fitRows'
+      // });
 
-      $('.tile-filters').on( 'change', 'input', function() {
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
-      });
+      // $('.tile-filters').on( 'change', 'input', function() {
+      //   var filterValue = $(this).attr('data-filter');
+      //   $grid.isotope({ filter: filterValue });
+      // });
   });
 </script>
