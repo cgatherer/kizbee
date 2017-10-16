@@ -1176,7 +1176,7 @@ hr {
   max-width: 265px; }
   #cms-logo img {
     max-height: 100px;
-    margin: 0 20px 0; }
+    margin: 5px 20px 0; }
   @media screen and (min-width: 768px) {
     #cms-logo {
       margin: 7px 0 0 30px;
