@@ -222,7 +222,6 @@ array( 'description' => __( 'Sample widget based on WPBeginner Tutorial', 'wpb_w
 }
  
 // Creating widget front-end
- 
 public function widget( $args, $instance ) {
 $title = apply_filters( 'widget_title', $instance['title'] );
  
@@ -232,7 +231,9 @@ if ( ! empty( $title ) )
 echo $args['before_title'] . $title . $args['after_title'];
  
 // This is where you run the code and display the output
-echo __( 'Hello, World!', 'wpb_widget_domain' );
+//echo __( 'Hello, World!', 'wpb_widget_domain' );
+get_template_directory() . '/template-parts/content-product-loop.php';
+
 echo $args['after_widget'];
 }
          
@@ -244,6 +245,7 @@ $title = $instance[ 'title' ];
 else {
 $title = __( 'New title', 'wpb_widget_domain' );
 }
+
 // Widget admin form
 ?>
 <p>
