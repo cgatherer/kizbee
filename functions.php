@@ -235,7 +235,7 @@ echo __( 'Hello, World!', 'wpb_widget_domain' );
 
 echo $args['after_widget'];
 }
-         
+     
 // Widget Backend 
 public function form( $instance ) {
 if ( isset( $instance[ 'title' ] ) ) {
