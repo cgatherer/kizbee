@@ -214,7 +214,7 @@ parent::__construct(
 'wpb_widget', 
  
 // Widget name will appear in UI
-__('WPBeginner Widget', 'wpb_widget_domain'), 
+__('Product Loop', 'wpb_widget_domain'), 
  
 // Widget description
 array( 'description' => __( 'Sample widget based on WPBeginner Tutorial', 'wpb_widget_domain' ), ) 
@@ -229,10 +229,23 @@ $title = apply_filters( 'widget_title', $instance['title'] );
 echo $args['before_widget'];
 if ( ! empty( $title ) )
 echo $args['before_title'] . $title . $args['after_title'];
+
+	$prodLoop = array('post_type' => 'product', 'posts_per_page' => 8);
+
+	$loop = new WP_Query($prodLoop);
+	while ( $loop->have_posts() ) : $loop->the_post(); global $product;
+		$term = $product->get_categories();
+		$prodImg = the_field( 'new_product_image' )
+
+		echo '<div class="span6 tiles pack-item" style="background: url('. $prodImg .'); background-size: cover;">';
+			echo '<h2><?php the_title();?></h2>';
+			echo '<div class="price"><?php echo $product->get_price_html(); ?></div>';
+			echo '<p><?php echo $term; ?></p>';
+		echo '</div>'
+	endwhile;
  
 // This is where you run the code and display the output
 //echo __( 'Hello, World!', 'wpb_widget_domain' );
-get_template_directory() . '/template-parts/content-product-loop.php';
 
 echo $args['after_widget'];
 }
