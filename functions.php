@@ -196,9 +196,7 @@ if (function_exists('register_sidebar')) {
 	));
 }
 
-/**
- * Register and load the widget.
- */
+// Register and load the widget
 function wpb_load_widget() {
     register_widget( 'wpb_widget' );
 }
@@ -214,7 +212,7 @@ parent::__construct(
 'wpb_widget', 
  
 // Widget name will appear in UI
-__('Product Loop', 'wpb_widget_domain'), 
+__('WPBeginner Widget', 'wpb_widget_domain'), 
  
 // Widget description
 array( 'description' => __( 'Sample widget based on WPBeginner Tutorial', 'wpb_widget_domain' ), ) 
@@ -222,6 +220,7 @@ array( 'description' => __( 'Sample widget based on WPBeginner Tutorial', 'wpb_w
 }
  
 // Creating widget front-end
+ 
 public function widget( $args, $instance ) {
 $title = apply_filters( 'widget_title', $instance['title'] );
  
@@ -232,7 +231,6 @@ echo $args['before_title'] . $title . $args['after_title'];
  
 // This is where you run the code and display the output
 echo __( 'Hello, World!', 'wpb_widget_domain' );
-
 echo $args['after_widget'];
 }
          
@@ -244,7 +242,6 @@ $title = $instance[ 'title' ];
 else {
 $title = __( 'New title', 'wpb_widget_domain' );
 }
-
 // Widget admin form
 ?>
 <p>
