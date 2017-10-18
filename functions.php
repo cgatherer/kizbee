@@ -132,6 +132,12 @@ function kizbees_kitchen_scripts() {
 add_action( 'wp_enqueue_scripts', 'kizbees_kitchen_scripts' );
 
 /**
+ *  Widgets
+ */
+require_once( get_template_directory() .'/inc/widget-functions.php' );
+require_once( get_template_directory() .'/inc/widget-products.php' );
+
+/**
  * load Custom Post Types file
  */
 require get_template_directory() . '/inc/CPT.php';
@@ -180,86 +186,3 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
-/**
- * Custom Widgetized Area.
- */
-if (function_exists('register_sidebar')) {
-
-	register_sidebar(array(
-		'name' => 'Widgetized Area',
-		'id'   => 'widgetized-area',
-		'description'   => 'This is a widgetized area.',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4>',
-		'after_title'   => '</h4>'
-	));
-}
-
-/**
- * Register and load the widget.
- */
-function wpb_load_widget() {
-    register_widget( 'wpb_widget' );
-}
-add_action( 'widgets_init', 'wpb_load_widget' );
- 
-// Creating the widget 
-class wpb_widget extends WP_Widget {
- 
-function __construct() {
-parent::__construct(
- 
-// Base ID of your widget
-'wpb_widget', 
- 
-// Widget name will appear in UI
-__('Product Loop', 'wpb_widget_domain'), 
- 
-// Widget description
-array( 'description' => __( 'Sample widget based on WPBeginner Tutorial', 'wpb_widget_domain' ), ) 
-);
-}
- 
-// Creating widget front-end
-public function widget( $args, $instance ) {
-$title = apply_filters( 'widget_title', $instance['title'] );
- 
-// before and after widget arguments are defined by themes
-echo $args['before_widget'];
-if ( ! empty( $title ) )
-echo $args['before_title'] . $title . $args['after_title'];
- 
-// This is where you run the code and display the output
-echo __( 'Hello, World!', 'wpb_widget_domain' );
-
-require_once(get_template_directory() . '/template-parts/content-product-loop.php');
-
-echo $args['after_widget'];
-}
-     
-// Widget Backend 
-public function form( $instance ) {
-if ( isset( $instance[ 'title' ] ) ) {
-$title = $instance[ 'title' ];
-}
-else {
-$title = __( 'New title', 'wpb_widget_domain' );
-}
-
-// Widget admin form
-?>
-<p>
-<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
-<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-</p>
-<?php 
-}
-     
-// Updating widget replacing old instances with new
-public function update( $new_instance, $old_instance ) {
-$instance = array();
-$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-return $instance;
-}
-} // Class wpb_widget ends here
