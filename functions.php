@@ -232,6 +232,9 @@ public function widget( $args, $instance ) {
 	 
 		// This is where you run the code and display the output
 		echo __( 'Hello, World!', 'wpb_widget_domain' );
+
+		echo '<h2>Testing</h2>';
+
 		echo $args['after_widget'];
 	}
          
