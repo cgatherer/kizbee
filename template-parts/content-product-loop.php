@@ -8,8 +8,8 @@
  */
 ?>
 
-	<div id="home-product" class="container pack-grid">
-		<div class="span12 margin-top margin-bottom">
+<div id="home-product" class="container pack-grid">
+	<div class="span12 margin-top margin-bottom">
 				
 				<!-- <input type="button" data-filter="*" class="btn btn-blue button-size" value="Show All"> -->
 				<!-- <select class="ignore tile-filters"> -->
@@ -45,11 +45,11 @@
 					}
 				?> -->
 				<!-- </select> -->
-		</div>
+	</div>
 
-		<div class="span12 group margin-bottom">
-			<?php
-				$args = array('post_type' => 'product', 'posts_per_page' => 8);
+	<div class="span12 group margin-bottom">
+		<?php
+			$args = array('post_type' => 'product', 'posts_per_page' => 8);
 
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
@@ -61,26 +61,10 @@
 						<div class="price"><?php echo $product->get_price_html(); ?></div>
 						<p><?php echo $term; ?></p>
 					</div>
-			<?php endwhile; ?>
-		</div>
-
-		<div class="span12 margin-bottom" style="text-align: center;">
-			<h2>Details About Shipping &amp; Availability</h2>
-		</div>
+		<?php endwhile; ?>
 	</div>
 
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-
-      // var $grid = $('.pack-grid').isotope({
-      //   // options
-      //   itemSelector: '.pack-item',
-      //   layoutMode: 'fitRows'
-      // });
-
-      // $('.tile-filters').on( 'change', 'input', function() {
-      //   var filterValue = $(this).attr('data-filter');
-      //   $grid.isotope({ filter: filterValue });
-      // });
-  });
-</script>
+	<div class="span12 margin-bottom" style="text-align: center;">
+		<h2>Details About Shipping &amp; Availability</h2>
+	</div>
+</div>
