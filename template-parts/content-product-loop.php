@@ -8,8 +8,8 @@
  */
 ?>
 
-	<!-- <div id="home-product" class="container pack-grid">
-		<div class="span12 margin-top margin-bottom"> -->
+	<div id="home-product" class="container pack-grid">
+		<div class="span12 margin-top margin-bottom">
 				
 				<!-- <input type="button" data-filter="*" class="btn btn-blue button-size" value="Show All"> -->
 				<!-- <select class="ignore tile-filters"> -->
@@ -45,9 +45,9 @@
 					}
 				?> -->
 				<!-- </select> -->
-		<!-- </div> -->
+		</div>
 
-		<!-- <div class="span12 group margin-bottom">
+		<div class="span12 group margin-bottom">
 			<?php
 				$args = array('post_type' => 'product', 'posts_per_page' => 8);
 
@@ -62,52 +62,12 @@
 						<p><?php echo $term; ?></p>
 					</div>
 			<?php endwhile; ?>
-		</div> -->
+		</div>
 
-		<!-- <div class="span12 margin-bottom" style="text-align: center;">
+		<div class="span12 margin-bottom" style="text-align: center;">
 			<h2>Details About Shipping &amp; Availability</h2>
 		</div>
-	</div> -->
-
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</div><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php
-			the_content();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kizbees_kitchen' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-				edit_post_link(
-					sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'kizbees_kitchen' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						get_the_title()
-					),
-					'<span class="edit-link">',
-					'</span>'
-				);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
-</div><!-- #post-<?php the_ID(); ?> -->
+	</div>
 
 <script type="text/javascript">
   jQuery(document).ready(function($) {
