@@ -11,9 +11,9 @@
 <div class="container pack-grid">
 	<div class="span12 margin-top margin-bottom">
 				
-				<!-- <input type="button" data-filter="*" class="btn btn-blue button-size" value="Show All"> -->
-				<!-- <select class="ignore tile-filters"> -->
-				<!-- <?php
+		<!-- <input type="button" data-filter="*" class="btn btn-blue button-size" value="Show All"> -->
+		<select class="ignore tile-filters">
+				<?php
 				  	$taxonomy     = 'product_cat';
 				  	$orderby      = 'name';  
 				  	$show_count   = 0;
@@ -43,8 +43,8 @@
 				        	echo '<option data-filter=".'. $cat->name .'" value="'. $cat->name .'">'. $cat->name .'</option>';
 				    	}       
 					}
-				?> -->
-				<!-- </select> -->
+				?>
+		</select>
 	</div>
 
 	<div class="span12 group margin-bottom">
