@@ -181,9 +181,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 
-/**
- * Custom widget area.
- */
+
 if (function_exists('register_sidebar')) {
 
 	register_sidebar(array(
@@ -195,17 +193,10 @@ if (function_exists('register_sidebar')) {
 		'before_title'  => '<h4>',
 		'after_title'   => '</h4>'
 	));
+
 }
 
-
-/**
- * Add custom shortcode.
- */
-
-
-/**
- * Register and load the widget.
- */
+// Register and load the widget
 function wpb_load_widget() {
     register_widget( 'wpb_widget' );
 }
@@ -228,8 +219,8 @@ class wpb_widget extends WP_Widget {
 	);
 }
  
-
 // Creating widget front-end
+ 
 public function widget( $args, $instance ) {
 	//$title = apply_filters( 'widget_title', $instance['title'] );
  
