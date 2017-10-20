@@ -9,7 +9,7 @@
 ?>
 
 <div class="container pack-grid">
-	<!-- <div class="span6 margin-top margin-bottom">
+	<div class="span6 margin-top margin-bottom">
 		<select class="ignore tile-filters">
 				<option data-filter="*" value="Show All">Show All</option>
 				<?php
@@ -44,24 +44,24 @@
 					}
 				?>
 		</select>
-	</div> -->
+	</div>
 
 	<div class="span12 group margin-bottom">
-		<!-- <?php
+		<?php
 
 			$args = array('post_type' => 'product', 'posts_per_page' => 8);
 
 				$loop = new WP_Query( $args );
 					while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 						<?php 
-							$term = $product->get_term_by_id();?>
+							$term = $product->get_categories();?>
 
 				    		<div class="span6 tiles pack-item" style="background: url('<?php the_field( 'new_product_image' ); ?>'); background-size: cover;">
 								<h2><?php the_title();?></h2>
 								<div class="price"><?php echo $product->get_price_html(); ?></div>
 								<p><?php echo $term; ?></p>
 							</div>
-		<?php endwhile; ?> -->
+		<?php endwhile; ?>
 	</div>
 
 	<div class="span12 margin-bottom" style="text-align: center;">
