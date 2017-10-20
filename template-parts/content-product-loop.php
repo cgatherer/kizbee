@@ -47,7 +47,7 @@
 	</div>
 
 	<div class="span12 group margin-bottom">
-		<!-- <?php
+		<?php
 
 			$args = array('post_type' => 'product', 'posts_per_page' => 8);
 
@@ -61,7 +61,7 @@
 								<div class="price"><?php echo $product->get_price_html(); ?></div>
 								<p><?php echo $term; ?></p>
 							</div>
-		<?php endwhile; ?> -->
+		<?php endwhile; ?>
 	</div>
 
 	<div class="span12 margin-bottom" style="text-align: center;">
