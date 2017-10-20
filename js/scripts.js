@@ -60,10 +60,10 @@ function loadGravatars() {
  */
 
 
-    // jQuery(document).ready(function($) {
-    //     $(document).ready(function() {
-    //         $('select:not(.ignore)').niceSelect();      
-    // });   
+    jQuery(document).ready(function($) {
+        $(document).ready(function() {
+            $('select:not(.ignore)').niceSelect();      
+    });   
 
 // Start Ease scroll to text anchors****************************************
 // *************************************************************************
@@ -81,7 +81,7 @@ jQuery(function() {
             }
         });
     });
-}; 
+}); 
 
 // Push Menu ****************************************
 // **************************************************
@@ -213,8 +213,8 @@ jQuery(document).ready(function(){
         var slider = sliderWrapper.find('.cd-slider'),
             sliderNavigation = sliderWrapper.find('.cd-slider-navigation').find('li'),
             svgCoverLayer = sliderWrapper.find('div.cd-svg-cover'),
-            pathId = svgCoverLayer.find('path').attr('id');
-            //svgPath = Snap('#'+pathId);
+            pathId = svgCoverLayer.find('path').attr('id'),
+            svgPath = Snap('#'+pathId);
         
         //store path 'd' attribute values   
         var pathArray = [];
