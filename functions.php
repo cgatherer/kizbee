@@ -181,7 +181,9 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 
-
+/**
+ * Custom widget area.
+ */
 if (function_exists('register_sidebar')) {
 
 	register_sidebar(array(
@@ -193,10 +195,22 @@ if (function_exists('register_sidebar')) {
 		'before_title'  => '<h4>',
 		'after_title'   => '</h4>'
 	));
-
 }
 
-// Register and load the widget
+
+/**
+ * Add custom shortcode.
+ */
+function shortcode_hello( $atts ){
+  $time = ( date('G') < 9 ) ? "good morning" : "good day";
+    return "Hello, and " . $time . ', my name is Linda';
+}
+add_shortcode( 'hello', 'shortcode_hello' );
+
+
+/**
+ * Register and load the widget.
+ */
 function wpb_load_widget() {
     register_widget( 'wpb_widget' );
 }
@@ -219,8 +233,8 @@ class wpb_widget extends WP_Widget {
 	);
 }
  
+
 // Creating widget front-end
- 
 public function widget( $args, $instance ) {
 	//$title = apply_filters( 'widget_title', $instance['title'] );
  
