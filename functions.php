@@ -227,7 +227,7 @@ public function widget( $args, $instance ) {
 	// before and after widget arguments are defined by themes
 	//echo $args['before_widget'];
 
-	if ( ! empty( $title ))
+	if ( ! empty( $title ) )
 		echo $args['before_title'] . $title . $args['after_title'];
 	 
 		// This is where you run the code and display the output
