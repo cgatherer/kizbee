@@ -201,11 +201,6 @@ if (function_exists('register_sidebar')) {
 /**
  * Add custom shortcode.
  */
-function shortcode_hello( $atts ){
-  $time = ( date('G') < 9 ) ? "good morning" : "good day";
-    return "Hello, and " . $time . ', my name is Linda';
-}
-add_shortcode( 'hello', 'shortcode_hello' );
 
 
 /**
