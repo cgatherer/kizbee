@@ -9,10 +9,9 @@
 ?>
 
 <div class="container pack-grid">
-	<div class="span12 margin-top margin-bottom">
-				
-		<!-- <input type="button" data-filter="*" class="btn btn-blue button-size" value="Show All"> -->
+	<div class="span6 margin-top margin-bottom">
 		<select class="ignore tile-filters">
+				<option data-filter="*" value="Show All">Show All</option>
 				<?php
 				  	$taxonomy     = 'product_cat';
 				  	$orderby      = 'name';  
