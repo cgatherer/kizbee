@@ -10,6 +10,8 @@
 
 <div class="container pack-grid">
 	<div class="span12 group margin-bottom">
+		<h2>Testing</h2>
+		
 		<?php
 
 			$args = array('post_type' => 'staff_member', 'posts_per_page' => 1);
@@ -22,7 +24,6 @@
 								<div class="price"><?php echo $product->get_price_html(); ?></div>
 								<p><?php echo $term; ?></p>
 							</div> -->
-							<h2>Testing</h2>
 		<?php endwhile; ?>
 	</div>
 </div>
