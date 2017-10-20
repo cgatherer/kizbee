@@ -231,9 +231,8 @@ public function widget( $args, $instance ) {
 		echo $args['before_title'] . $title . $args['after_title'];
 	 
 		// This is where you run the code and display the output
-		echo __( 'Hello, World!', 'wpb_widget_domain' );
+		//echo __( 'Hello, World!', 'wpb_widget_domain' );
 
-		//echo '<h2>Testing</h2>';
 		require_once( get_template_directory() . '/template-parts/content-product-loop.php' );
 
 		//echo $args['after_widget'];
