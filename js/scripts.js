@@ -213,8 +213,8 @@ jQuery(document).ready(function(){
         var slider = sliderWrapper.find('.cd-slider'),
             sliderNavigation = sliderWrapper.find('.cd-slider-navigation').find('li'),
             svgCoverLayer = sliderWrapper.find('div.cd-svg-cover'),
-            pathId = svgCoverLayer.find('path').attr('id'),
-            svgPath = Snap('#'+pathId);
+            pathId = svgCoverLayer.find('path').attr('id');
+            //svgPath = Snap('#'+pathId);
         
         //store path 'd' attribute values   
         var pathArray = [];
