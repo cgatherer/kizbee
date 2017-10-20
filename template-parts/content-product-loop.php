@@ -9,7 +9,7 @@
 ?>
 
 <div class="container pack-grid">
-	<div class="span6 margin-top margin-bottom">
+	<!-- <div class="span6 margin-top margin-bottom">
 		<select class="ignore tile-filters">
 				<option data-filter="*" value="Show All">Show All</option>
 				<?php
@@ -44,7 +44,7 @@
 					}
 				?>
 		</select>
-	</div>
+	</div> -->
 
 	<div class="span12 group margin-bottom">
 		<?php
