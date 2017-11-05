@@ -52,9 +52,6 @@
       
       <!-- Okta -->
       <div id="cms-top-nav"> 
-        <!-- <ul>
-          <li><a class="okta" href="https://hibbert.okta.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/Hibbert_Okta.svg" alt="Homepage"></a></li>
-        </ul> -->
       </div>
       
       <!-- Menu -->
