@@ -14,7 +14,7 @@
 			$args = array('post_type' => 'staff-member', 'posts_per_page' => 2);
 				$loop = new WP_Query( $args );
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
-						<h2><?php //the_title();?> Testing</h2>
+						<h2><?php the_title();?></h2>
 		<?php endwhile; ?>
 	</div>
 </div>

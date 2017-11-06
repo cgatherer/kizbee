@@ -220,7 +220,6 @@ class wpb_widget extends WP_Widget {
 }
  
 // Creating widget front-end
- 
 public function widget( $args, $instance ) {
 	//$title = apply_filters( 'widget_title', $instance['title'] );
  
@@ -234,7 +233,6 @@ public function widget( $args, $instance ) {
 		//echo __( 'Hello, World!', 'wpb_widget_domain' );
 
 		require_once( get_template_directory() . '/template-parts/content-product-loop.php' );
-		require_once( get_template_directory() . '/template-parts/content-home-staff-member.php' );
 
 		//echo $args['after_widget'];
 	}
