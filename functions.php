@@ -233,7 +233,7 @@ public function widget( $args, $instance ) {
 		// This is where you run the code and display the output
 		//echo __( 'Hello, World!', 'wpb_widget_domain' );
 
-		require_once( get_template_directory() . '/template-parts/content-product-loop.php' );
+		//require_once( get_template_directory() . '/template-parts/content-product-loop.php' );
 
 		//echo $args['after_widget'];
 	}
