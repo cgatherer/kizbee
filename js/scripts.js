@@ -60,10 +60,10 @@ function loadGravatars() {
  */
 
 
-    jQuery(document).ready(function($) {
-        $(document).ready(function() {
-            $('select:not(.ignore)').niceSelect();      
-    });   
+jQuery(document).ready(function($) {
+    $(document).ready(function() {
+        $('select:not(.ignore)').niceSelect();      
+});   
 
 // Start Ease scroll to text anchors****************************************
 // *************************************************************************

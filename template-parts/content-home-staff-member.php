@@ -15,7 +15,17 @@
 
 				$loop = new WP_Query( $args );
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
-						<h2><?php the_title();?></h2>
+						<div class="span4">
+							<div class="staff-image">
+								<?php if ( has_post_thumbnail() ) : ?>
+									<?php the_post_thumbnail('full'); ?>
+								<?php endif; ?>
+							</div>
+						</div>
+						<div class="span8">
+							<h2><?php the_title();?></h2>
+							<p><?php the_excerpt();?></p>
+						</div>
 		<?php endwhile; ?>
 	</div>
 </div>
