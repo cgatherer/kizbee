@@ -633,11 +633,17 @@ hr {
       max-width: 150px;
       padding: 9px 0 !important; } }
 
-.staff-image {
-  max-width: 350px;
-  max-height: 350px;
-  border-radius: 180px;
-  overflow: hidden; }
+.staff {
+  margin: 10px 0; }
+  .staff .staff-image {
+    max-width: 350px;
+    max-height: 350px;
+    border-radius: 180px;
+    overflow: hidden; }
+  .staff p {
+    padding: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); }
 
 /* Woocomerce */
 /* Default Style */

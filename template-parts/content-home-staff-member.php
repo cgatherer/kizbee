@@ -9,7 +9,7 @@
 ?>
 
 <div class="container pack-grid">
-	<div class="span12 group margin-bottom">
+	<div class="span12 group margin-bottom staff">
 		<?php
 			$args = array('post_type' => 'Staff Member', 'posts_per_page' => 8);
 
