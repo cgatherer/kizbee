@@ -38,10 +38,13 @@ hr {
     .staff-image{
         max-width: 350px;
         max-height: 350px;
-        width: 100%;
-        height: auto;
         border-radius: 180px;
         overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 
     h2 {

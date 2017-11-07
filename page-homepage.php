@@ -21,10 +21,10 @@ get_header(); ?>
 
 		get_template_part( 'template-parts/content', 'home' );
 
-	endwhile; // End of the loop.
+	endwhile; 
 	?>
 
-</div><!-- #primary -->
+</div>
 
 <?php
 get_footer();

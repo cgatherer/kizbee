@@ -638,10 +638,11 @@ hr {
   .staff .staff-image {
     max-width: 350px;
     max-height: 350px;
-    width: 100%;
-    height: auto;
     border-radius: 180px;
     overflow: hidden; }
+    .staff .staff-image img {
+      width: 100%;
+      height: auto; }
   .staff h2 {
     margin: 25px 0 5px;
     border-bottom: solid 2px #000;
