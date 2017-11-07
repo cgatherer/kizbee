@@ -44,7 +44,8 @@ hr {
 
     h2 {
         margin: 25px 0 5px;
-        border-bottom: solid 2px $grey;
+        border-bottom: solid 2px #000;
+        max-width: 250px;
     }
 
     p {
