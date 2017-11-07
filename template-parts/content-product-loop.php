@@ -9,43 +9,6 @@
 ?>
 
 <div class="container pack-grid">
-	<div class="span6 margin-top margin-bottom">
-		<select class="ignore tile-filters">
-				<option data-filter="*" value="Show All">Show All</option>
-				<?php
-				  	$taxonomy     = 'product_cat';
-				  	$orderby      = 'name';  
-				  	$show_count   = 0;
-				  	$pad_counts   = 0;
-				  	$hierarchical = 1;
-				  	$title        = '';  
-				  	$empty        = 0;
-
-				  	$args = array(
-				         'taxonomy'     => $taxonomy,
-				         'orderby'      => $orderby,
-				         'show_count'   => $show_count,
-				         'pad_counts'   => $pad_counts,
-				         'hierarchical' => $hierarchical,
-				         'title_li'     => $title,
-				         'hide_empty'   => $empty
-					);
-				 
-					$all_categories = get_categories($args);
-
-					foreach ($all_categories as $cat) {
-				    	if($cat->category_parent == 0) {
-				        	$category_id = $cat->term_id;       
-				        	// echo '<a href="'. get_term_link($cat->slug, 'product_cat') .'" class="btn btn-sm button-size">'. $cat->name .'</a>';
-				        	//echo '<a href="javascript:void(0);" data-filter="'. $cat->name .'">'. $cat->name .'</a>';
-				        	// echo '<input type="button" data-filter=".'. $cat->name .'" class="btn btn-blue button-size" value="'. $cat->name .'">';
-				        	echo '<option data-filter=".'. $cat->name .'" value="'. $cat->name .'">'. $cat->name .'</option>';
-				    	}       
-					}
-				?>
-		</select>
-	</div>
-
 	<div class="span12 group margin-bottom">
 		<?php
 

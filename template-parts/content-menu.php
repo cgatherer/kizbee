@@ -11,7 +11,7 @@
 <div class="container pack-grid">
 	<div class="span12 group margin-bottom staff">
 		<?php
-			$args = array('post_type' => 'Staff Member', 'posts_per_page' => 8);
+			$args = array('post_type' => 'Menu', 'posts_per_page' => 1);
 
 				$loop = new WP_Query( $args );
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
@@ -21,12 +21,6 @@
 									<?php the_post_thumbnail('large'); ?>
 								<?php endif; ?>
 							</div>
-						</div>
-						<div class="span8">
-							<h2><?php the_title();?></h2>
-							<h3><?php the_field('position');?></h3>
-							<p><?php the_excerpt();?></p>
-							<a href="<?php echo get_permalink(); ?>"><h2>Read More...</h2></a>
 						</div>
 		<?php endwhile; ?>
 	</div>

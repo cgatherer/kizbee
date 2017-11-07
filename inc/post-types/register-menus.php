@@ -1,7 +1,7 @@
 <?php
 
 $menus = new CPT(array(
-    'post_type_name' => 'menu',
+    'post_type_name' => 'Menu',
     'singular' => __('Menu'),
     'plural' => __('Menus'),
     'slug' => 'menu'
