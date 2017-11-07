@@ -640,6 +640,9 @@ hr {
     max-height: 350px;
     border-radius: 180px;
     overflow: hidden; }
+  .staff h2 {
+    margin: 25px 0 5px;
+    border-bottom: solid 2px #aaa; }
   .staff p {
     padding: 10px;
     color: #fff;

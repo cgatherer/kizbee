@@ -34,12 +34,17 @@ hr {
 
 .staff {
     margin: 10px 0;
-    
+
     .staff-image{
         max-width: 350px;
         max-height: 350px;
         border-radius: 180px;
         overflow: hidden;
+    }
+
+    h2 {
+        margin: 25px 0 5px;
+        border-bottom: solid 2px $grey;
     }
 
     p {
