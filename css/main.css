@@ -644,6 +644,10 @@ hr {
     margin: 25px 0 5px;
     border-bottom: solid 2px #000;
     max-width: 250px; }
+  .staff h3 {
+    color: #46acdc;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #fff; }
   .staff p {
     padding: 10px;
     color: #fff;
