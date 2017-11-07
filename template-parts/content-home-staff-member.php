@@ -18,7 +18,7 @@
 						<div class="span4">
 							<div class="staff-image">
 								<?php if ( has_post_thumbnail() ) : ?>
-									<?php the_post_thumbnail('full'); ?>
+									<?php the_post_thumbnail('medium'); ?>
 								<?php endif; ?>
 							</div>
 						</div>
