@@ -648,7 +648,7 @@ hr {
     color: #46acdc;
     font-weight: 600;
     text-shadow: 1px 1px 1px #fff; }
-  .staff p {
+  .staff span {
     padding: 10px;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.5); }
