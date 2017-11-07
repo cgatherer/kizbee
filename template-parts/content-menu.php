@@ -10,18 +10,23 @@
 
 <div class="container pack-grid">
 	<div class="span12 group margin-bottom staff">
-		<?php
-			$args = array('post_type' => 'Menu', 'posts_per_page' => 1);
+		<?php if( have_rows('menu_items') ): ?>
+			<?php while( have_rows('menu_items') ): the_row(); 
 
-				$loop = new WP_Query( $args );
-					while ( $loop->have_posts() ) : $loop->the_post(); ?>
-						<div class="span4">
-							<div class="staff-image">
-								<?php if ( has_post_thumbnail() ) : ?>
-									<?php the_post_thumbnail('large'); ?>
-								<?php endif; ?>
-							</div>
-						</div>
-		<?php endwhile; ?>
+				// vars
+				$headline = get_sub_field('menu_item_name');
+				$message  = get_sub_field('menu_item_description');
+				$price    = get_sub_field('menu_item_price');?>
+						
+				<div class="span4">
+					<div>
+						<h2><?php echo $headline;?></h2>
+						<p><?php echo $message;?></p>
+						<p><?php echo $price;?></p>
+					</div>
+				</div>
+
+			<?php endwhile; ?>
+		<?php endif; ?>
 	</div>
 </div>
