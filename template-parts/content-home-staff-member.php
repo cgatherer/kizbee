@@ -18,14 +18,14 @@
 						<div class="span4">
 							<div class="staff-image">
 								<?php if ( has_post_thumbnail() ) : ?>
-									<?php the_post_thumbnail('medium'); ?>
+									<?php the_post_thumbnail('large'); ?>
 								<?php endif; ?>
 							</div>
 						</div>
 						<div class="span8">
 							<h2><?php the_title();?></h2>
 							<h3><?php the_field('position');?></h3>
-							<p><span><?php the_excerpt();?></span></p>
+							<p><?php the_excerpt();?></p>
 						</div>
 		<?php endwhile; ?>
 	</div>
