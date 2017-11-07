@@ -24,7 +24,8 @@
 						</div>
 						<div class="span8">
 							<h2><?php the_title();?></h2>
-							<p><?php the_excerpt();?></p>
+							<h3><?php the_field('position');?></h3>
+							<span><?php the_excerpt();?></span>
 						</div>
 		<?php endwhile; ?>
 	</div>
