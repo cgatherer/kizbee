@@ -26,7 +26,7 @@
 							<h2><?php the_title();?></h2>
 							<h3><?php the_field('position');?></h3>
 							<p><?php the_excerpt();?></p>
-							<a href="<?php echo get_permalink(); ?>"><h2>Read More...</h2></a>
+							<a href="<?php echo get_permalink(); ?>"><h4>Read More...</h4></a>
 						</div>
 		<?php endwhile; ?>
 	</div>
