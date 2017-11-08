@@ -3684,6 +3684,7 @@ input:checked + .slider:before {
   display: block;
   width: 100%;
   height: auto;
+  margin-bottom: 25px;
   min-height: 400px;
   max-height: 600px;
   zoom: 1; }
@@ -3694,6 +3695,9 @@ input:checked + .slider:before {
     overflow: hidden; }
   .tiles:after {
     clear: both; }
+  @media screen and (min-width: 768px) {
+    .tiles {
+      margin-bottom: 0px; } }
   .tiles h2 {
     text-align: center;
     color: #fff;
