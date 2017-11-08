@@ -9,7 +9,7 @@
 ?>
 
 <div class="container pack-grid">
-	<div class="span12 group margin-bottom">
+	<div class="span12 group margin-top margin-bottom">
 		<?php
 
 			$args = array('post_type' => 'product', 'posts_per_page' => 8);
