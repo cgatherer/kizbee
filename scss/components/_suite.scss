@@ -11,7 +11,7 @@ header {
     display: block;
     height: $header-XL;
     position: fixed;
-    z-index: 4;
+    z-index: 5;
     
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);

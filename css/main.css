@@ -3201,7 +3201,7 @@ Slider navigation
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
-  z-index: 3;
+  z-index: 2;
   zoom: 1;
   text-align: center;
   width: 90%;
@@ -3333,7 +3333,7 @@ header {
   display: block;
   height: 125px;
   position: fixed;
-  z-index: 4;
+  z-index: 5;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;

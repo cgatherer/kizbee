@@ -157,7 +157,7 @@ Slider navigation
     position: absolute;
     bottom: 50px;
     @include center(x);
-    z-index: 3;
+    z-index: 2;
     @include clearfix;
     text-align: center;
     width: 90%;
