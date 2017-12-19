@@ -24,17 +24,13 @@ header {
     }
     
     //assign this class to the header if you want a fixed navigation
-    &.is-fixed {
-        position: fixed;
-        height: $header-M;
+    // &.is-fixed {
+    //     position: fixed;
+    //     height: $header-M;
 
-        #cms-logo img {
-            max-height: 70px;
-        }
-    }
-
-    // @include atMedium {
-    //     height: $header-L;
+    //     #cms-logo img {
+    //         max-height: 70px;
+    //     }
     // }
 }
 
