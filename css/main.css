@@ -3349,13 +3349,10 @@ header {
     /* translate to show the lateral menu */
     transform: translateX(-260px); }
   header.is-fixed {
-    position: fixed; }
-
-.header-smaller {
-  height: 85px; }
-
-.header-smaller #cms-logo img {
-  max-height: 70px; }
+    position: fixed;
+    height: 85px; }
+    header.is-fixed #cms-logo img {
+      max-height: 70px; }
 
 footer {
   width: 100vw;
