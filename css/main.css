@@ -3352,6 +3352,12 @@ header {
   header.is-fixed {
     position: fixed; }
 
+.header-smaller {
+  height: 85px; }
+
+.header-smaller #cms-logo img {
+  max-height: 70px; }
+
 footer {
   width: 100vw;
   text-align: center;

@@ -34,6 +34,14 @@ header {
     // }
 }
 
+.header-smaller {
+    height: $header-M;
+}
+
+.header-smaller #cms-logo img {
+    max-height: 70px;
+}
+
 footer {
     width: 100vw;
     text-align: center;
