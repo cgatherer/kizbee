@@ -132,7 +132,9 @@ jQuery(document).ready(function($){
 // **************************************************
 
 jQuery(document).ready(function($){  
-    if ( $('body').scrollTop() >= 100){
+    var scroll = $(window).scrollTop();
+    
+    if (scroll <= 500) {
         $('header').addClass('is-fixed');
     } else {
          $('header').removeClass('is-fixed');
