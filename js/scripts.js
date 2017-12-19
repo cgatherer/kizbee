@@ -140,6 +140,20 @@ jQuery(document).ready(function($){
 //     } 
 // });
 
+function resizeHeaderOnScroll() {
+  const distanceY = window.pageYOffset || document.documentElement.scrollTop,
+  shrinkOn = 200,
+  headerEl = document.getElementById('suite-header-bar');
+  
+  if (distanceY > shrinkOn) {
+    headerEl.classList.add("header-smaller");
+  } else {
+    headerEl.classList.remove("header-smaller");
+  }
+}
+
+window.addEventListener('scroll', resizeHeaderOnScroll);
+
 // Floating Action Button JS ************************
 // **************************************************
 
