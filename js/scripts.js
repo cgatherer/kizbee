@@ -131,28 +131,28 @@ jQuery(document).ready(function($){
 // Sticky Header ************************************
 // **************************************************
 
-// $(window).scroll(function() {
+jQuery(window).scroll(function($) {
 
-//     if ( $('body').scrollTop() >= 100){
-//         $('header').addClass('is-fixed');
-//     } else {
-//          $('header').removeClass('is-fixed');
-//     } 
-// });
+    if ( $('body').scrollTop() >= 100){
+        $('header').addClass('is-fixed');
+    } else {
+         $('header').removeClass('is-fixed');
+    } 
+});
 
-function resizeHeaderOnScroll() {
-  const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-  shrinkOn = 200,
-  headerEl = document.getElementById('suite-header-bar');
+// function resizeHeaderOnScroll() {
+//   const distanceY = window.pageYOffset || document.documentElement.scrollTop,
+//   shrinkOn = 200,
+//   headerEl = document.getElementById('suite-header-bar');
   
-  if (distanceY > shrinkOn) {
-    headerEl.classList.add("header-smaller");
-  } else {
-    headerEl.classList.remove("header-smaller");
-  }
-}
+//   if (distanceY > shrinkOn) {
+//     headerEl.classList.add("header-smaller");
+//   } else {
+//     headerEl.classList.remove("header-smaller");
+//   }
+// }
 
-window.addEventListener('scroll', resizeHeaderOnScroll);
+// window.addEventListener('scroll', resizeHeaderOnScroll);
 
 // Floating Action Button JS ************************
 // **************************************************
