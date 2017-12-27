@@ -11,6 +11,7 @@ header {
     display: block;
     height: $header-XL;
     z-index: 5;
+    position: fixed;
     
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
@@ -24,14 +25,14 @@ header {
     }
     
     //assign this class to the header if you want a fixed navigation
-    &.is-fixed {
-        position: fixed;
-        height: $header-M;
+    // &.is-fixed {
+    //     position: fixed;
+    //     height: $header-M;
 
-        #cms-logo img {
-            max-height: 70px;
-        }
-    }
+    //     #cms-logo img {
+    //         max-height: 70px;
+    //     }
+    // }
 }
 
 footer {

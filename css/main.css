@@ -3333,6 +3333,7 @@ header {
   display: block;
   height: 125px;
   z-index: 5;
+  position: fixed;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
@@ -3348,11 +3349,6 @@ header {
   header.lateral-menu-is-open {
     /* translate to show the lateral menu */
     transform: translateX(-260px); }
-  header.is-fixed {
-    position: fixed;
-    height: 85px; }
-    header.is-fixed #cms-logo img {
-      max-height: 70px; }
 
 footer {
   width: 100vw;
