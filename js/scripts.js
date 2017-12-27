@@ -131,15 +131,15 @@ jQuery(document).ready(function($){
 // Sticky Header ************************************
 // **************************************************
 
-// jQuery(document).ready(function($){  
-//     var scroll = $(window).scrollTop();
+jQuery(document).ready(function($){  
+    var scroll = $(window).scrollTop();
     
-//     if (scroll <= 500) {
-//         $('header').addClass('is-fixed');
-//     } else {
-//          $('header').removeClass('is-fixed');
-//     } 
-// });
+    if (scroll <= 500) {
+        $('header').addClass('is-fixed');
+    } else {
+         $('header').removeClass('is-fixed');
+    } 
+});
 
 // function resizeHeaderOnScroll() {
 //   const distanceY = window.pageYOffset || document.documentElement.scrollTop,
